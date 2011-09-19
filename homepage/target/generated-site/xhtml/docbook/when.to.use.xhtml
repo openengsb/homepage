@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
+    <meta http-equiv="Content-Type"
+    content="text/html; charset=ISO-8859-1" />
+    <title>
+      Chapter 3. When to use the OpenEngSB
+    </title>
+    <link rel="stylesheet" href="css/html.css" type="text/css" />
+    <meta name="generator"
+    content="DocBook XSL-NS Stylesheets V1.75.2" />
+    <link rel="home" href="openengsb-manual.html"
+    title="OpenEngSB Manual" />
+    <link rel="up" href="introduction.manual.html"
+    title="Part I. Introduction" />
+    <link rel="prev" href="what.is.openengsb.html"
+    title="Chapter 2. What is the Open Engineering Service Bus" />
+    <link rel="next" href="tutorials.manual.html"
+    title="Part II. Tutorials" />
+  </head>
+  <body bgcolor="white" text="black" link="#0000FF" vlink="#840084"
+  alink="#0000FF">
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format" id="top">
+      <div id="header">
+      </div>
+    </div>
+    <div class="chapter"
+    title="Chapter 3. When to use the OpenEngSB">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title">
+              <a id="when.to.use"
+              name="when.to.use"></a>Chapter 3. When to use the
+              OpenEngSB
+            </h2>
+          </div>
+        </div>
+      </div>
+      <p>
+        The OpenEngSB project has several direct purposes which
+        should be explained within this chapter to make clear in
+        which situations the OpenEngSB can be useful for you.
+      </p>
+      <div class="section"
+      title="3.1. The OpenEngSB as Base Environment">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="d0e68" name="d0e68"></a>3.1. The OpenEngSB
+                as Base Environment
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          OSGi is a very popular integration environment. Instead
+          of delivering one big product the products get separated
+          into minor parts and deployed within a general
+          envioronment. The problem with this concept is to get
+          old, well known concepts up and running in the new
+          environment. In addition tools such as PAX construct
+          allow a better integration into Apache Maven, and
+          extended OSGi runtimes, such as Karaf allow a richer and
+          easier development. Neverthless, settting up such a
+          system for development means a lot of hard manual work.
+          Using the OpenEngSB such systems can be setup within
+          minutes.
+        </p>
+      </div>
+      <div class="section"
+      title="3.2. Reusing integration Components and Workflows">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="d0e73" name="d0e73"></a>3.2. Reusing
+                integration Components and Workflows
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The OpenEngSB introduces a new level of ESB. Development
+          with all typical ESBs mean to start from the ground and
+          develop a complete, own environment, only using existing
+          connectors. Using the OpenEngSB not only connectors but
+          an entire integrated process, workflow and event
+          environment waits for you. In addition connectors to
+          different tools can not only be adapted to the specific
+          needs, but also simply replaced by other connectors,
+          using the Domain concept.
+        </p>
+      </div>
+      <div class="section" title="3.3. Management Environment">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="d0e78" name="d0e78"></a>3.3. Management
+                Environment
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The OpenEngSB delivers a complete management and
+          monitoring environment. While this environment can be
+          added to your project standalone (similar to e.g. Tomcat
+          management console) you also have the possibility to
+          completely integrate the OpenEngSB management enviornment
+          into your Apache Wicket application.
+        </p>
+      </div>
+      <div class="section"
+      title="3.4. Simple Development and Distribution Management">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="d0e83" name="d0e83"></a>3.4. Simple
+                Development and Distribution Management
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          While typical ESB have to be installed seperately from
+          your application the OpenEngSB is delivered with your
+          application. Develop your application in the OpenEngSB
+          environment and scripts to embed your application into
+          the OpenEngSB are provided. In addition easy blending
+          allows to adapt the OpenEngSB visually to your needs and
+          cooperate design.
+        </p>
+      </div>
+      <div class="section"
+      title="3.5. Simple Plug-Ins and Extensions">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="d0e88" name="d0e88"></a>3.5. Simple Plug-Ins
+                and Extensions
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The OpenEngSB provides the infrastructure for a rich
+          Plug-In and extension system. Using maven archetypes
+          Plug-Ins can be created, uploaded and provided to all
+          other OpenEngSB installations or applications using the
+          OpenEngSB.
+        </p>
+      </div>
+    </div>
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format"
+    class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left">
+            <a accesskey="p"
+            href="what.is.openengsb.html">Prev</a> 
+          </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="openengsb-manual.html">Home</a>
+          </td>
+          <td width="40%" align="right">
+             <a accesskey="n" href="tutorials.manual.html">Next</a>
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">
+            Chapter 2. What is the Open Engineering Service Bus 
+          </td>
+          <td width="20%" align="center">
+            <span style="color:white;font-size:85%;"><a
+            href="http://openengsb.org/"
+            title="OpenEngSB Community">OpenEngSB
+            Community</a></span>
+          </td>
+          <td width="40%" align="right" valign="top">
+             Part II. Tutorials
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

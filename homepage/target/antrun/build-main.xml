@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/home/pieber/projects/openengsb-framework/docs/homepage/target/site/">
+    <fileset dir="/home/pieber/projects/openengsb-framework/docs/homepage/target/openengsb-docs-manual-2.0.0-SNAPSHOT/">
+      <include name="**/*"/>
+    </fileset>
+  </copy>
+</target>
+</project>

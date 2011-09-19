@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
+    <meta http-equiv="Content-Type"
+    content="text/html; charset=ISO-8859-1" />
+    <title>
+      Chapter 22. Deployer services
+    </title>
+    <link rel="stylesheet" href="css/html.css" type="text/css" />
+    <meta name="generator"
+    content="DocBook XSL-NS Stylesheets V1.75.2" />
+    <link rel="home" href="openengsb-manual.html"
+    title="OpenEngSB Manual" />
+    <link rel="up" href="user.manual.html"
+    title="Part III. OpenEngSB Framework" />
+    <link rel="prev" href="developer.plugins.html"
+    title="Chapter 21. External Domains and Connectors" />
+    <link rel="next" href="developer.client.html"
+    title="Chapter 23. Client Projects and Embedding The OpenEngSB" />
+  </head>
+  <body bgcolor="white" text="black" link="#0000FF" vlink="#840084"
+  alink="#0000FF">
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format" id="top">
+      <div id="header">
+      </div>
+    </div>
+    <div class="chapter" title="Chapter 22. Deployer services">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title">
+              <a id="user.deployers"
+              name="user.deployers"></a>Chapter 22. Deployer
+              services
+            </h2>
+          </div>
+        </div>
+      </div>
+      <p>
+        The OpenEngSB supports file-based configuration through its
+        deployer services. These services are constantly checking
+        the "config/" directory for new/changed/deleted
+        configuration files.
+      </p>
+      <p>
+        If a new file is created, its configuration is loaded into
+        the OpenEngSB. When the file changes the configuration is
+        updated and when it is deleted the configuration is
+        unloaded. Each deployer handles a different type of
+        configuration file represented by different file name
+        extensions. Details and structure of these files are
+        covered in this section.
+      </p>
+      <p>
+        It should be noted that the OpenEngSB itself uses deployer
+        services for internal configuration. For this purpose the
+        deployer services also listen for configuration files in
+        "etc/". These config files however are essential for the
+        correct operation of the OpenEngSB and should not be
+        modified.
+      </p>
+      <div class="section" title="22.1. Connector configuration">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="user.deployers.connector"
+                name="user.deployers.connector"></a>22.1. Connector
+                configuration
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The connector deployer service creates, updates or
+          deletes instances of connector services.
+        </p>
+        <p>
+          All files in the "config/" directory with the extension
+          ".connector" are handled by the connector deployer. The
+          .connector files have to be simple property files
+          containing the configuration properies of a certain
+          connector service and their values. Those files have to
+          follow a specific form to be read correctly. First of all
+          they follow the pattern:
+          "domain+connector+instance.connector". Here "domain"
+          stands for the domainId to use (e.g. notification),
+          "connector" for the name of the connector which should be
+          created in the domain (e.g. mail) and "instance" is a
+          unique id per connector. A simple UUID or a unique
+          counter should do here. The content of the file is
+          two-fold. On one hand you can configure the properties of
+          a service directly using
+          property.NAME_OF_THE_PROPERTY=VALUE_OF_THE_PROPERTY (for
+          example property.location.root=notificaiton). Those
+          properties are directly added to the properties of a
+          service. On the other hand you have to configure the
+          connectors themselves. Therefore you have the
+          attribute.NAME_OF_THE_CONNECTOR_ATTRIBUTE=VALUE_TO_ASSIGN.
+          Throwing this together you can end with a connector file
+          as shown next.
+        </p>
+        <div class="example">
+          <a id="d0e1873" name="d0e1873"></a>
+          <p class="title">
+            <b>Example 22.1. Example .connector configuration file
+            for the email connector</b>
+          </p>
+          <div class="example-contents">
+            <p>
+              The email connector is regsitered in the root context
+              with the name notify. The file name has to be
+              notificaiton+email+dc110658-c6be-4470-8b41-6db154301791.connector
+              which represents a connector instance with the
+              instanceId dc110658-c6be-4470-8b41-6db154301791 of
+              the eemail connector in the notificaiton domain.
+            </p>
+<pre xml:space="preserve" class="programlisting">
+property.location.root=notify
+attribute.user = user
+attribute.password = test
+attribute.prefix = [test]
+attribute.smtpAuth = true
+attribute.smtpSender = test@test.com
+attribute.smtpPort = 25
+attribute.smtpHost = smtp.testserver.com
+     
+</pre>
+          </div>
+        </div><br class="example-break" />
+        <div class="section" title="22.1.1. Root services">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="user.deployers.connector.root"
+                  name="user.deployers.connector.root"></a>22.1.1. Root
+                  services
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            Note, that root services (ie. connector services
+            deployed from the "etc/" directory) are deployed with a
+            lower service ranking. This is done so that normal
+            services are preferred when matching services.
+          </p>
+        </div>
+      </div>
+      <div class="section" title="22.2. Context configuration">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="user.deployers.context"
+                name="user.deployers.context"></a>22.2. Context
+                configuration
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The context deployer service creates contexts according
+          to any .context files found in the config directory. The
+          context id is the file-name (without the extension). The
+          file content will be ignored. So for example
+        </p>
+      </div>
+    </div>
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format"
+    class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left">
+            <a accesskey="p"
+            href="developer.plugins.html">Prev</a> 
+          </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="openengsb-manual.html">Home</a>
+          </td>
+          <td width="40%" align="right">
+             <a accesskey="n" href="developer.client.html">Next</a>
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">
+            Chapter 21. External Domains and Connectors 
+          </td>
+          <td width="20%" align="center">
+            <span style="color:white;font-size:85%;"><a
+            href="http://openengsb.org/"
+            title="OpenEngSB Community">OpenEngSB
+            Community</a></span>
+          </td>
+          <td width="40%" align="right" valign="top">
+             Chapter 23. Client Projects and Embedding The
+            OpenEngSB
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

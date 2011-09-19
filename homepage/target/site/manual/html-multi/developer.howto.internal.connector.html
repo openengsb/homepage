@@ -1,0 +1,82 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;40.&nbsp;How To Create an Internal Connector</title><link rel="stylesheet" href="css/html.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"><link rel="home" href="openengsb-manual.html" title="OpenEngSB Manual"><link rel="up" href="developer.manual.html" title="Part&nbsp;VII.&nbsp;OpenEngSB Commiters &amp; Contributors"><link rel="prev" href="developer.quickstart.html" title="Chapter&nbsp;39.&nbsp;Getting Started as a Developer"><link rel="next" href="developer.howto.internal.domain.html" title="Chapter&nbsp;41.&nbsp;How To Create an Internal Domain"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns:fo="http://www.w3.org/1999/XSL/Format" id="top"><div id="header"><div class="projectlogo"></div></div></div><div xmlns:fo="http://www.w3.org/1999/XSL/Format" class="mhSpacer"></div><div class="chapter" title="Chapter&nbsp;40.&nbsp;How To Create an Internal Connector"><div class="titlepage"><div><div><h2 class="title"><a name="developer.howto.internal.connector"></a>Chapter&nbsp;40.&nbsp;How To Create an Internal Connector</h2></div></div></div><p>This chapter describes how to implement a connector for the OpenEngSB environment. A connector is an adapter
+    between an external tool and the OpenEngSB environment. Every connector belongs to a domain which defines the common
+    interface of all its connectors. This means that the connector is responsible to translate all calls to the common
+    interface to the externally provided tool.</p><div class="section" title="40.1.&nbsp;Prerequisites"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e3341"></a>40.1.&nbsp;Prerequisites</h2></div></div></div><p>In case it isn't known what a tool domain is and how it defines the interface for the tool connector then
+      <a class="xref" href="architecture.html#architecture.concept.tooldomains" title="14.4.&nbsp;OpenEngSB Tool Domains">Section&nbsp;14.4, &#8220;OpenEngSB Tool Domains&#8221;</a> is a good starting point. If there's already a matching domain for
+      this tool it is strongly recommended to use it. If the tool requires a new domain to be created relevant information can be found in <a class="xref" href="developer.howto.internal.domain.html" title="Chapter&nbsp;41.&nbsp;How To Create an Internal Domain">Chapter&nbsp;41, <i>How To Create an Internal Domain</i></a>.</p></div><div class="section" title="40.2.&nbsp;Creating a new connector project"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e3350"></a>40.2.&nbsp;Creating a new connector project</h2></div></div></div><p>To take burden off the developer of creating the initial boilerplate code and configuration, a Maven archetype
+      is provided for creating the initial project structure. Furthermore we provide the
+      <code class="literal">openengsb-maven-plugin</code> (see <a class="xref" href="developer.quickstart.html#developer.quickstart.tools.mavenplugin" title="39.7.1.&nbsp;openengsb-maven-plugin">Section&nbsp;39.7.1, &#8220;openengsb-maven-plugin&#8221;</a>)
+      (or the <code class="filename">etc/scripts/gen-connector.sh</code> script, which wraps the invocation of the maven plugin)
+      which simplifies the creation of a connector project from the archetype. It should be used for assisted creation
+      of a new connector project.</p><div class="section" title="40.2.1.&nbsp;Using the Maven Archetype"><div class="titlepage"><div><div><h3 class="title"><a name="d0e3363"></a>40.2.1.&nbsp;Using the Maven Archetype</h3></div></div></div><p>It is not recommended to use the maven archetype directly, because the <code class="literal">genConnector</code> goal
+      of the openengsb-maven-plugin executes additional tasks, I.e. renaming of the resulting project. Furthermore,
+      it tries to make sure that the new project is consistent with the naming conventions of the
+      OpenEngSB project.</p><p>The following parameters have to be specified to execute the correct archetype:
+        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">archetypeGroupId - the groupId of the OpenEngSB connector archetype.</li><li class="listitem">archetypeArtifactId - the artifactId of the OpenEngSB connector archetype.</li><li class="listitem">archetypeVersion - the current version of the OpenEngSB connector archetype.</li></ul></div><p>
+      </p><p>The following parameters have to be defined for the parent of the new connector. It is not solely parent
+      of the connector itself, but parent of the implementation of the domain and all other connectors of this domain too. 
+        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">parentArtifactId - the artifactId of the project parent.</li></ul></div><p>
+      </p><p>The following parameters have to be defined for the domain of the new connector.
+        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">groupId - the groupId of the domain.</li><li class="listitem">domainArtifactId - the artifactId of the domain.</li></ul></div><p>
+      </p><p>The following parameters have to be defined for the connector. 
+        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">artifactId - the connector artifact id. Has to be "openengsb-domains-&lt;yourDomain&gt;-&lt;yourConnector&gt;".</li><li class="listitem">version - the package for the source code of the domain implementation. Has to be "org.openengsb.domains.&lt;yourDomain&gt;".</li><li class="listitem">domainInterface - The name of the domain interface.</li><li class="listitem">parentPackage - The package in which the domain interface can be found.</li><li class="listitem">package - the package for the connector code. Usually &lt;parentPackage&gt;.&lt;yourConnector&gt; is used.</li><li class="listitem">name - the name of the implementation module. Has to be "OpenEngSB :: Domains :: &lt;yourDomain&gt; :: &lt;yourConnector&gt;"</li></ul></div><p>
+        Where &lt;yourDomain&gt; has to be replaced by your domain name and &lt;yourConnector&gt; has to be replaced by the respective connector name.
+      </p><p>Note that the archetype will use the artifactId to name the project, but the OpenEngSB convention is to use the
+      connector name. Therefore you will have to rename the resulting project (however if you use the
+      <code class="literal">genConnector</code> mojo, this renaming will be performed automatically).
+      Do not forget to check that the new connector is included in the modules section of the domain parent pom.</p></div><div class="section" title="40.2.2.&nbsp;Using mvn openengsb:genConnector"><div class="titlepage"><div><div><h3 class="title"><a name="d0e3416"></a>40.2.2.&nbsp;Using <code class="literal">mvn openengsb:genConnector</code></h3></div></div></div><p>
+        Simply invoke <code class="literal">mvn openengsb:genConnector</code> from the connector directory
+        (<code class="literal">connector/</code>) (alternatively the <code class="literal">etc/scripts/gen-connector.sh</code> script can
+        be used which invokes the openengsb-maven-plugin for you).
+      </p><div class="literallayout"><p><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="command"><strong>connector&nbsp;$</strong></span>&nbsp;mvn&nbsp;openengsb:genConnector<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></div><p>The mojo tries to guess as much as possible from your previous input. Guessed values
+        are displayed in brackets. If the guess is what you want, simply acknowledge with <code class="literal">Return</code>. The
+        following output has been recorded by executing the script in the <code class="literal">connector/</code>
+        directory:</p><div class="literallayout"><p><span class="command"><strong>Domain&nbsp;Name&nbsp;[domain]:&nbsp;</strong></span>notification&nbsp;&lt;Enter&gt;<br>
+<span class="command"><strong>Domain&nbsp;Interface&nbsp;[NotificationDomain]:&nbsp;</strong></span>&lt;Enter&gt;<br>
+<span class="command"><strong>Connector&nbsp;Name&nbsp;[myconnector]:&nbsp;</strong></span>twitter&nbsp;&lt;Enter&gt;<br>
+<span class="command"><strong>Version&nbsp;[1.0.0-SNAPSHOT]:&nbsp;</strong></span>&lt;Enter&gt;<br>
+<span class="command"><strong>Project&nbsp;Name&nbsp;[OpenEngSB&nbsp;::&nbsp;Domains&nbsp;::&nbsp;Notification&nbsp;::&nbsp;Twitter]:&nbsp;</strong></span>&lt;Enter&gt;</p></div><p>Only the domain and connector name was set, everything else has been guessed correctly. After these inputs
+        are provided the Maven Archetype gets called and may ask you for further inputs. You can simply hit <code class="literal">Return</code>
+        each time to acknowledge standard values. If it finishes successfully the new
+        connector project is created and you may start implementing.</p></div></div><div class="section" title="40.3.&nbsp;Project Structure"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e3466"></a>40.3.&nbsp;Project Structure</h2></div></div></div><p>The newly created connector project should have the exact same structure as the following listing:</p><pre class="programlisting">-- pom.xml
+-- src
+   -- main
+      -- java
+      |&nbsp; -- org
+      |&nbsp;    -- openengsb
+      |&nbsp;       -- domains
+      |&nbsp;          -- notification
+      |&nbsp;             -- twitter
+      |&nbsp;                -- internal
+      |&nbsp;                |&nbsp; -- MyServiceImpl.java
+      |&nbsp;&nbsp;               |&nbsp; -- MyServiceInstanceFactory.java
+      |&nbsp;&nbsp;               -- MyServiceManager.java
+      -- resources
+         -- META-INF
+         |&nbsp; -- spring
+         |&nbsp;    -- connector-context.xml
+         -- OSGI-INF
+            -- l10n
+               -- bundle_de.properties
+               -- bundle.properties</pre><p>The <code class="literal">MyServiceImpl</code> class implements the interface of the domain and thus is the
+      communication link between the OpenEngSB and the connected tool. To give the OpenEngSB (and in the long run the
+      end user) enough information on how to configure a connector, the <code class="literal">MyServiceInstanceFactory</code>
+      class provides the OpenEngSB with meta information for configuring and functionality for creating and updating a
+      connector instances. The <code class="literal">MyServiceManager</code> class connects connector instances with the
+      underlying OSGi engine and OpenEngSB infrastructure. It exports instances as OSGi services and adds necessary meta
+      information to each instance. Since the basic functionality is mostly similar for all service managers, the
+        <code class="literal">MyServiceManager</code> class extends a common base class
+      <code class="literal">AbstractServiceManager</code>. In addition the <code class="literal">AbstractServiceManager</code> also 
+      persists the configuration of each connector, so that the connector instances can be restored after a system
+      restart.</p><p>The spring setup in the resources folder contains the setup of the service manager. Additional bean setup and
+    dependency injection can be configured there.</p><p>The OpenEngSB has been designed with localization in mind. The Maven Archetype already generates two
+        <code class="literal">bundle*.properties</code> files, one for English (bundle.properties) and one for the German
+      (bundle_de.properties) language. Each connector has to provide localization through the properties files for
+      service and attributes text values. This includes localization for names, descriptions, attribute validation,
+      option values and more. For convenience the <code class="literal">BundleStrings</code> class is provided on all method calls
+      where text is needed for user representation for a specific locale.</p></div><div class="section" title="40.4.&nbsp;Integrating the Connector into the OpenEngSB environment"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e3503"></a>40.4.&nbsp;Integrating the Connector into the OpenEngSB environment</h2></div></div></div><p>The service manager is responsible for the integration of the connector into the OpenEngSB infrastructure. The correct
+    definition of this service is critical.</p></div></div><div xmlns:fo="http://www.w3.org/1999/XSL/Format" class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="developer.quickstart.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="openengsb-manual.html">Home</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="developer.howto.internal.domain.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;39.&nbsp;Getting Started as a Developer&nbsp;</td><td width="20%" align="center"><span style="color:white;font-size:85%;"><a href="http://openengsb.org/" title="OpenEngSB Community">OpenEngSB Community</a></span></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;41.&nbsp;How To Create an Internal Domain</td></tr></table></div></body></html>

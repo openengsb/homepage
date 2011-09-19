@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
+    <meta http-equiv="Content-Type"
+    content="text/html; charset=ISO-8859-1" />
+    <title>
+      Chapter 44. Admin
+    </title>
+    <link rel="stylesheet" href="css/html.css" type="text/css" />
+    <meta name="generator"
+    content="DocBook XSL-NS Stylesheets V1.75.2" />
+    <link rel="home" href="openengsb-manual.html"
+    title="OpenEngSB Manual" />
+    <link rel="up" href="developer.manual.html"
+    title="Part VII. OpenEngSB Commiters &amp; Contributors" />
+    <link rel="prev" href="developer.release.html"
+    title="Chapter 43. Release and Release Process" />
+    <link rel="next" href="developer.projectroles.html"
+    title="Chapter 45. Project Roles" />
+  </head>
+  <body bgcolor="white" text="black" link="#0000FF" vlink="#840084"
+  alink="#0000FF">
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format" id="top">
+      <div id="header">
+      </div>
+    </div>
+    <div class="chapter" title="Chapter 44. Admin">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title">
+              <a id="developer.admin"
+              name="developer.admin"></a>Chapter 44. Admin
+            </h2>
+          </div>
+        </div>
+      </div>
+      <p>
+        This section is relevant for everyone marked in the <a
+        class="link" href="http://openengsb.org/team-list.html"
+        target="_top">OpenEngSB Team List</a> as administrator. If
+        you require anything of the following points to be done
+        please write to the openengsb-dev mailing list or send a
+        mail directly to one of the administrators.
+      </p>
+      <div class="section" title="44.1. Infrastructure">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="developer.infrastructure"
+                name="developer.infrastructure"></a>44.1. Infrastructure
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          This section describes the OpenEngSB infrastructure and
+          the relevant parts to manage it.
+        </p>
+        <div class="section"
+        title="44.1.1. OpenEngSB Infrastructure Server">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="developer.admin.server"
+                  name="developer.admin.server"></a>44.1.1. OpenEngSB
+                  Infrastructure Server
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            The main server hosting our selfmaintained
+            infrastructure runs Ubuntu Linux and is hosted under
+            the domain "openengsb.org". The server is mainained
+            remotely via SSH [pw:server].
+          </p>
+          <p>
+            An apache2 server processes all requests and forwards
+            it to the corresponding service. The config-file that
+            connects the subdomains to the corresponding services
+            is located in /etc/apache2/sites-enabled/000-default.
+          </p>
+          <p>
+            This forwards point to a directory in /var/www that
+            redirects the browser to the correct page (like
+            build.openengsb.org -&gt; build.openengsb.org/hudson)
+            The tomcat-server for the homepage is located in
+            /var/opt/tomcat. JIRA is located in
+            /var/opt/atlassian-jira-enterprise-4.1.2/ Further all
+            passwd-files to control http-access are located in
+            /etc/apache2
+          </p>
+        </div>
+        <div class="section" title="44.1.2. OpenEngSB Build">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="developer.admin.build"
+                  name="developer.admin.build"></a>44.1.2. OpenEngSB
+                  Build
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            Hudson is accessible at <a class="link"
+            href="http://build.openengsb.org"
+            target="_top">http://build.openengsb.org</a>. To become
+            an admin create account and write mail to one of the
+            current admins.
+          </p>
+        </div>
+        <div class="section"
+        title="44.1.3. OpenEngSB Issuetracker">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="developer.admin.issue"
+                  name="developer.admin.issue"></a>44.1.3. OpenEngSB
+                  Issuetracker
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            JIRA is accessible at <a class="link"
+            href="http://issues.openengsb.org"
+            target="_top">http://issues.openengsb.org</a>. To
+            become an admin create account and write mail to one of
+            the current admins.
+          </p>
+        </div>
+        <div class="section" title="44.1.4. OpenEngSB git">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="developer.admin.git"
+                  name="developer.admin.git"></a>44.1.4. OpenEngSB
+                  git
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            The github is located at <a class="link"
+            href="http://git.openengsb.org"
+            target="_top">http://git.openengsb.org</a>. To become
+            an admin create a github-account (if you don't have
+            one) and write mail to one of the current admins.
+          </p>
+        </div>
+        <div class="section" title="44.1.5. OpenEngSB Maven">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="developer.admin.maven"
+                  name="developer.admin.maven"></a>44.1.5. OpenEngSB
+                  Maven
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="section" title="44.1.5.1. internal">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h4 class="title">
+                    <a id="developer.admin.maven.internal"
+                    name="developer.admin.maven.internal"></a>44.1.5.1. internal
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <p>
+              The internal maven-repo is accessible at <a
+              class="link" href="http://maven.openengsb.org"
+              target="_top">http://maven.openengsb.org</a>. Use
+              [pw:nexus] to login.
+            </p>
+          </div>
+          <div class="section" title="44.1.5.2. external">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h4 class="title">
+                    <a id="d0e3914"
+                    name="d0e3914"></a>44.1.5.2. external
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <p>
+              The external maven-repo hosting released artifacts is
+              located at <a class="link"
+              href="http://oss.sonatype.org"
+              target="_top">http://oss.sonatype.org</a>. Use
+              [pw:maven] to login.
+            </p>
+          </div>
+        </div>
+        <div class="section" title="44.1.6. OpenEngSB Mailinglist">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="developer.admin.mailinglist"
+                  name="developer.admin.mailinglist"></a>44.1.6. OpenEngSB
+                  Mailinglist
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            To obtain admin-access for the mailing lists register
+            google-account (if you don't have one), join <a
+            class="link"
+            href="http://openengsb.org/community/mailinglists.html"
+            target="_top">mailinglists</a> and write mail to one of
+            the current admins
+          </p>
+        </div>
+      </div>
+      <div class="section"
+      title="44.2. Logo Locations and Upgrade">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="developer.admin.logo"
+                name="developer.admin.logo"></a>44.2. Logo
+                Locations and Upgrade
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          This section describes the locations of the logo and what
+          have to be upgraded to the latest logo. The following
+          items are used in this section and are (should be) all
+          available within openengsb/etc/branding.
+        </p>
+        <div class="itemizedlist">
+          <ul class="itemizedlist" type="disc">
+            <li class="listitem">
+              openengsb.png: The full logo of the OpenEngSB in png
+              format. The size is not too important. At every
+              location used it is resized according to the
+              requirements automatically.
+            </li>
+            <li class="listitem">
+              openengsb_small.png: A reduced version of the
+              OpenEngSB logo. The most important thing with this
+              logo is that it have to be rectangular, since some
+              cases require this.
+            </li>
+            <li class="listitem">
+              openengsb.ico: This is the openengsb_small.png logo
+              convert to an ico file. Threfore scale the
+              openengsb_small.png. On unix install imagemagic and
+              png2ico and follow the following steps. Before you
+              start upate openengsb_smal.png in <code
+              class="literal">etc/branding</code>
+              <div class="literallayout">
+                <p>
+                  <span
+                  class="command"><strong>convert -resize 64x64 openengsb_small.png openengsb64x64.png</strong></span><br />
+                  <span
+                  class="command"><strong>convert -resize 32x32 openengsb_small.png openengsb32x32.png</strong></span><br />
+                  <span
+                  class="command"><strong>convert -resize 16x16 openengsb_small.png openengsb16x16.png</strong></span><br />
+                  <span
+                  class="command"><strong>png2ico openengsb.ico openengsb16x16.png openengsb32x32.png openengsb32x32.png</strong></span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="section"
+        title="44.2.1. External Infrastructure">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="d0e3955"
+                  name="d0e3955"></a>44.2.1. External
+                  Infrastructure
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            This section describes which tools have to be upgraded
+            and how this is done.
+          </p>
+          <div class="itemizedlist">
+            <ul class="itemizedlist" type="disc">
+              <li class="listitem">
+                Jira: Use openengsb_small.png as project logo.
+              </li>
+              <li class="listitem">
+                Twitter: Use openengsb.png as background and
+                openengsb_small.png as logo.
+              </li>
+              <li class="listitem">
+                Github: Upgrade gravatar with openengsb_icon.png to
+                upgrade openengsb@gmail.com.
+              </li>
+              <li class="listitem">
+                Facebook: Use openengsb.png for the group logo.
+              </li>
+              <li class="listitem">
+                Google Groups: Use openengsb_small.png for the
+                group logos (in all three lists).
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section"
+        title="44.2.2. Internal Management Application">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="d0e3971"
+                  name="d0e3971"></a>44.2.2. Internal Management
+                  Application
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            This section covers how to upgrade the logos in the
+            internal management application located within
+            openengsb/ui/web.
+          </p>
+          <div class="itemizedlist">
+            <ul class="itemizedlist" type="disc">
+              <li class="listitem">
+                src/main/resources/openengsb.png (openengsb.png)
+              </li>
+              <li class="listitem">
+                src/main/resources/openengsb.ico (openengsb.ico)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section" title="44.2.3. Documentation">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title">
+                  <a id="d0e3981"
+                  name="d0e3981"></a>44.2.3. Documentation
+                </h3>
+              </div>
+            </div>
+          </div>
+          <p>
+            Manual, Maven Site and all additional presentations of
+            the OpenEngSB are covered within this section
+            describing how and where to upgrade a logo.
+          </p>
+          <div class="itemizedlist">
+            <ul class="itemizedlist" type="disc">
+              <li class="listitem">
+                docs/homepage/src/site/resources/images/openengsb.png
+                uses openengsb.png to present a banner on the
+                homepage.
+              </li>
+              <li class="listitem">
+                docs/skin/src/main/resources/images/openengsb.ico
+                contains openengsb.ico which is presented as
+                favicon on openengsb.org
+              </li>
+              <li class="listitem">
+                docs/manual/src/main/docbx/resources/images/openengsb.png
+                contains openengsb.png which should be presented on
+                the html and pdf documentation of the OpenEngSB.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format"
+    class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left">
+            <a accesskey="p"
+            href="developer.release.html">Prev</a> 
+          </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="openengsb-manual.html">Home</a>
+          </td>
+          <td width="40%" align="right">
+             <a accesskey="n"
+            href="developer.projectroles.html">Next</a>
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">
+            Chapter 43. Release and Release Process 
+          </td>
+          <td width="20%" align="center">
+            <span style="color:white;font-size:85%;"><a
+            href="http://openengsb.org/"
+            title="OpenEngSB Community">OpenEngSB
+            Community</a></span>
+          </td>
+          <td width="40%" align="right" valign="top">
+             Chapter 45. Project Roles
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

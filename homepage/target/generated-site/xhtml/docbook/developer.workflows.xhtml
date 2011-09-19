@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
+    <meta http-equiv="Content-Type"
+    content="text/html; charset=ISO-8859-1" />
+    <title>
+      Chapter 18. Workflows
+    </title>
+    <link rel="stylesheet" href="css/html.css" type="text/css" />
+    <meta name="generator"
+    content="DocBook XSL-NS Stylesheets V1.75.2" />
+    <link rel="home" href="openengsb-manual.html"
+    title="OpenEngSB Manual" />
+    <link rel="up" href="user.manual.html"
+    title="Part III. OpenEngSB Framework" />
+    <link rel="prev" href="developer.management.html"
+    title="Chapter 17. Security in the OpenEngSB" />
+    <link rel="next" href="developer.taskbox.html"
+    title="Chapter 19. Taskbox" />
+  </head>
+  <body bgcolor="white" text="black" link="#0000FF" vlink="#840084"
+  alink="#0000FF">
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format" id="top">
+      <div id="header">
+      </div>
+    </div>
+    <div class="chapter" title="Chapter 18. Workflows">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title">
+              <a id="developer.workflows"
+              name="developer.workflows"></a>Chapter 18. Workflows
+            </h2>
+          </div>
+        </div>
+      </div>
+      <p>
+        The OpenEngSB supports the modeling of workflows. This
+        could be done by two different approaches. First of all a
+        rule-based event approach, by defining actions based on
+        events (and their content) which were thrown in or to the
+        bus. Events are practical for "short-time handling" since
+        they are also easy to replace and extend. For long running
+        business processes the secondary workflow method could be
+        used which is based on <a class="xref"
+        href="developer.workflows.html#workflows.processes"
+        title="18.3. Processes">Section 18.3, “Processes”</a>
+        described in Drools-Flow.
+      </p>
+      <p>
+        The workflow service takes "events" as input and handles
+        them using a rulebased system (JBoss Drools). It provides
+        methods to manage the rules.
+      </p>
+      <p>
+        The workflow component consists of two main parts: The
+        RuleManager and the WorkflowService.
+      </p>
+      <div class="section" title="18.1. Workflow service">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="d0e1692" name="d0e1692"></a>18.1. Workflow
+                service
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The <a class="link"
+          href="https://github.com/openengsb/openengsb/blob/master/core/api/src/main/java/org/openengsb/core/api/workflow/WorkflowService.java"
+           target="_top">workflow service</a> is responsible for
+          processing events, and makes sure the rulebase is
+          connected to the environment (domains and connectors).
+          When an event is fired, the workflow-service spawns a new
+          session of the rulebase. The session gets populated with
+          references to domain-services and other helper-objects in
+          form of global variables. A drools-session is running in
+          a sandbox. This means that the supplied globals are the
+          only way of triggering actions outside the rule-session.
+        </p>
+      </div>
+      <div class="section" title="18.2. Rulemanager">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="d0e1700"
+                name="d0e1700"></a>18.2. Rulemanager
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          The <a class="link"
+          href="https://github.com/openengsb/openengsb/blob/master/core/api/src/main/java/org/openengsb/core/api/workflow/RuleManager.java"
+           target="_top">rule manager</a> provides methods for
+          modifying the rulebase. As opposed to plain drl-files,
+          the rulemanager organized the elements of the rulebase in
+          its own manner. Rules, Functions and flows are saved
+          separately. All elements share a common collection of
+          import- and global-declarations. These parts are sticked
+          together by the rulemanager, to a consistent rulebase. So
+          when adding a new rule or function to the rulebase, make
+          sure that all imports are present before. Otherwise the
+          adding of the elements will fail.
+        </p>
+      </div>
+      <div class="section" title="18.3. Processes">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a id="workflows.processes"
+                name="workflows.processes"></a>18.3. Processes
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p>
+          In addition to processing Events in
+          global/context-specific rules, it is also possible to use
+          them to control a predefined workflow. The
+          WorkflowService provides methods for starting and
+          controlling workflow-processes.
+        </p>
+        <p>
+          When the workflow service receives an event, it is
+          inserted into the rulebase as a new fact (and rules are
+          fired accordingly). In addition the event is "signaled"
+          to every active workflow-process. Workflow logic may use
+          specific rules to filter these events.
+        </p>
+      </div>
+    </div>
+    <div xmlns:fo="http://www.w3.org/1999/XSL/Format"
+    class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left">
+            <a accesskey="p"
+            href="developer.management.html">Prev</a> 
+          </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="openengsb-manual.html">Home</a>
+          </td>
+          <td width="40%" align="right">
+             <a accesskey="n"
+            href="developer.taskbox.html">Next</a>
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">
+            Chapter 17. Security in the OpenEngSB 
+          </td>
+          <td width="20%" align="center">
+            <span style="color:white;font-size:85%;"><a
+            href="http://openengsb.org/"
+            title="OpenEngSB Community">OpenEngSB
+            Community</a></span>
+          </td>
+          <td width="40%" align="right" valign="top">
+             Chapter 19. Taskbox
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
