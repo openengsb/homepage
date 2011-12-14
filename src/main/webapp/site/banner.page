@@ -1,0 +1,17 @@
+---
+title: Banner
+page_version: 7
+page_creator: gnodet
+page_modifier: gnodet
+--- pipeline:conf
+{html:output=html|noPanel=true}
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td align="left" class="topbardiv" nowrap="">
+<a href="http://project.foundation.org/" title="Project">
+            <img border="0" src="/images/logo.png" width="150px"></img>
+</a>
+          </td>
+        </tr> 
+      </table>
+{html}

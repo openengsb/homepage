@@ -1,0 +1,16 @@
+---
+title: Issue Tracker
+page_version: 1
+page_creator: lstampf
+page_modifier: lstampf
+--- pipeline:conf
+h1. Issue Tracker
+
+This project uses [JIRA|http://www.atlassian.com/software/jira] a J2EE-based, issue tracking and project management application.
+
+h2. Issue Tracking
+Issues, bugs, and feature requests should be submitted to the following issue tracking system for this project.
+
+{panel}
+[http://issues.openengsb.org/jira/browse/OPENENGSB]
+{panel}

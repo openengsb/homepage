@@ -1,0 +1,13 @@
+---
+title: Guidelines
+page_version: 1
+page_creator: lstampf
+page_modifier: lstampf
+--- pipeline:conf
+h1. Quickstart
+
+This side references parts from the [documentation].
+
+* [Installation|/index/documentation/html-multi/howto.setup.html]
+* [Connectors and Domains|/index/documentation/html-multi/howto.logging.html]
+* [Events|/index/documentation/html-multi/howto.contexteditor.html]

@@ -1,0 +1,23 @@
+---
+title: FAQ
+page_version: 1
+page_creator: lstampf
+page_modifier: lstampf
+--- pipeline:conf
+h1. FAQ
+
+h3. General questions about the OpenEngSB 
+
+# [What is OpenEngSB? | What is OpenEngSB]
+# [Why is OpenEngSB developed as open-source project? | Why is OpenEngSB developed as open-source project]
+# [Where can I find help? | Where can I find help]
+# [What platforms does OpenEngSB support?| What platforms does OpenEngSB support]
+# [What license is used? | What license is used]
+# [Where can I find the source code? | Where can I find the source code]
+# [Where can I file a bug report or feature request? | Where can I file a bug report or feature request]
+# [How long will my OpenEngSB-version be supported? | How long will my OpenEngSB-version be supported]
+
+h3. Development
+
+# [How can I contribute to the OpenEngSB project? | How can I contribute to the OpenEngSB project]
+# [Can I debug OpenEngSB with source-code? | Can I debug OpenEngSB with source-code]

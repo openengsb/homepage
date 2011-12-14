@@ -1,0 +1,9 @@
+---
+title: Why is OpenEngSB developed as open-source project
+page_version: 1
+page_creator: lstampf
+page_modifier: lstampf
+--- pipeline:conf
+h4. Why is OpenEngSB developed as open-source project?
+
+OpenEngSB is developed as a FOSS (Free and open-source software) project to provide developers with a transparent and adaptable framework for integration of engineering tools. As usual for successful plattforms in heterogeneous systems open source-access allows developers to directly review and adapt the base framework to their needs. Closed-source licenses do not provide this kind of freedom and prevent framework users from doing what is best for their project. OpenEngSB uses the liberal Apache License 2.0 and ensures sustained transparency.

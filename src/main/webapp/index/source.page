@@ -1,0 +1,29 @@
+---
+title: Source
+page_version: 4
+page_creator: gnodet
+page_modifier: jbonofre
+--- pipeline:conf
+h1. Source
+
+This project uses Git as Source Content Management System to manage its source code. 
+
+h2. Web Access
+
+The following is a link to the online source repository.
+{panel}
+http://github.com/openengsb/openengsb
+{panel}
+
+h2. Anonymous access
+
+Refer to the documentation of the SCM used for more information about anonymously check out. The connection url is:
+{panel}
+git:git://github.com/openengsb/openengsb.git
+{panel}
+
+h2. Developer access
+
+{code}
+git:git@github.com:openengsb/openengsb-framework.git
+{code}

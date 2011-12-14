@@ -1,0 +1,20 @@
+---
+title: Navigation
+page_version: 17
+page_creator: gnodet
+page_modifier: lstampf
+--- pipeline:conf
+
+h3. [Home|Index]
+h3. [FAQ]
+h3. [Quickstart]
+h3. [Download]
+h3. [Documentation|/index/documentation]
+h3. [Help]
+h3. [Source]
+h3. [Contribute]
+h3. [Guidelines]
+h3. Subprojects
+- [OpenCIT|http://opencit.openengsb.org/]
+- [OpenTicket|http://openticket.openengsb.org/]
+- [YASTE|http://yaste.openengsb.org/]
