@@ -30,9 +30,9 @@
     <scalate.mode>production</scalate.mode>
     <scalate.workdir>${project.build.directory}/scalateWorkDir</scalate.workdir>
     <maven.wagon.version>1.0-beta-6</maven.wagon.version>
-	<maven.antrun.version>1.7</maven.antrun.version>
+    <maven.antrun.version>1.7</maven.antrun.version>
   </properties>
- 
+
   <repositories>
     <repository>
       <id>fusesource</id>
@@ -165,7 +165,7 @@
                   <type>zip</type>
                   <classifier>html-single</classifier>
                 </artifactItem>
-				<artifactItem>
+                <artifactItem>
                   <groupId>org.openengsb.docs</groupId>
                   <artifactId>openengsb-docs-manual</artifactId>
                   <version>${documentation.version}</version>
@@ -173,12 +173,12 @@
                   <classifier>html-multi</classifier>
                 </artifactItem>
               </artifactItems>
-			  <outputDirectory>${project.build.directory}/documentation/</outputDirectory>
+              <outputDirectory>${project.build.directory}/documentation/</outputDirectory>
             </configuration>
           </execution>
         </executions>
       </plugin>
-	  <plugin>
+      <plugin>
         <groupId>net.sourceforge.docbook-utils.maven-plugin</groupId>
         <artifactId>maven-tidy-plugin</artifactId>
         <version>1.0.0.beta-1</version>
@@ -233,7 +233,6 @@
           </jtidyConfiguration>
         </configuration>
       </plugin>
-	  
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -253,12 +252,12 @@
           </execution>
         </executions>
       </plugin>
-	  <plugin>
-	    <groupId>org.apache.maven.plugins</groupId>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
-		<version>${maven.antrun.version}</version>
+        <version>${maven.antrun.version}</version>
         <executions>
-		  <execution>
+          <execution>
             <id>copy-multi-html_resources</id>
             <phase>process-resources</phase>
             <configuration>
@@ -274,7 +273,7 @@
               <goal>run</goal>
             </goals>
           </execution>
-		  <execution>
+          <execution>
             <id>copy-multi-html-manual</id>
             <phase>process-resources</phase>
             <configuration>
@@ -302,7 +301,7 @@
                 </copy>
               </target>
             </configuration>
-			<goals>
+            <goals>
               <goal>run</goal>
             </goals>
           </execution>
@@ -318,7 +317,7 @@
                 </copy>
               </target>
             </configuration>
-			<goals>
+            <goals>
               <goal>run</goal>
             </goals>
           </execution>
@@ -342,7 +341,7 @@
         <configuration>
           <remoteServerId>OpenengsbWebServer</remoteServerId>
           <remoteServerUrl>scp://openengsb.org/var/www/openengsb/oeb</remoteServerUrl>
-        </configuration>		
+        </configuration>
         <dependencies>
           <dependency>
             <groupId>org.apache.maven.wagon</groupId>
