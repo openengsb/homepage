@@ -341,7 +341,7 @@
         </executions>
         <configuration>
           <remoteServerId>OpenengsbWebServer</remoteServerId>
-          <remoteServerUrl>scp://openengsb.org/var/www/openengsb/</remoteServerUrl>
+          <remoteServerUrl>scp://openengsb.org/var/www/openengsb/oeb</remoteServerUrl>
         </configuration>		
         <dependencies>
           <dependency>
