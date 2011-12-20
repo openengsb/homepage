@@ -4,22 +4,24 @@ page_version: 15
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
-h2. OpenEngSB
+h1. Downloads
 
-||Version||Description||Release Notes||Download Link||PGP||SHA1||MD5||
-|2.0.0|Binary Distribution|[Release Notes|download/openengsb/2.0.0.html]| | | | |
-|2.0.0|Source Distribution| | | | | |
+h2. OpenEngSB
 
 As a workaround for the missing release there are snapshots available [here|https://oss.sonatype.org/content/repositories/snapshots/org/openengsb/openengsb/2.0.0-SNAPSHOT/]
 
 h2. OpenEngSB Framework
 
-||Version||Description||Release Notes||Download Link||PGP||SHA1||MD5||
-|2.2.1|Binary Distribution|[Release Notes|download/framework/2.2.1.html]| [openengsb-framework-2.2.1|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.1/openengsb-framework-2.2.1.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.1/openengsb-framework-2.2.1.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.1/openengsb-framework-2.2.1.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.1/openengsb-framework-2.2.1.zip.md5]|
-|2.2.1|Source Distribution| | | | | |
+||Version||Date||Download||
+|2.0.0|Not available|Not available|
+
+h2. OpenEngSB Manual Builder Resources
+
+||Version||Date||Download||
+|1.0.0|2011-12-20|[download|download/openengsb-manual-builder-resources/v1.0.0]|
 
 h2. Keys
-The {{KEYS}} used to sign the release can be found [here|http://www.apache.org/dist/karaf/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
 
 h2. Previous releases
 

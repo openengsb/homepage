@@ -1,0 +1,37 @@
+---
+title: openengsb-manual-builder-resources-1.0.0
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0.jar]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0.jar.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0.jar.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0.jar.md5]|
+|Source Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0-src.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0-src.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0-src.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-manual-builder-resources/1.0.0/openengsb-manual-builder-resources-1.0.0-src.zip.md5]|
+
+...or use it directly in Apache Maven...
+
+{code}
+<dependency>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-manual-builder-resources</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+</dependency>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Release Notes - OpenEngSB Manual Builder Resources - Version 1.0.0 2011-12-20
+
+This release simply contains the copied resources from OpenEngSB Framework 2.2.1. Basically those could be used for
+every manual build for the OpenEngSB.
+
+h3. Task
+ * [OPENENGSB-2424|http://issues.openengsb.org/jira/browse/OPENENGSB-2424] - Provide initial project infrastructure for openengsb-manual-builder-resources
+ * [OPENENGSB-2425|http://issues.openengsb.org/jira/browse/OPENENGSB-2425] - Move resources from openengsb-framework to openengsb-manual-builder-resources
+ * [OPENENGSB-2426|http://issues.openengsb.org/jira/browse/OPENENGSB-2426] - Release manual-builder-resources 1.0.0
+

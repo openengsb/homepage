@@ -8,19 +8,8 @@ h1. Releases history
 
 {toc:minLevel=2|maxLevel=2}
 
-h2. Old Version
+h2. OpenEngSB Manual Builder Resources
 
-[Release Notes|download/old-release.html]
-
-h3. Binary Distribution
-
-||Description||Download Link|| || || ||
-|Windows Distribution| [old.zip|http://some/path/old.zip]|[PGP|http://some/path/old.zip.asc]|[SHA1|http://some/path/old.zip.sha1]|[MD5|http://some/path/old.zip.md5]|
-|Unix/Linux/Cygwin Distribution| [old.tar.gz|http://some/path/old.tar.gz]|[PGP|http://some/path/old.tar.gz.asc]|[SHA1|http://some/path/old.tar.gz.sha1]|[MD5|http://some/path/old.tar.gz.md5]|
-
-h3. Source Distribution
-
-||Description||Download Link|| || || ||
-|Windows Source Distribution| [old-src.zip|http://some/path/old-src.zip]|[PGP|http://some/path/old-src.zip.asc]|[SHA1|http://some/path/old-src.zip.sha1]|[MD5|http://some/path/old-src.zip.md5]|
-|Unix/Linux/Cygwin Source Distribution| [old-src.tar.gz|http://some/path/old-src.tar.gz]|[PGP|http://some/path/old-src.tar.gz.asc]|[SHA1|http://some/path/old-src.tar.gz.sha1]|[MD5|http://some/path/old-src.tar.gz.md5]|
+||Version||Date||Download||
+|1.0.0|2011-12-20|[download|openengsb-manual-builder-resources/v1.0.0]|
 
