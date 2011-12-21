@@ -1,0 +1,85 @@
+---
+title: Admin
+page_version: 1
+page_creator: arcticwolf
+--- pipeline:conf
+
+h2. Admin
+
+This section is relevant for everyone marked in the [OpenEngSB Team List|Team] as administrator. If you require anything of the following points to be done please write to the openengsb-dev mailing list or send a mail directly to one of the administrators.
+
+h3. Infrastructure
+
+This section describes the OpenEngSB infrastructure and the relevant parts to manage it.
+
+h4. OpenEngSB Infrastructure Server
+
+The main server hosting our selfmaintained infrastructure runs Ubuntu Linux and is hosted under the domain "openengsb.org". The server is mainained remotely via SSH [pw:server].
+An apache2 server processes all requests and forwards it to the corresponding service. The config-file that connects the subdomains to the corresponding services is located in /etc/apache2/sites-enabled/000-default.
+
+This forwards point to a directory in /var/www that redirects the browser to the correct page (like build.openengsb.org -> build.openengsb.org/hudson). The tomcat-server for the homepage is located in /var/opt/tomcat.
+JIRA is located in /var/opt/atlassian-jira-enterprise-4.1.2/. Further all passwd-files to control http-access are located in /etc/apache2.
+
+h4. OpenEngSB Build
+
+Hudson is accessible [here|http://build.openengsb.org].
+
+h4. OpenEngSB Issuetracker
+
+JIRA is accessible [here|http://issues.openengsb.org].
+
+h4. OpenEngSB git
+
+The Github project page is [here|http://git.openengsb.org].
+
+h4. OpenEngSB Maven
+
+h5. internal
+The internal maven-repo is accessible [here|http://maven.openengsb.org].
+
+h5. external
+The external maven-repo hosting released artifacts is located [here|http://oss.sonatype.org].
+
+h4. OpenEngSB Mailinglist
+
+To obtain admin-access for the mailing lists register google-account (if you don't have one), join [Mailing Lists] and write mail to one of the current admins.
+
+h3. Logo Locations and Upgrade
+
+This section describes the locations of the logo and what have to be upgraded to the latest logo. The following items are used in this section and are (should be) all available within openengsb/etc/branding.
+
+*) openengsb.png: The full logo of the OpenEngSB in png format. The size is not too important. At every location used it is resized according to the requirements automatically.
+*) openengsb_small.png: A reduced version of the OpenEngSB logo. The most important thing with this logo is that it have to be rectangular, since some cases require this.
+*) openengsb.ico: This is the openengsb_small.png logo convert to an ico file. Threfore scale the openengsb_small.png. On unix install imagemagic and png2ico and follow the following steps. Before you startupate openengsb_smal.png in "etc/branding":
+{code}
+convert -resize 64x64 openengsb_small.png openengsb64x64.png
+convert -resize 32x32 openengsb_small.png openengsb32x32.png
+convert -resize 16x16 openengsb_small.png openengsb16x16.png
+png2ico openengsb.ico openengsb16x16.png openengsb32x32.png openengsb32x32.png
+{code}
+
+h4. External Infrastructure
+
+This section describes which tools have to be upgraded and how this is done.
+
+*) Jira: Use openengsb_small.png as project logo.
+*) Twitter: Use openengsb.png as background and openengsb_small.png as logo.
+*) Github: Upgrade gravatar with openengsb_icon.png to upgrade openengsb@gmail.com.
+*) Facebook: Use openengsb.png for the group logo.
+*) Google Groups: Use openengsb_small.png for the group logos (in all three lists).
+
+h4. Internal Management Application
+
+This section covers how to upgrade the logos in the internal management application located within openengsb/ui/web.
+
+*) src/main/resources/openengsb.png (openengsb.png)
+*) src/main/resources/openengsb.ico (openengsb.ico)
+
+h4. Documentation
+
+Manual, Maven Site and all additional presentations of the OpenEngSB are covered within this section describing how and where to upgrade a logo.
+
+*) docs/homepage/src/site/resources/images/openengsb.png uses openengsb.png to present a banner on the homepage.
+*) docs/skin/src/main/resources/images/openengsb.ico contains openengsb.ico which is presented as favicon on openengsb.org.
+*) docs/manual/src/main/docbx/resources/images/openengsb.png contains openengsb.png which should be presented on the html and pdf documentation of the OpenEngSB.
+
