@@ -201,7 +201,7 @@ Currently the default configurations can not be changed or adapted in the OpenEn
 
 h3. Available Goals
 
-h4. openengsb:assemble or "etc/scripts/assemble.sh
+h4. openengsb:assemble or "etc/scripts/assemble.sh"
 Installs the OpenEngSB and skips tests. Furthermore a <emphasis>nightly</emphasis> profile is activated if available in your poms.
 
 h4. openengsb:eclipse or "etc/scripts/eclipse.sh"
@@ -211,10 +211,10 @@ h4. openengsb:checkstyle
 Performs a Checkstyle check of the project. The checkstyle configuration file which is used for the check can be found [here|https://github.com/openengsb/openengsb-maven-plugin/tree/master/src/main/resources/checkstyle].
 We ship this configuration file with the plugin (and changes need to be done there) because we think it may be useful for other OpenEngSB related projects. Setting up eclipse projects with configured checkstyle becomes very easy that way (simply mvn openengsb:eclipse).
 
-h4. openengsb:genConnector or "etc/scripts/gen-connector.sh
+h4. openengsb:genConnector or "etc/scripts/gen-connector.sh"
 Guides interactively through the creation of a connector and generates the artifact via the connector archetype.
 
-h4. openengsb:genDomain or "etc/scripts/gen-domain.sh
+h4. openengsb:genDomain or "etc/scripts/gen-domain.sh"
 Guides interactively through the creation of a domain and generates the artifact via the domain archetype.
 
 h4. openengsb:licenseCheck or "etc/scripts/license-check.sh"
