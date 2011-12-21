@@ -173,23 +173,23 @@ h3. Configuring the openengsb-maven-plugin for your project
 To use the openengsb-maven-plugin in your project add the following configuration to your project's pom.xml:
 
 {code}
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   ...
-  &lt;build&gt;
-    &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.openengsb&lt;/groupId&gt;
-        &lt;artifactId&gt;openengsb-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;${openengsb.maven.plugin.version}&lt;/version&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.openengsb</groupId>
+        <artifactId>openengsb-maven-plugin</artifactId>
+        <version>${openengsb.maven.plugin.version}</version>
+      </plugin>
+    </plugins>
+  </build>
   ...
-&lt;/project&gt;   
+</project>   
 {code}
-The plugin can now be invoked via {code}mvn openengsb:&lt; goal&gt;{code}
+The plugin can now be invoked via {code}mvn openengsb:<goal>{code}
 
 h3. Purpose of the openengsb-maven-plugin
 
@@ -262,9 +262,9 @@ Parameters:
 h4. openengsb:releaseNightly or "etc/scripts/release-nightly.sh"
 Mojo to perform nightly releases. This mojo activates the "nightly" profile in the project, where you can put your additional configuration for nightly releases (To see what these profiles can be necessary for please read the descript of the other release mojos).
 
-h4. openengsb:release&lt;XXX&gt;
-The release&lt;XXX&gt; mojos (except Nightly) wrap the [maven-license-plugin|http://code.google.com/p/maven-license-plugin/], basically just invoking "mvn release:prepare" and then "mvn release:perform" with some useful default configuration which can be reused for other projects related to the openengsb.
-These mojos perform a release and activate the "&lt;XXX&gt;" profile. These release profiles are important and are required to ..</para>
+h4. openengsb:release<XXX>
+The release<XXX> mojos (except Nightly) wrap the [maven-license-plugin|http://code.google.com/p/maven-license-plugin/], basically just invoking "mvn release:prepare" and then "mvn release:perform" with some useful default configuration which can be reused for other projects related to the openengsb.
+These mojos perform a release and activate the "<XXX>" profile. These release profiles are important and are required to ..</para>
 *) .. select the appropriate passphrase for the maven release repository from your "settings.xml". For additional information on this topic see [Release].
 *) .. set links depending on the release type. For examples please see the profiles in [the pom|https://github.com/openengsb/openengsb/blob/master/pom.xml]
 *) .. configure distribution management of the project site, depending on the release type. For examples see [docs/homepage/pom|https://github.com/openengsb/openengsb/blob/master/docs/homepage/pom.xml">docs/homepage/pom]
