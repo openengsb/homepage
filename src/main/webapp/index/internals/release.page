@@ -1,0 +1,498 @@
+---
+title: How to release the OpenEngSB
+page_version: 1
+page_creator: arcticwolf
+--- pipeline:conf
+
+h2. Release and Release Process
+
+This section provides a step by step description to execute a release of the OpenEngSB. It is relevant for everyone marked in the [OpenEngSB Team List|Team] as release manager because only they have the required rights to execute the following steps.
+
+h3. Releases and the OpenEngSB
+
+Every release of the OpenEngSB consists of the following parts: RELEASE.MAJOR.MINOR.TYPE. Every release of this type is available at [Maven Central|http://repo1.maven.org/maven2/]. Optionally SNAPSHOT is appended. Snapshot releases are available from the [Sonatype Snapshot repository|https://oss.sonatype.org/content/groups/public/]. This section explains what each modifier means and how it is used within the OpenEngSB.
+
+SNAPSHOTS: Snapshots are always available from the latest build of the OpenEngSB. They are taken from the master branch automatically at each commit.
+
+TYPE: Type could be MX, RCX or RELEASE, where X is a number. While RELEASE marks a final release, ready for use in your production environment, M and RC are typically not ready for production. M stands for Milestone release and is cut every two weeks to present the current state of the OpenEngSB and allow a coarse grained planning and roadmap for the OpenEngSB team. RC, release candidates, are handled differently. 
+After everything is finished and the OpenEngSB teams think that the current work is ready for a release, we provide a release candidate and invite everyone to test the release. If there are any issues with the release we fix them and provide another release candidate. During this process no new features, but only bug fixes are handled. We continue this process as long as there are no new bug reports for a RC for two weeks. 
+Then we re-release the latest release candidate as final release. This process only applies for RELEASE and MAJOR. MINOR is handled differently, as explained later on.
+
+RELEASE is a increasing number used for mayor changes within the OpenEngSB architecture. In addition all methods and interfaces marked as deprecated are removed during such a release. It is also possible that a RELEASE does not enhance any mayor architectural concept but is only used to get rid of all the deprecated methods, generated during MAJOR releases.
+
+MAJOR is the main feature development number of the OpenEngSB. Each release containing new features will be a MAJOR release. Nevertheless, between MAJOR releases architectural concepts are not removed but only set to deprecated. This means they only enhance functionality but try to not break with former releases.
+
+MINOR releases are bug-fix releases. They do not include any new features but only fix bugs within the OpenEngSB. They have no release plan, but are simply cut after each bug-fix.
+
+To visualize the explained process the following example. Assume we have released openengsb-1.0.0.RELEASE. Now we're working on openengsb-1.1.0.RELEASE. Therefore we start developing openengsb-1.1.0.M1 which will be released in two weeks. During the development of 1.1.0.M1 a bug occurs at openengsb-1.0.0.RELEASE. During the development the bug is fixed and openengsb-1.0.1.RELEASE is released. 
+After 1.1.0.M1 we require three additional milestone releases to get feature releases. Six weeks after 1.1.0.M1 we'll release 1.1.0.RC1. From now on we continue to develop 1.2.0.M1 (or 2.0.0.M1, depending on the gravity of the changes) and wait for feedback on 1.1.0.RC1. Now a bug-report occurs for 1.0.1.RELEASE. We fix the bug, release 1.0.2.RELEASE with the fix. 
+If it also affects 1.1.0.RC1, we fix the bug there too and release 1.1.0.RC2 (still working on 1.2.0.M1(!)). Now assume that some other bug reports are received for 1.0.0.RC2. We fix them and release 1.1.0.RC3. In the meantime we finished 1.2.0.M1 and start work on 1.2.0.M2. Now two weeks after the release of 1.1.0.RC3 without any new bug-reports we re-release 1.1.0.RC3 to 1.1.0.RELEASE (starting the game again from the beginning).
+
+h3. Git Branches
+
+For the best cooperation between Git and Maven the OpenEngSB team has developed its own workflow with branches during releases. For different project phases (milestone, RC, final, support) different workflows apply.
+
+h3. New Feature Workflow
+
+For new features the already described workflow apply. This means create a feature branch based on the integration branch, add your commits and create a pull request if you're finished. Your changes will be merged (after review) to the integration branch. From time to time the integration branch ins merged into the master, which is pushed as  snapshots to sonatype.
+
+h3. Milestone Releases
+
+For milestone releases about one day before a planned release a openensb-1.X.0-release branch is created. This branch can be forward merged to integration as often as liked (no backward merges are allowed). If all final bugs and changes are done the MX version is released on this branch and the branch is merged into integration and deleted again. During this process any number of new features are merged into integration, without affecting the release any longer.
+
+h3. Release Candidates
+
+RCs are the pre-level for final releases. This means, after the openengsb team decides a release is ready to go, two new branch are created from the latest commit AFTER the milestone release (where the mvn versions are set backo the snapshot version): openengsb-1.X.x-dev and openengsb-1.X.x-release. openengsb-1.X.x-dev is used for bug-fixes. 
+Every fix which should also be merged into the integration branch/master should be branched off openengsb-1.X.x-dev and afterewards merged into integration and openengsb-1.X.x-dev. If a release is ready openengsb-1.X.x-dev is merged into openengsb-1.X.x-release, where the release takes place. BUT no merge from openengsb-1.X.x-release to openengsb-1.X.x-release is allowed!
+
+h3. Final and Support Releases
+
+All support and final releases are handled exactly as the RC releases between the openengsb-1.X.x-dev and openengsb-1.X.x-release branch.
+
+h3. Configure Maven
+
+For the right rights to deploy to maven central and upload maven site to openengsb.org the following entries are required in your ~/.m2/settings.xml file:
+
+{code}
+<![CDATA[<settings>
+  <server>
+    <id>sonatype-nexus-snapshots</id>
+    <username>SONATYPE_USERNAME</username>
+    <password>SONATYPE_PASSWORD</password>
+  </server>
+  <server>
+    <id>sonatype-nexus-staging</id>
+    <username>SONATYPE_USERNAME</username>
+    <password>SONATYPE_PASSWORD</password>
+  </server>
+  <server>
+    <id>OpenengsbWebServer</id>
+    <username>OPENENGSB_SERVER_USERNAME</username>
+    <password>OPENEGNSB_SERVER_PASSWORD</password>
+  </server>
+  <profiles>
+    <profile>
+      <id>milestone</id>
+      <properties>
+        <gpg.passphrase>GPG_PASSPHRASE</gpg.passphrase>
+      </properties>
+    </profile>
+    <profile>
+      <id>release</id>
+      <properties>
+        <gpg.passphrase>GPG_PASSPHRASE</gpg.passphrase>
+      </properties>
+    </profile>
+    <profile>
+      <id>final</id>
+      <properties>
+        <gpg.passphrase>GPG_PASSPHRASE</gpg.passphrase>
+      </properties>
+    </profile>
+  </profiles>
+<settings>]]>
+{code}
+
+All the usernames and passwords can be retrieved from someone marked as administrator in the [OpenEngSB Team List|Team].
+
+In addition you have to have a GPG key for your mail address (the same you're using to commit to the OpenEngSB source repository which is uploaded to the [MIT Key Server|hkp://pgp.mit.edu/].
+
+h3. Adapt Jira
+
+A word in front, how Jira is used for the OpenEngSB. Jira is used for bug tracking and release planning. ONLY each Milestone release has its own target. Release candidates and final releases are handled differently. Since we release RC and MINOR releases quite often its much too much administration work to keep JIRA up to date.
+
+Ok, knowing that the release process is simple:
+*) If you release a milestone release close the release target (e.g. 1.0.0.M1).
+*) If you release a release candidate create a VERSION.RCX release target and close the old one.
+*) If you release a final release (MAJOR RELEASE) create a new release target 1.0.X.RELEASE.
+*) If you release a minor release close the 1.0.X.RELEASE target and create 1.0.(X+1).RELEASE.
+
+h3. Perform the release
+
+Performing a release is quite simple, because of the maven release plugin and some scripts. Simple follow these steps:
+*) First of all make sure that the NOTICE file is up-to-date using notice:generate
+*) Now invoke "mvn openengsb:release{Final|Milestone|Support|RC} -DconnectionUrl=path/to/your/repo" (e.g. mvn openengsb:releaseMilestone -DconnectionUrl=scm:git:file://~/openengsb)
+*) After the artifacts are available for sync to maven central you have to push them from the staging to the final repository. Therefore follow the steps as explained [here|https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide]
+*) If everything works fine execute git push;git push --tags
+
+h3. Spread the News
+
+Post a message to the OpenEngSB twitter account with the following content:
+{code}
+<![CDATA[openengsb-VERSION "NAME" released, closing XX issues (JIRA_RELEASE_REPORT_SHORT_URL). Try the new features now: http://openengsb.org]]>
+{code}
+
+Mails in this case are not only used for notification but also to get the developers and users to try a new release and report issues and problems. Therefore, we use different templates for different types of releases of the project.
+
+The following template shows a copy and paste template for mails send for a release candidate. This mail should only be sent to the developer mailing list:
+{code}
+<![CDATA[Hey guys,
+
+I've just uploaded openengsb-1.0.0.RC4 to maven central (Should be available
+within the next hour).
+
+Sources can be downloaded here:
+
+https://github.com/openengsb/openengsb/zipball/openengsb-1.0.0.RC4
+
+The binary release can be downloaded here:
+
+http://repo1.maven.org/maven2/org/openengsb/openengsb/1.0.0.RC4/openengsb-1.0.0.RC4.zip
+
+Between openengsb-1.0.0.RC3 and openegnsb-1.0.0.RC4 we've fixed the following
+issues:
+
+** Bug
+  * [OPENENGSB-548] - jetty7 - felix problems 
+  * [OPENENGSB-605] - Use png as favicon for openengsb war file and script
+
+** Improvement
+  * [OPENENGSB-603] - Context has to be stored persistently and
+  * restored on system startup
+  * [OPENENGSB-610] - Maven connector has to support the execution of a configurable command
+
+** Task
+  * [OPENENGSB-606] - update docs new jira release 
+
+** TBD
+  * [OPENENGSB-589] - document release process for stable branches
+
+Please give it a try and report all problems you encounter here:
+
+http://issues.openengsb.org/jira/browse/OPENENGSB/fixforversion/10142
+
+If there are no new issues reported within the next 72 hours I set RC4 as the final release 1.0.0.RELEASE.
+
+Kind regards,
+andreas]]>
+{code}
+
+h3. Prepare Changelog
+
+The changelog is a file to inform users about the changes in the version they are using. This file should only contain the releases which are done in one branch. E.g. the master will never contain changelog about minor releases; because of the way we handle Jira those changes are captured and included anyhow.
+
+Now the CHANGELOG.md file has to be updated. Therefore the following template with the correct version have to be copied in the current changelog file (the latest version always has the most "on-top" position in the text file):
+
+{code}
+<![CDATA[openengsb-VERSION
+------------------
+
+Add a General Description
+
+### Highlights
+  * [e.g.] org.openengsb.domain.scm.doSomething() is removed
+
+### Details
+
+Copy JIRA issues here]]>
+{code}
+
+The following sections explain shortly what changes belong to which part of the changelog.
+
+h3. General Description
+
+The general description summarizes the most important changes in this release. This is a short and verbal description of the changes.
+
+h3. Highlights
+
+The highlight section could be a little bit more detailed than the general description. Things which should be changed by developers could be explained here and other important points could be lined up here.
+
+h3. Details
+
+The details section contains a copy of the release notes generated by Jira if a developer wants to take a detailed look at the changes included in this release.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2. Quickstart for Contributors
+
+This chapter describes the basic steps to get started as a contributor for the OpenEngSB project.
+
+h3. Getting comfortable with the infrastructure
+
+As any open source project the OpenEngSB development depends on a wide range of different infrastructural and communication methods to get things done. 
+The following sub-chapters describe the different tools, their location and usage in the OpenEngSB development process.
+
+h3. Mailing lists
+
+The most important communication medium for the OpenEngSB development team is email. Mostly all of the vital design, architectural and infrastructural decisions are discussed on the OpenEngSB developer list. 
+Therefore, the first step to get involved into the development of the OpenEngSB is to register to the developer mailing list ([Mailing Lists]) and say hello world.
+
+While notifications from the OpenCIT Build Server, about code commits and Jira issues are vital for the OpenEngSB core developer, they may not be as interesting for you. 
+If you get annoyed by the automatically  generated notification mails ignore all mails from openengsb@gmail.com and noreply@github.com to openengsb-dev@googlegroups.com.
+Please remember it is important to configure both, "to" and "from" in your filter. Both addresses will also send notifications directly to you which are important and should not be ignored!
+
+h3. Jira Issue Tracker
+
+Please use the [Issue Tracker] to keep track of all bugs, ideas and new features you're currently working or of which you think they might be interesting.
+
+h3. Code Repository
+
+As for any open source project the source code is public available. We've chosen [Github|http://github.com] for this task. The project is available at [github.com/openengsb/openengsb|http://github.com/openengsb/openengsb]
+As explained later within this document Github is not only used to store our code, but also for collaboration, code review and patch-tracking.
+
+h3. Maven Repository
+
+The OpenEngSB is available at [Maven Central|http://repo1.maven.org/maven2/org/openengsb/]. We still have our own Maven repository at [maven.openengsb.org|http://maven.openengsb.org/].
+Please keep in mind that we try to get rid of this own infrastructure as soon as possible. Therefore the use of this repository is as minimal as possible. Snapshots are available via the [sonatype Maven repository|http://oss.sonatype.org].
+
+h3. Build Server
+
+The master and integration branch of the OpenEngSB repository are watched and built by an [OpenCIT|http://opencit.openengsb.org] build server instance available at [build.openengsb.org|http://build.openengsb.org/opencit/]. 
+Notifications about failures are directly sent to the OpenEngSB developer list.
+
+h3. Prerequisites
+
+First of all the latest JDK has to be installed on the system and the "JAVA_HOME" variable has to be set accordingly. All further steps are described in the subsections of this chapter.
+
+h3. Installing Git
+
+It is assumed that Git is installed. For Linux your distribution provides already a package for git. Please use the package manager of your distribution (apt, yum, pacman, ...) to install it. 
+For MAC binaries are available at [git-scm.com|http://git-scm.com]. For MS users [cygwin|http://www.cygwin.com] or [msysgit|http://code.google.com/p/msysgit]. 
+After installing, set at least the following variables:
+{code} 
+git config --global user.name [Firstname Lastname]
+git config --global user.email [user@example.com]
+git config --global core.autcrlf input
+{code}
+
+h3. Installing Maven
+
+Finally download Apache Maven3 and unpack it. Add the path of the maven binary to your "PATH" variable. Furthermore you should set the "MAVEN_OPTS" environment variable to allow Maven to use more RAM. If you don't you'll get Out Of Memory errors.
+
+{code}
+export PATH=$PATH:[/path/to/maven]/bin
+export MAVEN_OPTS='-Xmx1024M -XX:MaxPermSize=512m'
+{code}
+
+Add these commands to ~/.bashrc to make the settings permanent.
+
+h3. Starting OpenEngSB
+
+The next step is to get the OpenEngSB source by checking out the current master using git:
+{code}git clone git://github.com/openengsb/openengsb.git{code}
+
+Connector, domains and additional various features are included into the OpenEngSB as submodules. To include them into the build and development cycle execute {code}./etc/scripts/submodulePush.sh{code} if you're a commiter and {code}./etc/scripts/submodulePull.sh{code} otherwise.
+
+Now start the OpenEngSB by executing
+{code}mvn clean install openengsb:provision{code}
+
+This command builds, tests and runs the OpenEngSB right from your command-line. Executing the following command will shutdown it again:
+{code}shutdown{code}
+
+h3. Using Eclipse
+
+Eclipse had been chosen by the OpenEngSB team as the main development environment. After checkout the code the following command creates the required Eclipse project files:
+{code}
+mvn install
+mvn openengsb:eclipse
+{code}
+
+Start Eclipse and select any workspace. The folder "eclipse-workspace" is ignored in the OpenEngSB project structure for this purpose. But you can choose any other directory if you prefer. 
+
+At the preference page go to the menu "Java/Build Path/Classpath Variables" and create a new label "M2_REPO" pointing to "~/.m2/repository". Now select "File/Import.../Existing Projects into Workspace". As the root directory select the root of the OpenEngSB source. 
+Eclipse will list several projects and for now it's best to import them all by clicking the button "Finish".
+
+At "openengsb/etc/eclipse/" eclipse configuration files for formatting can found. Checkstyle configuration files are part of the openengsb-maven-plugin and can be found [here|https://github.com/openengsb/openengsb-maven-plugin/tree/master/src/main/resources/checkstyle]. The mvn openengsb:eclipse goal configures your eclipse project to download and use the provided checkstyle configuration file, so no manual steps are necessary here (however the formatter still needs to and should be configured manually).
+
+h3. Using Other IDEs than Eclipse
+
+Basically, the OpenEngSB is developed in plain Java, which means any other IDE than Eclipse can be used too. While there are tools for most IDEs to use Checkstyle, but non of it supports the formatting file of the OpenEngSB. Please use Checkstyle, which automatically validates the eclipse formatting rules too.
+
+h2. Git Documentation
+
+h3. Usage
+
+First of all this text passage here explains only the very basics of Git and only that parts directly relevant for the development of the OpenEngSB project, but not the entire idea and possibilities of Git.
+Please read some tutorials first to get how to work with Git and see this chapter more as an summary! You may also take a look at the [Git Documentation|http://git-scm.com/documentation/] Page and the [Pro Git Book|http://progit.org/book/].
+
+h3. Github
+
+OpenEngSB is developed at [Github|http://github.com/]. Please create an account there and explore its features. Specify your real name in the admin tab and add a picture. This makes it easier to associate your commits to you.
+
+h3. Starting up and configure
+
+Before starting to work with Git some settings should be applied to Git. Therefore simply execute the following commands:
+{code}
+git config --global user.name "[Firstname Lastname]"
+git config --global user.email [user@example.com]
+git config --global color.ui "auto"
+git config --global pack.threads "0"
+git config --global diff.renamelimit "0"
+git config --global core.autocrlf "input"
+{code}
+
+Additionally execute the special settings for github as could be found on github in the "Account Settings" tab is a point "Global git config information". Please use the two git commands described there
+{code}
+git config --global github.user [username]
+git config --global github.token [token]
+{code}
+
+If you don't already have an SSH key you can create one by executing "ssh-keygen". Simply answer all questions from the application with "enter" without enter any values. 
+Afterwards the content of the "id_rsa.pub" file from your "~/.ssh/" directory should be submitted to Github in your Account Settings (SSH public keys).
+ 
+You may also want to setup the provided git-hooks. Hooks are scripts that automate some small tasks in the git-workflow. To enable them, they have to be located in the ".git/hooks" directory. You can achieve this by copying the scripts located in the "etc/git-hooks" directory to ".git/hooks" directory.
+
+h3. Contributor Workflow
+
+Contributor are all developer who like to contribute to the OpenEngSB project, but not have commit rights to openengsb/openengsb-framework.
+
+Please keep in mind, that this manual is NOT a Git tutorial. Github itself, e.g. provides a great [help|http://book.git-scm.com/]. All base concepts such as forking, pull-requests, ...
+
+Please start by choose or create a new issue. Now create a new fork of the OpenEngSB at Github (if you've not done already so; otherwise this is explained [here|http://help.github.com/forking/]. Clone your fork, but also add the original openengsb repository as remote repository. This is also explained [here|http://help.github.com/forking/].
+
+In difference to the Github tutorial please do not commit to the master, but rather create a new branch named OPENENGSB-ISSUE_NUMBER_YOURE_WORKING_ON. Optionally append /DESCRIPTION (e.g. OPENENGSB-586/mvn-eclipse-download-fix). 
+{code}git checkout -b [OPENENGSB-ISSUE] origin/[BRANCH]{code}.[BRANCH] is the point where you like to start your work. If you like to contribute to the head this will be typically master, but could also be a commit or a complete different branch. 
+This is the OpenEngSB schema for naming branches and we'll really appreciate if you work according to it. Please notice that each commit should include [OPENENGSB-ISSUEID] at the beginning of its message.
+
+Now hack, commit and push as you like. If you think you're finished invoke {code}mvn openengsb:prePush{code} (or use "etc/scripts/pre-push.sh") to validate your code, tests, licenses and so on. If everything works without errors create a Github pull request on Github, between the master or integration branch (depending on where you've created your branch on) and your branch. 
+This process is also explained [here|http://help.github.com/pull-requests/]. In addition it will help if you add the link to the pull request to the issue you're working on. A commiter will tend as fast as possible to your request and give feedback or directly merge your commit into the integration/master branch.
+
+h3. Commiter Workflow
+
+The only difference between a commiter and a contributor is that he has to watch and merge branches of contributors. If a commiter is happy with the work of a contributor. Comments and other discussions should be done on the mailing list and/or via the Github review system and pull requests.
+
+In addition commiters typically do not create forks but rather create their branches directly in the OpenEngSB repository. This is done because the repository is covered by the OpenEngSB build server and in addition keeps everything closer together.
+
+h3. Additional Rules
+
+*) (Contributor/Committer) All development is done in branches (also of the core developers) One exception to this rule exists: Small fixes and maintenance work which is NOT related to a new feature and does not exceed 2 commits should be cherry-picked into the master directly.
+*) (Contributor/Committer) Rebase is "not" dead (although we use merges). !Never ever! commit local merges. You still should develop in local dev branches and rebasing them with the upstream branches. Only if nobody else has access to your fork you can be sure that nobody changed it!
+*) (Committer) If merging branches from forked repositories ALWAYS use the "--no-ff" option for merges; this will always create a merge node (even if a fast-forward merge is possible). This is required to create a clear and consistent history!
+*) Avoid backward merges from the master and keep feature branches small! This does not mean that backward merges from master are forbidden. But they should not be done too often, since they create a history not easy to read. Please use the method described on this page (with "--no-ff" "--no-commit") to reduce the number of merge nodes.
+*) Use "meaningful" feature branch names. Using the merge history in the master you can easily follow the development of features. But this requires (maybe long) good names! In addition, always start with OPENENGSB-NUMBER of the issue you're working on. Try to always do work based on issues. If no issue covers what you're doing create one.
+
+h2. Useful Tools
+
+h3. openengsb-maven-plugin
+
+The openengsb-maven-plugin is a plugin for Apache Maven, intended to simplify various activities (creating domains or connectors, building a release artifact of the whole project etc.) when developing based on the OpenEngSB.
+
+h3. Configuring the openengsb-maven-plugin for your project
+
+To use the openengsb-maven-plugin in your project add the following configuration to your project's pom.xml:
+
+{code}
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  ...
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.openengsb</groupId>
+        <artifactId>openengsb-maven-plugin</artifactId>
+        <version>${openengsb.maven.plugin.version}</version>
+      </plugin>
+    </plugins>
+  </build>
+  ...
+</project>   
+{code}
+The plugin can now be invoked via {code}mvn openengsb:<goal>{code}
+
+h3. Purpose of the openengsb-maven-plugin
+
+The purpose of the OpenEngSB Maven Plugin is to provide additional useful goals for the development of the OpenEngSB itself and all projects which base on the OpenEngSB. It helps in various goals starting in assembling, checkstyle, license checking and many other various goals which would otherwise require to duplicate tons of version (and manage it in addition) between the OpenEngSB and projects which are based on the OpenEngSB.
+
+h3. Changing the default configuration of the mojos
+
+Currently the default configurations can not be changed or adapted in the OpenEngSB plugin. This means that all changes and adaptions have to be made directly in the openengsb-maven-plugin. This situation is not ideal. The version 1.6.0 of the plugin will tackle this drawback.
+
+h3. Available Goals
+
+h4. openengsb:assemble or "etc/scripts/assemble.sh"
+Installs the OpenEngSB and skips tests. Furthermore a <emphasis>nightly</emphasis> profile is activated if available in your poms.
+
+h4. openengsb:eclipse or "etc/scripts/eclipse.sh"
+Generates eclipse configuration file for the module where it is invoked from and all submodules. The generated eclipse projects are also configured to use the checkstyle rules shipped with the plugin (see checkstyle mojo).
+
+h4. openengsb:checkstyle
+Performs a Checkstyle check of the project. The checkstyle configuration file which is used for the check can be found [here|https://github.com/openengsb/openengsb-maven-plugin/tree/master/src/main/resources/checkstyle].
+We ship this configuration file with the plugin (and changes need to be done there) because we think it may be useful for other OpenEngSB related projects. Setting up eclipse projects with configured checkstyle becomes very easy that way (simply mvn openengsb:eclipse).
+
+h4. openengsb:genConnector or "etc/scripts/gen-connector.sh"
+Guides interactively through the creation of a connector and generates the artifact via the connector archetype.
+
+h4. openengsb:genDomain or "etc/scripts/gen-domain.sh"
+Guides interactively through the creation of a domain and generates the artifact via the domain archetype.
+
+h4. openengsb:licenseCheck or "etc/scripts/license-check.sh"
+Performs a check if appropriate license headers are available in every source file. The licenseCheck mojo wraps the com.mycila.maven-license-plugin. A large part of the default behavior of this mojo can be changed in "src/main/resources/license/licenseConfig.xml".
+See [this site|http://code.google.com/p/maven-license-plugin/wiki/Configuration#maven-license-plugin_configuration_options] for available configuration options. The openengsb-maven-plugin needs to be reinstalled after changing its default behavior.
+
+NOTE: pom.xml files are excluded from license check.
+
+Parameters:
+*) additionalExcludes: Defines path to a file where each line represents a pattern which files to exclude from license check or license format (additionally to the default excludes).
+
+h4. openengsb:licenseFormat or "etc/scripts/license-format.sh"
+Adds a license header to files where the license header is missing. Regarding the configuration for this mojo the same applies as for licenseCheck.
+
+NOTE: pom.xml files are excluded from license format.
+
+Parameters:
+*) additionalExcludes: see description of openengsb:licenseCheck
+
+h4. openengsb:prePush or "etc/scripts/pre-push.sh"
+Builds and installs the openengsb, checks for license headers, performs a Checkstyle check and runs the integration tests.
+
+Parameters:
+*) additionalExcludes: see description of openengsb:licenseCheck
+
+h4. openengsb:provision or "etc/scripts/run.sh" or "etc/scripts/quickrun.sh"
+Equivalent to execute karaf or karaf.bat per hand after build by mvn clean install in a (typically) assembly directory.
+
+Parameters:
+*) provisionPathUnix: This setting should be done in the one of the assembly folders and have to point to the final directory where the karaf system, etc configs and so on consist.
+*) provisionExecutionPathUnix: The path to the executable in the unix archive file
+*) additionalRequiredExecutionPathUnix: Sometimes it's required that some executable files, provided in "provisionExecutionPathUnix" execute other files which have to made executable to work correctly on themselves. Those files should be specified here.
+*) provisionPathWindows: This setting should be done in the one of the assembly folders and have to point to the final directory where the karaf system, etc configs and so on consist.
+*) provisionExecutionPathWindows: The path to the executable in the windows archive file
+*) additionalRequiredExecutionPathWindows: Sometimes it's required that some executable files, provided in "provisionExecutionPathWindows" execute other files which have to made executable to work correctly on themselves. Those files should be specified here.
+
+These parameters are typically configured in the pom of your assembly project ("/assembly/pom.xml" for the OpenEngSB)).
+
+h4. openengsb:pushVersion or "etc/scripts/push-version.sh"
+Updates the development version.
+
+Parameters:
+*) developmentVersion: The new SNAPSHOT version.
+
+h4. openengsb:releaseNightly or "etc/scripts/release-nightly.sh"
+Mojo to perform nightly releases. This mojo activates the "nightly" profile in the project, where you can put your additional configuration for nightly releases (To see what these profiles can be necessary for please read the descript of the other release mojos).
+
+h4. openengsb:release<XXX>
+The release<XXX> mojos (except Nightly) wrap the [maven-license-plugin|http://code.google.com/p/maven-license-plugin/], basically just invoking "mvn release:prepare" and then "mvn release:perform" with some useful default configuration which can be reused for other projects related to the openengsb.
+These mojos perform a release and activate the "<XXX>" profile. These release profiles are important and are required to ..</para>
+*) .. select the appropriate passphrase for the maven release repository from your "settings.xml". For additional information on this topic see [Release].
+*) .. set links depending on the release type. For examples please see the profiles in [the pom|https://github.com/openengsb/openengsb/blob/master/pom.xml]
+*) .. configure distribution management of the project site, depending on the release type. For examples see [docs/homepage/pom|https://github.com/openengsb/openengsb/blob/master/docs/homepage/pom.xml">docs/homepage/pom]
+
+Parameters:
+*) connectionUrl: URL to your SCM repository (e.g. scm:git:file://~/openengsb). During the release process changes (version updates, etc) are commited into your SCM.
+
+h3. Goals:
+h4. openengsb:releaseFinal or "etc/scripts/release-final.sh"
+profile = "final"
+
+h4. openengsb:releaseMilestone or "etc/scripts/release-milestone.sh"
+profile = "milestone"
+
+h4. openengsb:releaseRC or "etc/scripts/release-rc.sh"
+profile = "rc"
+
+h4. openengsb:releaseSupport or "etc/scripts/release-support.sh"
+profile = "support"
+
