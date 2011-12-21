@@ -1,8 +1,8 @@
 ---
 title: Source
-page_version: 4
-page_creator: gnodet
-page_modifier: jbonofre
+page_version: 2
+page_creator: pieber
+page_modifier: pieber
 --- pipeline:conf
 h1. Source
 
@@ -10,20 +10,52 @@ This project uses Git as Source Content Management System to manage its source c
 
 h2. Web Access
 
-The following is a link to the online source repository.
+All source repositories could be found on github using the following link:
+
 {panel}
-http://github.com/openengsb/openengsb
+http://github.com/openengsb/
 {panel}
+
+There you'll find various projects containing the domains, connectors, frameworks, maven-plugin and various other tools like IDE integrations.
 
 h2. Anonymous access
 
-Refer to the documentation of the SCM used for more information about anonymously check out. The connection url is:
+All projects could be checked out anonymously:
+
 {panel}
-git:git://github.com/openengsb/openengsb.git
+git clone git://github.com/openengsb/PROJECT_NAME.git
 {panel}
 
 h2. Developer access
 
-{code}
-git:git@github.com:openengsb/openengsb-framework.git
-{code}
+If you've commit rights to the repositories you can easily checkout them with the following command:
+
+{panel}
+git clone git@github.com:openengsb/PROJECT_NAME.git
+{panel}
+
+h2. Using repo
+
+[Repo|http://source.android.com/source/version-control.html] is a collection of [Python|http://python.org/] scripts allowing easier management of multible git repositories. After you've installed repo do the following steps to get the entire project sources follow the next steps.
+
+h3. Getting OpenEngSB sources
+
+The entire code of the maven-plugin, domains, connectors and framework could be retrieved by:
+
+{panel}
+mkdir openengsb; cd openengsb
+repo init -u git://github.com/openengsb/openengsb-manifest.git
+repo sync
+ln -s .repo/manifest/pom.xml
+{panel}
+
+h4. Getting Loom Visual Studio CSharp
+
+For the Visual Studio IDE support use
+{panel}
+mkdir loom-vs-csharp; cd loom-vs-csharp
+repo init -u git://github.com/openengsb/loom-csharp-manifest.git
+repo sync
+ln -s .repo/manifest/pom.xml
+{panel}
+
