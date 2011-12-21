@@ -1,9 +1,10 @@
 ---
 title: News
-page_version: 3
-page_creator: gnodet
-page_modifier: gnodet
+page_version: 2
+page_creator: pieber
+page_modifier: pieber
 --- pipeline:conf
 h2. News
 
-{include:news-initial}
+{include:news-2011-12-20_1}
+

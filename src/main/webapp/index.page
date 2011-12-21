@@ -4,8 +4,6 @@ page_version: 1
 page_creator: lstampf
 page_modifier: lstampf
 --- pipeline:conf
-{section}
-{column}
 h1. Welcome to OpenEngSB!
 
 The Open Engineering Service Bus (OpenEngSB) project provides an easy-to-use and easy-to-adapt platform for tool integration. It offers graphical workflow design between software tools and avoids repetitive setup tasks. In contrast to typical Enterprise Service Bus approaches existing workflows can easily be adapted to software changes due to the domain-based integration model. Thus, OpenEngSB enables transparency in dynamic development processes too and frees the engineers' time for productive work.
@@ -22,57 +20,17 @@ Although this concept is very powerful it cannot solve every problem. The OpenEn
 
 However, this project does not try to reinvent the wheel. OpenEngSB will not replace the tools already used for your development process, it will integrate them. Our service bus is used to connect the different tools and design a workflow between them, but not to replace them with yet another application. For example, software engineers like us love their tools and will fight desperately if you try to take them away. We like the wheels as they are, but we do not like the way they are put together at the moment.
 
-{column}
-{column}
-{html}
-<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: '#openengsb',
-  interval: 6000,
-  title: 'What do people say about',
-  subject: 'OpenEngSB',
-  width: 250,
-  height: 300,
-  theme: {
-    shell: {
-      background: '#778899',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#444444',
-      links: '#778899'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    toptweets: true,
-    behavior: 'default'
-  }
-}).render().start();
-</script>
-{html}
-{column}
-{section}
-{section}
 h2. Features
 
 The OpenEngSB comes with the following features out of the box:
 
-{include: Features}
-
-h2. Further Information
+* Abstract tool integration for mail, scm, issue tracking, build, test, deploy, auditing, reporting and microblogging. In detail we support the following tools: Mail, Twitter, Facebook, JIRA, Git and Maven with more to come.
+* Modular UI presenting the state of the OpenEngSB and its installed modules.
+* Completely integrated workflow and rule management.
+* Very modular, powerful and reusable system based on OSGi.
+* Full control over the system using console and ssh to connect to it; thanks to Apache Karaf
 
 See the [documentation], participate in the [mailing lists] or directly dive into the [source].
 
-{include:news}
+{include: News}
 
-{section}
