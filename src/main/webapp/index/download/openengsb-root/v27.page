@@ -31,8 +31,8 @@ h3. Bug
  * [OPENENGSB-2350] - maven-bundle-plugin needs extensions configuration
 
 h3. Improvement
- * [OPENENGSB-2352|http://issues.openengsb.org/jira/browse/OPENENGSB-] - Rename CHANGELOG.md to CHANGELOG
- * [OPENENGSB-2446|http://issues.openengsb.org/jira/browse/OPENENGSB-] - Allow to import projects using the openengsb-maven-plugin with m2e
+ * [OPENENGSB-2352|http://issues.openengsb.org/jira/browse/OPENENGSB-2352] - Rename CHANGELOG.md to CHANGELOG
+ * [OPENENGSB-2446|http://issues.openengsb.org/jira/browse/OPENENGSB-2446] - Allow to import projects using the openengsb-maven-plugin with m2e
 
 h3. Library Upgrade
  * [OPENENGSB-2349|http://issues.openengsb.org/jira/browse/OPENENGSB-2349] - Upgrade maven-bundle-plugin to 2.3.6
