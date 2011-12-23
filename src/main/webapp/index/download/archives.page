@@ -1,15 +1,15 @@
 ---
 title: Archives
-page_version: 2
-page_creator: gnodet
-page_modifier: jbonofre
+page_version: 3
+page_creator: pieber
+page_modifier: pieber
 --- pipeline:conf
 h1. Releases history
 
 {toc:minLevel=2|maxLevel=2}
 
-h2. OpenEngSB Manual Builder Resources
+h2. OpenEngSB Root
 
 ||Version||Date||Download||
-|1.0.0|2011-12-20|[download|openengsb-manual-builder-resources/v1.0.0]|
+|27|2011-12-23|[download|openengsb-root/v27]|
 
