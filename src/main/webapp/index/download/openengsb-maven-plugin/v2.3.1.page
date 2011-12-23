@@ -1,0 +1,47 @@
+---
+title: openengsb-maven-plugin-2.3.1
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1.jar]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1.jar.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1.jar.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1.jar.md5]|
+|Source Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-src.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-src.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-src.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-src.zip.md5]|
+|Docbook Sources|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-docbook.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-docbook.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-docbook.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-docbook.zip.md5]|
+|Manuals|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-manual.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-manual.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-manual.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-maven-plugin/2.3.1/openengsb-maven-plugin-2.3.1-manual.zip.md5]|
+
+...or use it directly in Apache Maven...
+
+{code}
+<plugin>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-maven-plugin</artifactId>
+  <version>2.3.1</version>
+</plugin>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Online Documentation
+
+You can browse the documentation online here:
+
+* [Single-HTML page documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.1/html-single/openengsb-maven-plugin.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.1/html-multi/openengsb-maven-plugin.html]
+* [PDF documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.1/pdf/openengsb-maven-plugin.pdf]
+
+h2. Release Notes - OpenEngSB Maven Plugin - Version 2.3.1 2011-12-23
+
+This release was only required to make it possible to get a clean documentation on the homepage (which required openengsb-root-28, which on the other hand required openengsb-maven-plugin-2.3.0).
+
+h3. Library Upgrade
+ * [OPENENGSB-2458|http://issues.openengsb.org/jira/browse/OPENENGSB-2458] - Upgrade to root-28
+ * [OPENENGSB-2459|http://issues.openengsb.org/jira/browse/OPENENGSB-2459] - Reactivate source parsing
+
+h3. Task
+ * [OPENENGSB-2456|http://issues.openengsb.org/jira/browse/OPENENGSB-2456] - Release openengsb-maven-plugin 2.3.1
+

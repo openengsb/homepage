@@ -8,6 +8,11 @@ h1. Releases history
 
 {toc:minLevel=2|maxLevel=2}
 
+h2. OpenEngSB Maven Plugin
+
+||Version||Date||Download||
+|2.3.0|2011-12-23|[download|openengsb-maven-plugin/v2.3.0]|
+
 h2. OpenEngSB Root
 
 ||Version||Date||Download||

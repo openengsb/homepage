@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. Andreas Pieber posted on Dec 23, 2011\\OpenEngSB Maven Plugin 2.3.1 released
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Maven Plugin 2.3.1|index/download/openengsb-maven-plugin/v2.3.1].
+This release was only required to make it possible to get a clean documentation on the homepage (which required openengsb-root-28, which on the other hand required openengsb-maven-plugin-2.3.0).
+For more information, please see the [release notes|index/download/openengsb-maven-plugin/v2.3.1].
+
