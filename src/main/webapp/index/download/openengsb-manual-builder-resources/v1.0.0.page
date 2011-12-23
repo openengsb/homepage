@@ -1,9 +1,13 @@
 ---
 title: openengsb-manual-builder-resources-1.0.0
-page_version: 1
+page_version: 2
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
+h1. OpenEngSB Manual Builder Resources - Version 1.0.0 2011-12-20
+
+This release simply contains the copied resources from OpenEngSB Framework 2.2.1. Basically those could be used for every manual build for the OpenEngSB.
+
 h2. Download
 
 You can download the release manually...
@@ -25,10 +29,7 @@ You can download the release manually...
 
 The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
 
-h2. Release Notes - OpenEngSB Manual Builder Resources - Version 1.0.0 2011-12-20
-
-This release simply contains the copied resources from OpenEngSB Framework 2.2.1. Basically those could be used for
-every manual build for the OpenEngSB.
+h2. Release Notes
 
 h3. Task
  * [OPENENGSB-2424|http://issues.openengsb.org/jira/browse/OPENENGSB-2424] - Provide initial project infrastructure for openengsb-manual-builder-resources

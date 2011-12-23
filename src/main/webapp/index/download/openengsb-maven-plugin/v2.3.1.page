@@ -4,6 +4,10 @@ page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
+h1. OpenEngSB Maven Plugin - Version 2.3.1 2011-12-23
+
+This release was only required to make it possible to get a clean documentation on the homepage (which required openengsb-root-28, which on the other hand required openengsb-maven-plugin-2.3.0).
+
 h2. Download
 
 You can download the release manually...
@@ -34,9 +38,7 @@ You can browse the documentation online here:
 * [Multi-HTML page documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.1/html-multi/openengsb-maven-plugin.html]
 * [PDF documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.1/pdf/openengsb-maven-plugin.pdf]
 
-h2. Release Notes - OpenEngSB Maven Plugin - Version 2.3.1 2011-12-23
-
-This release was only required to make it possible to get a clean documentation on the homepage (which required openengsb-root-28, which on the other hand required openengsb-maven-plugin-2.3.0).
+h2. Release Notes
 
 h3. Library Upgrade
  * [OPENENGSB-2458|http://issues.openengsb.org/jira/browse/OPENENGSB-2458] - Upgrade to root-28

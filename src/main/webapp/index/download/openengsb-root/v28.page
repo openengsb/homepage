@@ -1,9 +1,13 @@
 ---
 title: openengsb-root-28
-page_version: 1
+page_version: 2
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
+h1. OpenEngSB Root - Version 28 2011-12-23
+
+The only change in this version is the upgrade of the openengsb-maven-plugin (2.3.0). This change was pretty important to allow the extraction of sources in all projects using this pom.
+
 h2. Download
 
 You can download the release manually...
@@ -23,9 +27,7 @@ You can download the release manually...
 
 The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
 
-h2. Release Notes - OpenEngSB Root - Version 28 2011-12-23
-
-The only change in this version is the upgrade of the openengsb-maven-plugin (2.3.0). This change was pretty important to allow the extraction of sources in all projects using this pom.
+h2. Release Notes
 
 h3. Library Upgrade
  * [OPENENGSB-2460|http://issues.openengsb.org/jira/browse/OPENENGSB-2460] - Upgrade to openengsb-maven-plugin 2.3.0

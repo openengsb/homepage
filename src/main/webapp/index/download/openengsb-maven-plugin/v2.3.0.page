@@ -1,9 +1,13 @@
 ---
 title: openengsb-maven-plugin-2.3.0
-page_version: 1
+page_version: 2
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
+h1. OpenEngSB Maven Plugin - Version 2.3.0 2011-12-23
+
+The third feature release cut from the 2.x release series comes with great new features concerning the documentation.  With this plugin a new goal (extractSource) had been added which allows to tag source code and automatically generate docbook src from it. In addition we've upgraded various libraries and included the documentation now directly into the project. There's also a source package now providing the tagged source as is for building/modifying the plugin locally.
+
 h2. Download
 
 You can download the release manually...
@@ -34,9 +38,7 @@ You can browse the documentation online here:
 * [Multi-HTML page documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.0/html-multi/openengsb-maven-plugin.html]
 * [PDF documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.0/pdf/openengsb-maven-plugin.pdf]
 
-h2. Release Notes - OpenEngSB Maven Plugin - Version 2.3.0 2011-12-23
-
-The third feature release cut from the 2.x release series comes with great new features concerning the documentation.  With this plugin a new goal (extractSource) had been added which allows to tag source code and automatically generate docbook src from it. In addition we've upgraded various libraries and included the documentation now directly into the project. There's also a source package now providing the tagged source as is for building/modifying the plugin locally.
+h2. Release Notes
 
 h3. Bug
  * [OPENENGSB-2408|http://issues.openengsb.org/jira/browse/OPENENGSB-2408] - LicenseFormat test fails

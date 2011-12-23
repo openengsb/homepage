@@ -1,9 +1,13 @@
 ---
 title: openengsb-root-27
-page_version: 1
+page_version: 2
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
+h1. OpenEngSB Root - Version 27 2011-12-23
+
+The 27th version of the openengsb-root pom file increases the support for the use of m2e. In addition the docbook configurations finally found their way into the root pom besides configuration for using the maven wagon plugin with the ssh protocol. Finally the surefire plugins (2.11), assembly (2.2.2), dependency (2.4) and release (2.2.2) plugins got upgraded.
+
 h2. Download
 
 You can download the release manually...
@@ -23,9 +27,7 @@ You can download the release manually...
 
 The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
 
-h2. Release Notes - OpenEngSB Root - Version 27 2011-12-23
-
-The 27th version of the openengsb-root pom file increases the support for the use of m2e. In addition the docbook configurations finally found their way into the root pom besides configuration for using the maven wagon plugin with the ssh protocol. Finally the surefire plugins (2.11), assembly (2.2.2), dependency (2.4) and release (2.2.2) plugins got upgraded.
+h2. Release Notes
 
 h3. Bug
  * [OPENENGSB-2350] - maven-bundle-plugin needs extensions configuration
