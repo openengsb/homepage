@@ -1,0 +1,49 @@
+---
+title: openengsb-root-27
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/27/openengsb-root-27.pom]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/27/openengsb-root-27.pom.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/27/openengsb-root-27.pom.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/27/openengsb-root-27.pom.md5]|
+
+...or use it directly in Apache Maven...
+
+{code}
+<parent>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-root</artifactId>
+  <version>27</version>
+</parent>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Release Notes - OpenEngSB Root - Version 27 2011-12-23
+
+The 27th version of the openengsb-root pom file increases the support for the use of m2e. In addition the docbook configurations finally found their way into the root pom besides configuration for using the maven wagon plugin with the ssh protocol. Finally the surefire plugins (2.11), assembly (2.2.2), dependency (2.4) and release (2.2.2) plugins got upgraded.
+
+h3. Bug
+ * [OPENENGSB-2350] - maven-bundle-plugin needs extensions configuration
+
+h3. Improvement
+ * [OPENENGSB-2352|http://issues.openengsb.org/jira/browse/OPENENGSB-] - Rename CHANGELOG.md to CHANGELOG
+ * [OPENENGSB-2446|http://issues.openengsb.org/jira/browse/OPENENGSB-] - Allow to import projects using the openengsb-maven-plugin with m2e
+
+h3. Library Upgrade
+ * [OPENENGSB-2349|http://issues.openengsb.org/jira/browse/OPENENGSB-2349] - Upgrade maven-bundle-plugin to 2.3.6
+ * [OPENENGSB-2444|http://issues.openengsb.org/jira/browse/OPENENGSB-2444] - Include docbook dependencies in root
+ * [OPENENGSB-2445|http://issues.openengsb.org/jira/browse/OPENENGSB-2445] - Add wagon-plugin to root
+ * [OPENENGSB-2447|http://issues.openengsb.org/jira/browse/OPENENGSB-2447] - Add mvn extension for wagon-ssh
+ * [OPENENGSB-2448|http://issues.openengsb.org/jira/browse/OPENENGSB-2448] - Upgrade surefire plugins to 2.11
+ * [OPENENGSB-2449|http://issues.openengsb.org/jira/browse/OPENENGSB-2449] - Upgrade assembly plugin to 2.2.2
+ * [OPENENGSB-2450|http://issues.openengsb.org/jira/browse/OPENENGSB-2450] - Upgrade dependency plugin to 2.4
+ * [OPENENGSB-2451|http://issues.openengsb.org/jira/browse/OPENENGSB-2451] - Upgrade release plugin to 2.2.2
+
+h3. Task
+ * [OPENENGSB-2336|http://issues.openengsb.org/jira/browse/OPENENGSB-2336] - Release openengsb-root-27
+
