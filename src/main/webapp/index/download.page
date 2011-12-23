@@ -1,6 +1,6 @@
 ---
 title: Download
-page_version: 15
+page_version: 16
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -14,6 +14,11 @@ h2. OpenEngSB Framework
 
 ||Version||Date||Download||
 |2.0.0|Not available|Not available|
+
+h2. OpenEngSB Maven Plugin
+
+||Version||Date||Download||
+|2.3.0|2011-12-23|[download|download/openengsb-maven-plugin/v2.3.0]|
 
 h2. OpenEngSB Root
 
