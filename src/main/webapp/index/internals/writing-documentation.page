@@ -12,13 +12,13 @@ h3. General Documentation Guidelines
 
 A chapter should consist of these parts:
 
-*) Introduction: It should explained who the target audience for this chapter is and in what case this chapter should be read. There should also be a basic summary of what this chapter is about.
-*) Prerequisites: Any prerequisites should be listed. Link to the appropriate chapter or to a website to give the reader a good starting point in case they need to learn something else first.
-*) Context: In the context section the reader should learn in which context this chapter is applicable. If necessary abbrevations and acronyms used in this chapter can be explained here.
-*) Content: The actual content of this chapter. This should be structured in as many sections as appropriate.
-*) Example: If possible there should be an example to illustrate the points of the chapter.
-*) Common Problems: If there are some known pitfalls or bugs they should be described in this section.
-*) Closing Remarks: In this section the content of the chapter can be summarized once more. The reader should get information on what to do next.
+* Introduction: It should explained who the target audience for this chapter is and in what case this chapter should be read. There should also be a basic summary of what this chapter is about.
+* Prerequisites: Any prerequisites should be listed. Link to the appropriate chapter or to a website to give the reader a good starting point in case they need to learn something else first.
+* Context: In the context section the reader should learn in which context this chapter is applicable. If necessary abbrevations and acronyms used in this chapter can be explained here.
+* Content: The actual content of this chapter. This should be structured in as many sections as appropriate.
+* Example: If possible there should be an example to illustrate the points of the chapter.
+* Common Problems: If there are some known pitfalls or bugs they should be described in this section.
+* Closing Remarks: In this section the content of the chapter can be summarized once more. The reader should get information on what to do next.
 
 It is not necessary that every part is a docbook section. Parts can be combined if it seems appropriate.
 
@@ -30,9 +30,9 @@ Each domain gets their own directory in the user guide at "domains/<the-domain-n
 
 The documentation of a domain should at least consist of the following parts:
 
-*) Description: Describe briefly what the purpose of the Domain is.
-*) Functional interface: The link to the actual java interface (and any domain models used in the interface) at Github. The domain interface and models should have enough Javadoc to explain the usage.
-*) Events: If the domain adds new events to the OpenEngSB, the link to the events package at Github should be provided. The meaning of each events should be documented through the Javadoc at the actual class.
+* Description: Describe briefly what the purpose of the Domain is.
+* Functional interface: The link to the actual java interface (and any domain models used in the interface) at Github. The domain interface and models should have enough Javadoc to explain the usage.
+* Events: If the domain adds new events to the OpenEngSB, the link to the events package at Github should be provided. The meaning of each events should be documented through the Javadoc at the actual class.
 
 h4. Connector
 
@@ -40,9 +40,9 @@ A connector for a specific domain should be documented in the domain-specific di
 
 The documentation of a connector should at least conisst of the following parts:
 
-*) Description: Provide a description of the external tool and its purpose.
-*) External tool configuration: A section on how to configure the actual external tool for usage with the OpenEngSB has to be provided.
-*) Support for domain interface: Any deviation to the provided functionality of the domain should be documented. E.g a connector may only implement parts of the domain interface.
+* Description: Provide a description of the external tool and its purpose.
+* External tool configuration: A section on how to configure the actual external tool for usage with the OpenEngSB has to be provided.
+* Support for domain interface: Any deviation to the provided functionality of the domain should be documented. E.g a connector may only implement parts of the domain interface.
 
 h3. Using Docbook
 
