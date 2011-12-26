@@ -1,0 +1,14 @@
+---
+title: Subprojects
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+
+h1. Subprojects
+
+The OpenEngSB project also maintenance several sub-projects. Those are mostly for showing some use cases of the OpenEngSB and implementing some of the extended concepts. In addition we try to "eat our own dog food" as much as possible; e.g. using OpenCIT for our internal project builds ([http://build.openengsb.org|http://build.openengsb.org])
+
+* [OpenCIT|http://opencit.openengsb.org/]
+* [OpenTicket|http://openticket.openengsb.org/]
+
