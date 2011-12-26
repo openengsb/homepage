@@ -1,0 +1,16 @@
+---
+title: Developers
+page_version: 3
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. Contribute
+
+This section simply contains the collection of links pointing to the important places for the infrastructure
+
+* [Source|source]
+* [Issue Tracker]
+* [IRC Room|irc-room]
+* [Mailing Lists]
+* [CI]
+

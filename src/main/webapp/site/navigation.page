@@ -5,15 +5,20 @@ page_creator: gnodet
 page_modifier: lstampf
 --- pipeline:conf
 
+h2. Introduction
 h3. [Home|Index]
 h3. [FAQ]
+h2. Getting Started
 h3. [Quickstart]
 h3. [Download]
 h3. [Documentation|/index/documentation]
 h3. [Help/Support|Help]
-h3. [Source]
+h2. Contribute
 h3. [Contribute]
-h3. [Internals]
+h3. [Infrastructure]
+h3. [Team]
+h2. Others
 h3. [Sponsors]
+h3. [License|http://www.apache.org/licenses/]
 h3. [Subprojects]
 
