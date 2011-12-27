@@ -1,0 +1,15 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. Andreas Pieber posted on Dec 27, 2011\\OpenEngSB Wrapped CSharp DLLs Released
+
+The OpenEngSB team is pleased to announce the availability of the following set of CSharp DLLs via Maven Central:
+
+* org.openengsb.wrapped.csharp/Apache.NMS.ActiveMQ/1.5.0_2
+* org.openengsb.wrapped.csharp/Apache.NMS.API/1.5.0_1
+* org.openengsb.wrapped.csharp/codeplex.fastjson/1.9.6_1
+* org.openengsb.wrapped.csharp/codeplex.newton.json/5.0_1
+* org.openengsb.wrapped.csharp/Apache.log4net/1.2.11_1
+
