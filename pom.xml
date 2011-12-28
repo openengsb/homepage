@@ -141,6 +141,9 @@
               <goal>copy-resources</goal>
             </goals>
             <configuration>
+              <nonFilteredFileExtensions>
+                <nonFilteredFileExtension>pdf</nonFilteredFileExtension>
+              </nonFilteredFileExtensions>
               <outputDirectory>${project.build.directory}/webapp</outputDirectory>
               <resources>
                 <resource>
