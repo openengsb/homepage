@@ -1,0 +1,26 @@
+---
+title: When to use the OpenEngSB?
+page_version: 1
+page_creator: lstampf
+page_modifier: lstampf
+--- pipeline:conf
+
+h4. When to use the OpenEngSB?
+
+The OpenEngSB is an ESB, but with a little different purpose than other systems.
+
+The OpenEngSB basically is: 
+* Felix 
+* Karaf 
+* CXF
+* AMQ
+* Drools
+* Own Components 
+* Domains 
+* Connectors
+
+Typical ESB go the approach: here you've your base system (e.g. Karaf when using OSGi or any other non-OSGi-base-system), CXF, AMQ, Camel; and now do what you want. This approach is really good if you have almost only server components and wire the entire thing together only once and exactly for your needs. If this is exactly what you need, you might be better off with SMX (or a similar product). 
+ 
+BUT in case you need to integrate rich client tools, the people themselves working with these tools (we've advanced workflow support for human interaction) and their processes; and at best want to reuse this for various customers the OpenEngSB is your tool of choice.
+
+Or in other words the more concepts of the OpenEngSB you use the more you get from it.
