@@ -9,7 +9,7 @@ h4. When to use the OpenEngSB?
 
 The OpenEngSB is an ESB, but with a little different purpose than other systems.
 
-The OpenEngSB basically is: 
+The OpenEngSB consists of: 
 * Felix 
 * Karaf 
 * CXF
