@@ -1,0 +1,56 @@
+---
+title: OpenEngSB Maven Plugin 2.3.1 Released
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. OpenEngSB Framework - Version 2.2.2 2011-12-29
+
+The second micro release of the OpenEngSB 2.2.x series contains 4 "direct" bug fixes and various indirect by upgrading various dependencies. The direct fixes include the correction of "getOpenEngSBModelEntries" for lists; A nullpointer in the test client UI; not enough perm space of the JRE. In addition we've upgraded Apache Karaf (2.2.5), OpenEngSB Root (28) and CXF (2.4.5) fixing various indirect bugs.
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.2/openengsb-framework-2.2.2.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.2/openengsb-framework-2.2.2.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.2/openengsb-framework-2.2.2.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.2.2/openengsb-framework-2.2.2.zip.md5]|
+
+...or use it directly in Apache Maven...
+
+{code}
+<dependency>
+  <groupId>org.openengsb.framework</groupId>
+  <artifactId>openengsb-framework</artifactId>
+  <version>2.2.2</version>
+  <packaging>zip</packaging>
+</dependency>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Online Documentation
+
+The 2.2.x series is not capable of building the documentation itself. This will be (re-) introduced with the 2.3.x series.
+
+h2. Release Notes
+
+h3. Bug
+ * [OPENENGSB-2340|http://issues.openengsb.org/jira/browse/OPENENGSB-2340] - getOpenEngSBModelEntries doesn't handle Lists and Submodels correctly
+ * [OPENENGSB-2341|http://issues.openengsb.org/jira/browse/OPENENGSB-2341] - Warning about duplicated artifact in parents/shared
+ * [OPENENGSB-2464|http://issues.openengsb.org/jira/browse/OPENENGSB-2464] - TestClient: DropdownMenu creates NullPointerException
+ * [OPENENGSB-2506|http://issues.openengsb.org/jira/browse/OPENENGSB-2506] - Not enough perm-gen defined for real projects
+
+h3. Library Upgrade
+ * [OPENENGSB-2465|http://issues.openengsb.org/jira/browse/OPENENGSB-2465] - Upgrade to karaf 2.2.5
+ * [OPENENGSB-2470|http://issues.openengsb.org/jira/browse/OPENENGSB-2470] - Upgrade to root-28
+ * [OPENENGSB-2472|http://issues.openengsb.org/jira/browse/OPENENGSB-2472] - Upgrade to cxf 2.4.5
+
+h3. Task
+ * [OPENENGSB-2337|http://issues.openengsb.org/jira/browse/OPENENGSB-2337] - Release framework-2.2.2
+
+h2. Known Issues
+
+ * [OPENENGSB-1956|http://issues.openengsb.org/jira/browse/OPENENGSB-1956] - activemq web console fails
+ * [OPENENGSB-2398|http://issues.openengsb.org/jira/browse/OPENENGSB-2398] - Start script of openengsb does not work on windows.
+ * [OPENENGSB-2463|http://issues.openengsb.org/jira/browse/OPENENGSB-2463] - TestClient: Inputfield for parameter is not displayed
+
