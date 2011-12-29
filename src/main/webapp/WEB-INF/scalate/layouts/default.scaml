@@ -88,6 +88,8 @@
                     #wrapper-menu-page-bottom
                       #menu-page
                         = include("/site/navigation.page")
+                      %script{:type => "text/javascript",
+                        :src  => "http://www.ohloh.net/p/494725/widgets/project_partner_badge.js"}
               %td{:height =>"100%", :width => "100%"}
                 .wiki-content
                   !~~ body
