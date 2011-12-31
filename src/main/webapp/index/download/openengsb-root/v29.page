@@ -1,0 +1,49 @@
+---
+title: OpenEngSB Root 29 Released
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. OpenEngSB Root - Version 29 2011-12-31
+
+This release contains further improvements to import OpenEngSB projects using the m2e plugin. In addition the openengsb-maven-plugin (2.3.1) had been updated.
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/29/openengsb-root-29.pom]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/29/openengsb-root-29.pom.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/29/openengsb-root-29.pom.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/29/openengsb-root-29.pom.md5]|
+|Source Distribution|[download|https://github.com/openengsb/openengsb-root/zipball/v29]| | | |
+
+...or use it directly in Apache Maven...
+
+{code}
+<parent>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-root</artifactId>
+  <version>29</version>
+</parent>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Release Notes
+
+h3. Improvement
+ * [OPENENGSB-2500|http://issues.openengsb.org/jira/browse/OPENENGSB-2500] - m2e support should also work with maven-plugin smaller 2.2 (2.0 in fact)
+
+h3. Library Upgrade
+ * [OPENENGSB-2527|http://issues.openengsb.org/jira/browse/OPENENGSB-2527] - Upgrade to openengsb-maven-plugin 2.3.1
+
+h3. New Feature
+ * [OPENENGSB-2501|http://issues.openengsb.org/jira/browse/OPENENGSB-2501] - CXF java2ws plugin should work with m2e
+ * [OPENENGSB-2502|http://issues.openengsb.org/jira/browse/OPENENGSB-2502] - docbookx plugin should work with m2e
+
+h3. Task
+ * [OPENENGSB-2443|http://issues.openengsb.org/jira/browse/OPENENGSB-2443] - Release openengsb-root-29
+
+h2. Known Issues
+
+ * [OPENENGSB-2228|http://issues.openengsb.org/jira/browse/OPENENGSB-2228] - Configure maven-release-plugin to use vVERSION as default tag
+
