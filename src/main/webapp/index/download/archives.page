@@ -8,6 +8,11 @@ h1. Releases history
 
 {toc:minLevel=2|maxLevel=2}
 
+h2. OpenEngSB Framework
+
+||Version||Date||Download||
+|2.2.2|2011-12-29|[download|openengsb-framework/v2.2.2]|
+
 h2. OpenEngSB Maven Plugin
 
 ||Version||Date||Download||
