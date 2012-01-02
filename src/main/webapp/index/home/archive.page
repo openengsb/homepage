@@ -1,6 +1,6 @@
 ---
-title: News
-page_version: 6
+title: NewsArchive
+page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -11,4 +11,10 @@ h2. News
 {include:news-2011-12-31_1}
 {include:news-2011-12-29_1}
 {include:news-2011-12-27_2}
+{include:news-2011-12-27_1}
+{include:news-2011-12-23_4}
+{include:news-2011-12-23_3}
+{include:news-2011-12-23_2}
+{include:news-2011-12-23_1}
+{include:news-2011-12-20_1}
 
