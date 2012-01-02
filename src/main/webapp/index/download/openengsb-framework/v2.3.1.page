@@ -1,0 +1,56 @@
+---
+title: OpenEngSB Framework 2.3.1 Released
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. OpenEngSB Framework - Version 2.3.1 2012-01-02
+
+This release is an "emergency" release reintroducing offline capabilities to the OpenEngSB Framework.
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1.zip.md5]|
+|Source Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1-src.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1-src.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1-src.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework/2.3.1/openengsb-framework-2.3.1-src.zip.md5]|
+|Docbook Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1-docbook.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1-docbook.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1-docbook.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1.zip.md5]|
+|Manuals|[download|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1-manual.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1-manual.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1-manual.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/framework/openengsb-framework-manual/2.3.1/openengsb-framework-manual-2.3.1-manual.zip.md5]|
+
+...or use it directly in Apache Maven...
+
+{code}
+<dependency>
+  <groupId>org.openengsb.framework</groupId>
+  <artifactId>openengsb-framework</artifactId>
+  <version>2.3.1</version>
+  <packaging>zip</packaging>
+</dependency>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Online Documentation
+
+You can browse the documentation online here:
+
+* [Single-HTML page documentation|http://openengsb.org/manual/openengsb-framework-manual/v2.3.1/html-single/openengsb-framework-manual.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/openengsb-framework-manual/v2.3.1/html-multi/openengsb-framework-manual.html]
+* [PDF documentation|http://openengsb.org/manual/openengsb-framweork-manual/v2.3.1/pdf/openengsb-framework-manual.pdf]
+
+h2. Release Notes
+
+h3. Bug
+ * [OPENENGSB-2555|http://issues.openengsb.org/jira/browse/OPENENGSB-2555] - new way of handling source distribution breaks exec-script
+ * [OPENENGSB-2559|http://issues.openengsb.org/jira/browse/OPENENGSB-2559] - OpenEngSB does not start when used offline
+
+h3. Task
+ * [OPENENGSB-2553|http://issues.openengsb.org/jira/browse/OPENENGSB-2553] - Release framework-2.3.1
+
+h2. Known Issues
+
+ * [OPENENGSB-1956|http://issues.openengsb.org/jira/browse/OPENENGSB-1956] - activemq web console fails
+ * [OPENENGSB-2398|http://issues.openengsb.org/jira/browse/OPENENGSB-2398] - Start script of openengsb does not work on windows.
+ * [OPENENGSB-2463|http://issues.openengsb.org/jira/browse/OPENENGSB-2463] - TestClient: Inputfield for parameter is not displayed
+

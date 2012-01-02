@@ -6,6 +6,7 @@ page_modifier: pieber
 --- pipeline:conf
 h2. News
 
+{include:news-2012-01-02_1}
 {include:news-2012-01-01_1}
 {include:news-2011-12-31_1}
 {include:news-2011-12-29_1}
