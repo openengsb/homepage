@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. Andreas Pieber posted on Jan 04, 2011\\OpenEngSB Root 30 released
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Root 30|index/download/openengsb-root/v30].
+This release contains an important bug-fix to the configuration of the snapshot repositories. In addition all links to the setup of the OpenEngSB environment had been removed to make this parent easier reusable in other context. Finally the release process is changed back to be useful via "mvn release:prepare release:perform -DconnectionUrl=scm:git:file://PATH".
+For more information, please see the [release notes|index/download/openengsb-root/v30].
+

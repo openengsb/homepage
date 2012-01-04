@@ -1,0 +1,47 @@
+---
+title: OpenEngSB Root 30 Released
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. OpenEngSB Root - Version 30 2012-01-04
+
+This release contains an important bug-fix to the configuration of the snapshot repositories. In addition all links to the setup of the OpenEngSB environment had been removed to make this parent easier reusable in other context. Finally the release process is changed back to be useful via "mvn release:prepare release:perform -DconnectionUrl=scm:git:file://PATH".
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/30/openengsb-root-30.pom]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/30/openengsb-root-30.pom.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/30/openengsb-root-30.pom.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/30/openengsb-root-30.pom.md5]|
+|Source Distribution|[download|https://github.com/openengsb/openengsb-root/zipball/v30]| | | |
+
+...or use it directly in Apache Maven...
+
+{code}
+<parent>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-root</artifactId>
+  <version>30</version>
+</parent>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Release Notes
+
+h3. Bug
+ * [OPENENGSB-2583|http://issues.openengsb.org/jira/browse/OPENENGSB-2583] - To work correctly with snapshots openengsb-root should also include sonatype snapshot
+
+h3. Improvement
+ * [OPENENGSB-2228|http://issues.openengsb.org/jira/browse/OPENENGSB-2228] - Configure maven-release-plugin to use vVERSION as default tag
+ * [OPENENGSB-2348|http://issues.openengsb.org/jira/browse/OPENENGSB-2348] - Configure releases via mvn release:prepare/perform again
+
+h3. Task
+ * [OPENENGSB-2528|http://issues.openengsb.org/jira/browse/OPENENGSB-2528] - Release openengsb-root-30
+ * [OPENENGSB-2585|http://issues.openengsb.org/jira/browse/OPENENGSB-2585] - Remove Include issuetracker, buildserver and inceptionYear from root
+
+h2. Known Issues
+
+Non by now.
+
