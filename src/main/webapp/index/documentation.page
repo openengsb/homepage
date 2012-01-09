@@ -35,6 +35,12 @@ h2. OpenEngSB Build Domain
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.build/v2.0.0/html-multi/org.openengsb.domain.build.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.build/v2.0.0/pdf/org.openengsb.domain.build.pdf]
 
+h2. OpenEngSB Contact Domain
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.contact/v2.0.0/html-single/org.openengsb.domain.contact.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.contact/v2.0.0/html-multi/org.openengsb.domain.contact.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.contact/v2.0.0/pdf/org.openengsb.domain.contact.pdf]
+
 h2. OpenEngSB Report Domain
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.report/v2.0.0/html-single/org.openengsb.domain.report.html]
