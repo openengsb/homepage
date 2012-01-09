@@ -23,6 +23,12 @@ h2. OpenEngSB Maven Plugin
 * [Multi-HTML page documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.1/html-multi/openengsb-maven-plugin.html]
 * [PDF documentation|http://openengsb.org/manual/openengsb-maven-plugin/v2.3.1/pdf/openengsb-maven-plugin.pdf]
 
+h2. OpenEngSB Appointment Domain
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.appointment/v2.0.0/html-single/org.openengsb.domain.appointment.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.appointment/v2.0.0/html-multi/org.openengsb.domain.appointment.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.appointment/v2.0.0/pdf/org.openengsb.domain.appointment.pdf]
+
 h2. OpenEngSB Report Domain
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.report/v2.0.0/html-single/org.openengsb.domain.report.html]
