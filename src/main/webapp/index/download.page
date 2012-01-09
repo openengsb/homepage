@@ -1,42 +1,58 @@
 ---
 title: Download
-page_version: 16
+page_version: 17
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
 h1. Downloads
 
-h2. OpenEngSB
+h2. OpenEngSB Distribution
 
 As a workaround for the missing release there are snapshots available [here|https://oss.sonatype.org/content/repositories/snapshots/org/openengsb/openengsb/2.0.0-SNAPSHOT/]
 
-h2. OpenEngSB Framework
+h2. Domains and Connectors
+
+This chapter collects all known domains/connectors to the OpenEngSB. If they're not released within the OpenEngSB project only links to the external location are provided.
+
+h3. OpenEngSB Report Domain
+
+||Version||Date||Download||Compatible to OpenEngSB Version||
+|2.0.0|2012-01-08|[download|download/openengsb-domain-report/v2.0.0]|2.x|
+
+||Connector Name||Version||Date||Download||Compatible to OpenEngSB Version||
+|OpenEngSB PlainText Connector|2.0.0|To be released| |2.x|
+|OpenEngSB Prom Connector|2.0.0|To be released| |2.x|
+
+h2. Tooling
+
+This chapter collects the releases relevant indirectly for users; mostly only if you develop own distributions based on the OpenEngSB.
+
+h3. OpenEngSB Framework
 
 ||Version||Date||Download||
 |2.4.0|2012-01-08|[download|download/openengsb-framework/v2.4.0]|
 
-h2. OpenEngSB Maven Plugin
+h3. OpenEngSB Maven Plugin
 
 ||Version||Date||Download||
 |2.3.1|2011-12-23|[download|download/openengsb-maven-plugin/v2.3.1]|
 
-h2. OpenEngSB Report Domain
+h2. Utility
 
-||Version||Date||Download||
-|2.0.0|2012-01-08|[download|download/openengsb-domain-report/v2.0.0]|
+The following chapters show the downloads of OpenEngSB utilities required in one or the other way for the build but mostly not directly interesting for users.
 
-h2. OpenEngSB Root
+h3. OpenEngSB Root
 
 ||Version||Date||Download||
 |30|2012-01-04|[download|download/openengsb-root/v30]|
 
-h2. OpenEngSB Assembly Builder Resources
+h3. OpenEngSB Assembly Builder Resources
 
 ||Version||Date||Download||
 |1.0.0|2011-12-27|[download|download/openengsb-assembly-builder-resources/v1.0.0]|
 
 
-h2. OpenEngSB Manual Builder Resources
+h3. OpenEngSB Manual Builder Resources
 
 ||Version||Date||Download||
 |1.0.0|2011-12-20|[download|download/openengsb-manual-builder-resources/v1.0.0]|
