@@ -53,6 +53,12 @@ h2. OpenEngSB Issue Domain
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.issue/v2.0.0/html-multi/org.openengsb.domain.issue.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.issue/v2.0.0/pdf/org.openengsb.domain.issue.pdf]
 
+h2. OpenEngSB Notification Domain
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.notification/v2.0.0/html-single/org.openengsb.domain.notification.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.notification/v2.0.0/html-multi/org.openengsb.domain.notification.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.notification/v2.0.0/pdf/org.openengsb.domain.notification.pdf]
+
 h2. OpenEngSB Report Domain
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.report/v2.0.0/html-single/org.openengsb.domain.report.html]
