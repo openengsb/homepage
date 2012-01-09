@@ -1,0 +1,75 @@
+---
+title: OpenEngSB Report Domain 2.0.0 Released
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. OpenEngSB Report Domain - Version 2.0.0 2012-01-08
+
+This release contains only upgrades to the latest OpenEngSB Framework 2.4.0 version.
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0.jar]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0.jar.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0.jar.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0.jar.md5]|
+|Source Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-src.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-src.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-src.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-src.zip.md5]|
+|Features Descriptor|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-features.xml]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-features.xml.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-features.xml.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-features.xml.md5]|
+|Docbook Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-docbook.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-docbook.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-docbook.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-docbook.zip.md5]|
+|Manuals|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-manual.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-manual.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-manual.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-manual.zip.md5]|
+|ReportDomain Wsdl|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomain.wsdl]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomain.wsdl.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomain.wsdl.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomain.wsdl.md5]|
+|ReportDomainEvents Wsdl|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomainEvents.wsdl]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomainEvents.wsdl.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomainEvents.wsdl.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.report/2.0.0/org.openengsb.domain.report-2.0.0-ReportDomainEvents.wsdl.md5]|
+
+...or reference the domain directly in Apache Maven...
+
+{code}
+<dependency>
+  <groupId>org.openengsb.domain</groupId>
+  <artifactId>org.openengsb.domain.report</artifactId>
+  <version>2.0.0</version>
+  <packaging>zip</packaging>
+</dependency>
+{code}
+
+...to install the features either drop the features.xml into the deploy folder or add the following into the OpenEngSB shell...
+
+{code}
+features:addurl mvn:org.openengsb.domain/org.openengsb.domain.report/2.0.0/xml/features
+features:install openengsb-domain-report/2.0.0
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+
+h2. Online Documentation
+
+You can browse the documentation online here:
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.report/v2.0.0/html-single/org.openengsb.domain.report.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.report/v2.0.0/html-multi/org.openengsb.domain.report.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.report/v2.0.0/pdf/org.openengsb.domain.report.pdf]
+
+h2. Release Notes
+
+h3. Bug
+ * [OPENENGSB-2327|http://issues.openengsb.org/jira/browse/OPENENGSB-2327] - adapt report domain to current openengsb-framework
+ * [OPENENGSB-2582|http://issues.openengsb.org/jira/browse/OPENENGSB-2582] - Domains and Connectors need to include our snapshot repo to work with deployed snapshots correctly
+
+h3. Improvement
+ * [OPENENGSB-1845|http://issues.openengsb.org/jira/browse/OPENENGSB-1845] - Enhance report domain with EDB CUD Events
+ * [OPENENGSB-2586|http://issues.openengsb.org/jira/browse/OPENENGSB-2586] - Include issuetracker, buildserver and inceptionYear from root
+ * [OPENENGSB-2598|http://issues.openengsb.org/jira/browse/OPENENGSB-2598] - Make package structure flat to make wsdl-generation possible
+
+h3. New Feature
+ * [OPENENGSB-2513|http://issues.openengsb.org/jira/browse/OPENENGSB-2513] - move documentation to domain
+ * [OPENENGSB-2575|http://issues.openengsb.org/jira/browse/OPENENGSB-2575] - Include wsdl definition from 2.4.0 parent
+
+h3. Task
+ * [OPENENGSB-2566|http://issues.openengsb.org/jira/browse/OPENENGSB-2566] - upgrade openengsb-domain-parent to 2.3.0 in all domains
+ * [OPENENGSB-2596|http://issues.openengsb.org/jira/browse/OPENENGSB-2596] - Adapt domain.name in domains to be e.g. AppointmentDomain instead of Appointment alone
+ * [OPENENGSB-2609|http://issues.openengsb.org/jira/browse/OPENENGSB-2609] - Release openengsb-domain-report 2.0.0
+
+h2. Known Issues
+
+Non by now
+

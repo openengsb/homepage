@@ -1,11 +1,12 @@
 ---
 title: NewsArchive
-page_version: 3
+page_version: 4
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
 h2. News
 
+{include:news-2012-01-08_2}
 {include:news-2012-01-08_1}
 {include:news-2012-01-04_2}
 {include:news-2012-01-04_1}
