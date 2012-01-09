@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. Andreas Pieber posted on Jan 09, 2012\\OpenEngSB SCM Domain 2.0.0 released
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB SCM Domain 2.0.0|index/download/openengsb-domain-scm/v2.0.0].
+This release upgrades the SCM domain to a) work with the latest version of the OpenEngSB and b) incorporated the latest features of the new version (EDB integration, WSDLs for easy bridge integration, dedicated documentation).
+For more information, please see the [release notes|index/download/openengsb-domain-scm/v2.0.0].
+
