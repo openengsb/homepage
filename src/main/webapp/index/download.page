@@ -85,7 +85,7 @@ h3. OpenEngSB SCM Domain
 h3. OpenEngSB Test Domain
 
 ||Version||Date||Download||Compatible to OpenEngSB Version||
-|2.0.0|2012-01-09|[download|download/openengsb-domain-test/v2.0.0]|2.x|
+|2.0.1|2012-01-09|[download|download/openengsb-domain-test/v2.0.1]|2.x|
 
 ||Connector Name||Version||Date||Download||Compatible to OpenEngSB Version||
 |OpenEngSB Maven Connector|2.0.0|To be released| |2.x|

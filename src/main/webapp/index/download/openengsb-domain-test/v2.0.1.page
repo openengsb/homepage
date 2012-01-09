@@ -1,0 +1,60 @@
+---
+title: OpenEngSB Test Domain 2.0.1 Released
+page_version: 1
+page_creator: gritschenberger
+page_modifier: gritschenberger
+--- pipeline:conf
+h1. OpenEngSB Test Domain - Version 2.0.1 2012-01-09
+
+This release upgrades the domain to a) work with the latest version of the OpenEngSB and b) incorporated the latest features of the new version (EDB integration, WSDLs for easy bridge integration, dedicated documentation).
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1.jar]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1.jar.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1.jar.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1.jar.md5]|
+|Source Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-src.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-src.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-src.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-src.zip.md5]|
+|Features Descriptor|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-features.xml]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-features.xml.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-features.xml.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-features.xml.md5]|
+|Docbook Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-docbook.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-docbook.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-docbook.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-docbook.zip.md5]|
+|Manuals|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-manual.zip]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-manual.zip.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-manual.zip.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-manual.zip.md5]|
+|TestDomain Wsdl|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomain.wsdl]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomain.wsdl.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomain.wsdl.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomain.wsdl.md5]|
+|TestDomainEvents Wsdl|[download|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomainEvents.wsdl]|[PGP|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomainEvents.wsdl.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomainEvents.wsdl.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/domain/org.openengsb.domain.test/2.0.1/org.openengsb.domain.test-2.0.1-TestDomainEvents.wsdl.md5]|
+
+...or reference the domain directly in Apache Maven...
+
+{code}
+<dependency>
+  <groupId>org.openengsb.domain</groupId>
+  <artifactId>org.openengsb.domain.test</artifactId>
+  <version>2.0.1</version>
+</dependency>
+{code}
+
+...to install the features either drop the features.xml into the test folder or add the following into the OpenEngSB shell...
+
+{code}
+features:addurl mvn:org.openengsb.domain/org.openengsb.domain.test/2.0.1/xml/features
+features:install openengsb-domain-test/2.0.1
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS].
+
+h2. Online Documentation
+
+You can browse the documentation online here:
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.test/v2.0.1/html-single/org.openengsb.domain.test.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.test/v2.0.1/html-multi/org.openengsb.domain.test.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.test/v2.0.1/pdf/org.openengsb.domain.test.pdf]
+
+h2. Release Notes
+
+h3. Bug
+ * [OPENENGSB-2636|http://issues.openengsb.org/jira/browse/OPENENGSB-2636] - release is missing WSDL-artifact
+
+h3. Task
+ * [OPENENGSB-2637|http://issues.openengsb.org/jira/browse/OPENENGSB-2637] - Release domain-test-2.0.1
+
+h3. Known Issues
+ * [OPENENGSB-2621|http://issues.openengsb.org/jira/browse/OPENENGSB-2621] - Domain definition is not suited for distributed builds
