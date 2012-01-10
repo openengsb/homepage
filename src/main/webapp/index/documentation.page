@@ -77,6 +77,12 @@ h2. OpenEngSB Test Domain
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.domain.test/v2.0.1/html-multi/org.openengsb.domain.test.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.domain.test/v2.0.1/pdf/org.openengsb.domain.test.pdf]
 
+h2. OpenEngSB Email Connector
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.email/v2.0.0/html-single/org.openengsb.connector.email.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.email/v2.0.0/html-multi/org.openengsb.connector.email.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.email/v2.0.0/pdf/org.openengsb.connector.email.pdf]
+
 h2. OpenEngSB Prom Domain
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.promreport/v2.0.0/html-single/org.openengsb.connector.promreport.html]

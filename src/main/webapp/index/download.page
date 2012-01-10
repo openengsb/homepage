@@ -61,7 +61,7 @@ h3. OpenEngSB Notification Domain
 |2.0.0|2012-01-09|[download|download/openengsb-domain-notification/v2.0.0]|2.x|
 
 ||Connector Name||Version||Date||Download||Compatible to OpenEngSB Version||
-|OpenEngSB Email Connector|2.0.0|To be released| |2.x|
+|OpenEngSB Email Connector|2.0.0|2012-01-10|[download|download/openengsb-connector-email/v2.0.0]|2.x|
 |OpenEngSB Facebook Connector|2.0.0|To be released| |2.x|
 |OpenEngSB NotificationSample Connector|2.0.0|To be released| |2.x|
 
