@@ -89,7 +89,7 @@ h2. OpenEngSB Git Connector
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/html-multi/org.openengsb.connector.git.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/pdf/org.openengsb.connector.git.pdf]
 
-h2. OpenEngSB Prom Domain
+h2. OpenEngSB Prom Connector
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.promreport/v2.0.0/html-single/org.openengsb.connector.promreport.html]
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.promreport/v2.0.0/html-multi/org.openengsb.connector.promreport.html]
