@@ -83,6 +83,12 @@ h2. OpenEngSB Email Connector
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.email/v2.0.0/html-multi/org.openengsb.connector.email.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.email/v2.0.0/pdf/org.openengsb.connector.email.pdf]
 
+h2. OpenEngSB Git Connector
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/html-single/org.openengsb.connector.git.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/html-multi/org.openengsb.connector.git.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/pdf/org.openengsb.connector.git.pdf]
+
 h2. OpenEngSB Prom Domain
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.promreport/v2.0.0/html-single/org.openengsb.connector.promreport.html]
