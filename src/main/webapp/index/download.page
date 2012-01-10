@@ -28,7 +28,7 @@ h3. OpenEngSB Build Domain
 |2.0.0|2012-01-09|[download|download/openengsb-domain-build/v2.0.0]|2.x|
 
 ||Connector Name||Version||Date||Download||Compatible to OpenEngSB Version||
-|OpenEngSB Maven Connector|2.0.0|To be released| |2.x|
+|OpenEngSB Maven Connector|2.0.0|2012-01-10|[download|download/openengsb-connector-maven/v2.0.0]|2.x|
 
 h3. OpenEngSB Contact Domain
 
@@ -44,7 +44,7 @@ h3. OpenEngSB Deploy Domain
 |2.0.0|2012-01-09|[download|download/openengsb-domain-deploy/v2.0.0]|2.x|
 
 ||Connector Name||Version||Date||Download||Compatible to OpenEngSB Version||
-|OpenEngSB Maven Connector|2.0.0|To be released| |2.x|
+|OpenEngSB Maven Connector|2.0.0|2012-01-10|[download|download/openengsb-connector-maven/v2.0.0]|2.x|
 
 h3. OpenEngSB Issue Domain
 
@@ -88,7 +88,7 @@ h3. OpenEngSB Test Domain
 |2.0.1|2012-01-09|[download|download/openengsb-domain-test/v2.0.1]|2.x|
 
 ||Connector Name||Version||Date||Download||Compatible to OpenEngSB Version||
-|OpenEngSB Maven Connector|2.0.0|To be released| |2.x|
+|OpenEngSB Maven Connector|2.0.0|2012-01-10|[download|download/openengsb-connector-maven/v2.0.0]|2.x|
 
 
 
