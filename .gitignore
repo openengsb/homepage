@@ -4,3 +4,4 @@ bin
 .project
 .settings
 logFile.log
+.DS_Store
