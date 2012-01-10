@@ -95,6 +95,12 @@ h2. OpenEngSB Maven Connector
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.maven/v2.0.0/html-multi/org.openengsb.connector.maven.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.maven/v2.0.0/pdf/org.openengsb.connector.maven.pdf]
 
+h2. OpenEngSB Notification Sample Connector
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.notificationsample/v2.0.0/html-single/org.openengsb.connector.notificationsample.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.notificationsample/v2.0.0/html-multi/org.openengsb.connector.notificationsample.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.notificationsample/v2.0.0/pdf/org.openengsb.connector.notificationsample.pdf]
+
 h2. OpenEngSB Plaintext Report Connector
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.plaintextreport/v2.0.0/html-single/org.openengsb.connector.plaintextreport.html]
