@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: gritschenberger
+page_modifier: gritschenberger
+--- pipeline:conf
+h1. Christoph Gritschenberger posted on Jan 10, 2012\\OpenEngSB Plaintext Report Connector 2.0.0 released
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Plaintext Report Connector 2.0.0|index/download/openengsb-connector-plaintextreport/v2.0.0].
+The 2.0.0 release of the Plaintext Report connector a) adapts all interfaces and implementations to the latest connector/openengsb versions and b) implements EDB/EKB access.
+For more information, please see the [release notes|index/download/openengsb-connector-plaintextreport/v2.0.0].
+

@@ -89,6 +89,12 @@ h2. OpenEngSB Git Connector
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/html-multi/org.openengsb.connector.git.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/pdf/org.openengsb.connector.git.pdf]
 
+h2. OpenEngSB Plaintext Report Connector
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.plaintextreport/v2.0.0/html-single/org.openengsb.connector.plaintextreport.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.plaintextreport/v2.0.0/html-multi/org.openengsb.connector.plaintextreport.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.plaintextreport/v2.0.0/pdf/org.openengsb.connector.plaintextreport.pdf]
+
 h2. OpenEngSB Prom Connector
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.promreport/v2.0.0/html-single/org.openengsb.connector.promreport.html]
