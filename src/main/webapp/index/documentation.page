@@ -101,6 +101,12 @@ h2. OpenEngSB Git Connector
 * [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/html-multi/org.openengsb.connector.git.html]
 * [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.git/v2.0.0/pdf/org.openengsb.connector.git.pdf]
 
+h2. OpenEngSB Github Connector
+
+* [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.github/v2.0.0/html-single/org.openengsb.connector.github.html]
+* [Multi-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.github/v2.0.0/html-multi/org.openengsb.connector.github.html]
+* [PDF documentation|http://openengsb.org/manual/org.openengsb.connector.github/v2.0.0/pdf/org.openengsb.connector.github.pdf]
+
 h2. OpenEngSB Maven Connector
 
 * [Single-HTML page documentation|http://openengsb.org/manual/org.openengsb.connector.maven/v2.0.0/html-single/org.openengsb.connector.maven.html]
