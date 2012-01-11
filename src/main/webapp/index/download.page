@@ -20,7 +20,7 @@ h3. OpenEngSB Appointment Domain
 |2.0.0|2012-01-09|[download|download/openengsb-domain-appointment/v2.0.0]|2.x|
 
 ||Connector Name||Version||Date||Download||Compatible to OpenEngSB Version||
-|OpenEngSB GCalendar Connector|2.0.0|To be released| |2.x|
+|OpenEngSB GCalendar Connector|2.0.0|2012-01-10|[download|download/openengsb-connector-gcalendar/v2.0.0]|2.x|
 
 h3. OpenEngSB Build Domain
 
