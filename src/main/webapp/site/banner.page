@@ -8,13 +8,15 @@ page_modifier: lstampf
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td align="left" class="topbardiv" nowrap="">
-            <img border="0" src="/images/logo.png" width="150px"></img>
+            <a href="http://openengsb.org/" title="OpenEngSB">
+              <img border="0" src="/images/logo.png" width="150px"></img>
+            </a>
           </td>
-		  <td align="right" class="topbardiv" nowrap="">
-<a href="http://karaf.apache.org/" title="Karaf">
-            <img border="0" src="/images/karaf-powered-high.png" width="250px"></img>
-</a>
+          <td align="right" class="topbardiv" nowrap="">
+            <a href="http://karaf.apache.org/" title="Karaf">
+              <img border="0" src="/images/karaf-powered-high.png" width="250px"></img>
+            </a>
           </td>
-        </tr> 
+        </tr>
       </table>
 {html}
