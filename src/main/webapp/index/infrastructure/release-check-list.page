@@ -1,0 +1,43 @@
+---
+title: Release OpenEngSB and related projects
+page_version: 1
+page_creator: gritschenberger
+page_modifier: gritschenberger
+--- pipeline:conf
+h1. Checklist
+
+* Generate release notes from JIRA
+** Check for known issues
+
+* Update Changelog with releasenotes
+
+* Update Notice-file
+** mvn notice:generate
+
+* Run Maven-release
+** mvn release:prepare release:perform -DconnectionUrl=scm:git:file://$PWD
+
+* Push git-repository with tags
+
+* Close and release staging repository on sonatype
+
+* Update Homepage
+** upgrade version in download.page
+** create download/vx.y.z.page and insert release-notes
+*** replace ** with h3.
+*** make sure issues are only indented with one space
+*** make issues link to issue-tracker
+** documentation.page
+** news.page
+** archive.page
+** check with mvn jetty:run -Dlive
+** mvn clean install scalate:deploy
+
+* Announce via mail
+** write three separete mails to:
+*** openengsb-announce@googlegroups.com
+*** openengsb-dev@googlegroups.com
+*** openengsb-user@googlegroups.com
+
+* Release version in JIRA
+* create version and release-issue for next minor release
