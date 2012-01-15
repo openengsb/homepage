@@ -1,8 +1,8 @@
 ---
 title: OpenEngSB GCalendar Connector 2.0.0 Released
-page_version: 1
+page_version: 2
 page_creator: gritschenberger
-page_modifier: gritschenberger
+page_modifier: pieber
 --- pipeline:conf
 h1. OpenEngSB GCalendar Connector - Version 2.0.0 2012-01-10
 
@@ -36,7 +36,7 @@ features:addurl mvn:org.openengsb.connector/org.openengsb.connector.gcalendar/2.
 features:install openengsb-connector-gcalendar/2.0.0
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/index/dist/KEYS.txt].
 
 h2. Online Documentation
 

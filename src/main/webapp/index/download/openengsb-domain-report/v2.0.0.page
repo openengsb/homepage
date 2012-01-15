@@ -1,6 +1,6 @@
 ---
 title: OpenEngSB Report Domain 2.0.0 Released
-page_version: 2
+page_version: 3
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -38,7 +38,7 @@ features:addurl mvn:org.openengsb.domain/org.openengsb.domain.report/2.0.0/xml/f
 features:install openengsb-domain-report/2.0.0
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/index/dist/KEYS.txt].
 
 h2. Online Documentation
 

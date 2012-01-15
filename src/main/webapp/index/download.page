@@ -129,7 +129,7 @@ h3. OpenEngSB Manual Builder Resources
 |1.0.0|2011-12-20|[download|download/openengsb-manual-builder-resources/v1.0.0]|
 
 h2. Keys
-The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS.txt].
 
 h2. Previous releases
 

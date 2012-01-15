@@ -1,6 +1,6 @@
 ---
 title: OpenEngSB Plaintext Report Connector 2.0.0 Released
-page_version: 1
+page_version: 2
 page_creator: gritschenberger
 page_modifier: gritschenberger
 --- pipeline:conf
@@ -36,7 +36,7 @@ features:addurl mvn:org.openengsb.connector/org.openengsb.connector.plaintextrep
 features:install openengsb-connector-plaintextreport/2.0.0
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/index/dist/KEYS.txt].
 
 h2. Online Documentation
 

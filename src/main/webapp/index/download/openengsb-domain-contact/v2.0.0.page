@@ -1,6 +1,6 @@
 ---
 title: OpenEngSB Contact Domain 2.0.0 Released
-page_version: 1
+page_version: 2
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -38,7 +38,7 @@ features:addurl mvn:org.openengsb.domain/org.openengsb.domain.contact/2.0.0/xml/
 features:install openengsb-domain-contact/2.0.0
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS.txt].
 
 h2. Online Documentation
 

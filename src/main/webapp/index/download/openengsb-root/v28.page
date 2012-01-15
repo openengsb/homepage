@@ -1,6 +1,6 @@
 ---
 title: OpenEngSB Root 28 Released
-page_version: 2
+page_version: 3
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -25,7 +25,7 @@ You can download the release manually...
 </parent>
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/index/dist/KEYS.txt].
 
 h2. Release Notes
 

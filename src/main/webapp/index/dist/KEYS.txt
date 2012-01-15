@@ -1,7 +1,7 @@
 This file contains the PGP keys of various developers.
 
-Users: pgp < KEYS
-       gpg --import KEYS
+Users: pgp < KEYS.txt
+       gpg --import KEYS.txt
        Developers:
          pgp -kxa <your name> and append it to this file.
          (pgpk -ll <your name> && pgpk -xa <your name>) >> this file.

@@ -1,8 +1,8 @@
 ---
 title: OpenEngSB Test Domain 2.0.1 Released
-page_version: 1
+page_version: 2
 page_creator: gritschenberger
-page_modifier: gritschenberger
+page_modifier: pieber
 --- pipeline:conf
 h1. OpenEngSB Test Domain - Version 2.0.1 2012-01-09
 
@@ -38,7 +38,7 @@ features:addurl mvn:org.openengsb.domain/org.openengsb.domain.test/2.0.1/xml/fea
 features:install openengsb-domain-test/2.0.1
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS.txt].
 
 h2. Online Documentation
 

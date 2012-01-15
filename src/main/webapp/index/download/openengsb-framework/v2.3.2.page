@@ -1,6 +1,6 @@
 ---
 title: OpenEngSB Framework 2.3.2 Released
-page_version: 1
+page_version: 2
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -29,7 +29,7 @@ You can download the release manually...
 </dependency>
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/index/dist/KEYS.txt].
 
 h2. Online Documentation
 

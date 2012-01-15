@@ -1,8 +1,8 @@
 ---
 title: OpenEngSB Notification Domain 2.0.0 Released
-page_version: 1
+page_version: 2
 page_creator: gritschenberger
-page_modifier: gritschenberger
+page_modifier: pieber
 --- pipeline:conf
 h1. OpenEngSB Notification Domain - Version 2.0.0 2012-01-09
 
@@ -38,7 +38,7 @@ features:addurl mvn:org.openengsb.domain/org.openengsb.domain.notification/2.0.0
 features:install openengsb-domain-notification/2.0.0
 {code}
 
-The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS].
+The {{KEYS}} used to sign the release can be found [here|http://openengsb.org/index/dist/KEYS.txt].
 
 h2. Online Documentation
 
