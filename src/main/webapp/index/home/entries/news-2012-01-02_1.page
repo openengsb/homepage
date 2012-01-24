@@ -5,7 +5,7 @@ page_modifier: pieber
 --- pipeline:conf
 h1. Andreas Pieber posted on Jan 02, 2012\\OpenEngSB Framework 2.3.1 released
 
-The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Framework 2.3.1|index/download/openengsb-framework/v2.3.1].
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Framework 2.3.1|/index/download/openengsb-framework/v2.3.1].
 This release is an "emergency" release reintroducing offline capabilities to the OpenEngSB Framework.
-For more information, please see the [release notes|index/download/openengsb-framework/v2.3.1].
+For more information, please see the [release notes|/index/download/openengsb-framework/v2.3.1].
 

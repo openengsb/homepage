@@ -5,7 +5,7 @@ page_modifier: pieber
 --- pipeline:conf
 h1. Andreas Pieber posted on Dec 27, 2011\\OpenEngSB Assembly Builder Resources 1.0.0 released
 
-The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Assembly Builder Resources 1.0.0|index/download/openengsb-assembly-builder-resources/v1.0.0].
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Assembly Builder Resources 1.0.0|/index/download/openengsb-assembly-builder-resources/v1.0.0].
 The initial release of the assembly builder resources contains three maven assembly plugin descriptors; namely source, doc and manual.
-For more information, please see the [release notes|index/download/openengsb-assembly-builder-resources/v1.0.0].
+For more information, please see the [release notes|/index/download/openengsb-assembly-builder-resources/v1.0.0].
 
