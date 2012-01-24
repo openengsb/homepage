@@ -5,7 +5,7 @@ page_modifier: gritschenberger
 --- pipeline:conf
 h1. Christoph Gritschenberger posted on Jan 17, 2012\\OpenEngSB 2.0.1 released
 
-The OpenEngSB team is pleased to announce the availability of the [OpenEngSB 2.0.1|index/download/openengsb/v2.0.1].
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB 2.0.1|/index/download/openengsb/v2.0.1].
 The final release 2.0.1 of the Open Engineering Service Bus comes with OpenEngSB Framework 2.4.1 including some bugfixes to the framework.
-For more information, please see the [release notes|index/download/openengsb/v2.0.1].
+For more information, please see the [release notes|/index/download/openengsb/v2.0.1].
 

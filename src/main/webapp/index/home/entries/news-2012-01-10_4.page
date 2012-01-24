@@ -5,7 +5,7 @@ page_modifier: gritschenberger
 --- pipeline:conf
 h1. Christoph Gritschenberger posted on Jan 10, 2012\\OpenEngSB Maven Connector 2.0.0 released
 
-The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Maven Connector 2.0.0|index/download/openengsb-connector-maven/v2.0.0].
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Maven Connector 2.0.0|/index/download/openengsb-connector-maven/v2.0.0].
 The 2.0.0 release of the Maven connector a) adapts all interfaces and implementations to the latest connector/openengsb versions and b) implements EDB/EKB access.
-For more information, please see the [release notes|index/download/openengsb-connector-maven/v2.0.0].
+For more information, please see the [release notes|/index/download/openengsb-connector-maven/v2.0.0].
 

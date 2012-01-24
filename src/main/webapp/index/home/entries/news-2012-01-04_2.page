@@ -5,7 +5,7 @@ page_modifier: pieber
 --- pipeline:conf
 h1. Andreas Pieber posted on Jan 04, 2012\\OpenEngSB Framework 2.3.2 released
 
-The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Framework 2.3.2|index/download/openengsb-framework/v2.3.2].
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Framework 2.3.2|/index/download/openengsb-framework/v2.3.2].
 This release contains 6 bug fixes ranging from some internal setups, over a configuration bug in the jetty-logging configuration and the archetype configurations.
-For more information, please see the [release notes|index/download/openengsb-framework/v2.3.2].
+For more information, please see the [release notes|/index/download/openengsb-framework/v2.3.2].
 
