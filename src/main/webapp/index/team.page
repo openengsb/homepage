@@ -21,13 +21,14 @@ The following is a list of developers with commit privileges that have directly 
 |mhandler|Michael Handler|michael.handler at fullstop.at|X|Framework, OpenCIT|
 |Turantul|Michael Heil|michael.heil at chello.at| |Framework, OpenTicket|
 |tobster|Tobias Hochwallner|tobster at gmx.at| |Framework|
-|bonomat|Philipp Hoenisch|philipp.hoenisch at gmail.com| |Framework|
+|bonomat|Philipp Hoenisch|philipp.hoenisch at gmail.com|X|Framework|
 |chKarner|Christoph Karner|ch.karner at gmail.com| |Framework|
 |Arcticwolf|Felix Mayerhuber|felix.mayerhuber at gmx.at|X|Framework, Maven Plugin|
 |flomotlik|Florian Motlik|flomotlik at gmail.com| |Framework|
+|frenzqse|François Thillen|e1029188 at student.tuwien.ac.at|Loom CSharp|
 |pieber|Andreas Pieber|anpieber at gmail.com|X|Framework, Maven Plugin, OpenCIT, OpenTicket, Loom CSharp, Loom Java|
 |SoFabian|Fabian Souczek|e0728541 at student.tuwien.ac.at| |Framework|
-|lstampf|Lukas Stampf|lukas.stampf at gmx.at| |Framework, OpenTicket|
+|lstampf|Lukas Stampf|lukas.stampf at gmx.at|X|Framework, OpenTicket|
 |esz|Eduard Szente|eduard.szente at gmail.com| |Framework, Maven Plugin|
 |crazymaik|Michael Zoech|zoech at qse.ifs.tuwien.ac.at| |Framework|
 
@@ -61,7 +62,6 @@ The following additional people have contributed to this project through the way
 |Gernot Rumpold|gernot.rumpold at gmail.com|Framework|
 |Gregor Ryba|gregor.ryba at infor.com|Framework|
 |Alexander Schatten|schatten at ifs.tuwien.ac.at|Framework|
-|François Thillen|e1029188 at student.tuwien.ac.at|Loom CSharp|
 |David Waldhans|david at waldhans.at|Framework|
 |Florian Waltersdorfer|ignatiomobius at gmail.com|Framework|
 |Christoph Zehetner|christoph.zehetner at gmx.at|Framework|
