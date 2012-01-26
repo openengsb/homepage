@@ -5,7 +5,7 @@ page_modifier: pieber
 --- pipeline:conf
 h1. Andreas Pieber posted on Dec 20, 2011\\OpenEngSB Manual Builder Resources 1.0.0 released
 
-The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Manual Builder Resources 1.0.0|index/download/openengsb-manual-builder-resources/v1.0.0].
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Manual Builder Resources 1.0.0|/index/download/openengsb-manual-builder-resources/v1.0.0].
 This release simply contains the copied resources from OpenEngSB Framework 2.2.1. Basically those could be used for every manual build for the OpenEngSB
-For more information, please see the [release notes|index/download/openengsb-manual-builder-resources/v1.0.0].
+For more information, please see the [release notes|/index/download/openengsb-manual-builder-resources/v1.0.0].
 
