@@ -1,0 +1,55 @@
+---
+title: OpenEngSB Root 31 Released
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h1. OpenEngSB Root - Version 31 2012-02-21
+
+This release contains various library maven plugin upgrades. In addition the no longer required maven.openengsb.org repository had been removed. Another noteable change was the addition of a prerequisites section for maven 3 which forces now to use maven 3 to build the OpenEngSB or related projects.
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/31/openengsb-root-31.pom]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/31/openengsb-root-31.pom.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/31/openengsb-root-31.pom.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/31/openengsb-root-31.pom.md5]|
+|Source Distribution|[download|https://github.com/openengsb/openengsb-root/zipball/v31]| | | |
+
+...or use it directly in Apache Maven...
+
+{code}
+<parent>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-root</artifactId>
+  <version>31</version>
+</parent>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/index/dist/KEYS.txt].
+
+h2. Release Notes
+
+h3. Bug
+ * [OPENENGSB-2752] - Remove no longer existing maven.openengsb.org
+
+h3. Library Upgrade
+ * [OPENENGSB-2759|http://issues.openengsb.org/jira/browse/OPENENGSB-2759] - Upgrade to docbkx version 2.0.14
+ * [OPENENGSB-2760|http://issues.openengsb.org/jira/browse/OPENENGSB-2760] - Upgrade eclipse plugin to 2.9
+ * [OPENENGSB-2761|http://issues.openengsb.org/jira/browse/OPENENGSB-2761] - Upgrade checkstyle plugin to 2.9
+ * [OPENENGSB-2762|http://issues.openengsb.org/jira/browse/OPENENGSB-2762] - Upgrade surefire plugins to 2.12
+ * [OPENENGSB-2763|http://issues.openengsb.org/jira/browse/OPENENGSB-2763] - Upgrade maven-jar-plugin to 2.4
+ * [OPENENGSB-2764|http://issues.openengsb.org/jira/browse/OPENENGSB-2764] - Upgrade maven-bundle-plugin to 2.3.7
+ * [OPENENGSB-2766|http://issues.openengsb.org/jira/browse/OPENENGSB-2766] - Upgrade maven-assembly-plugin to 2.3
+
+h3. New Feature
+ * [OPENENGSB-2758|http://issues.openengsb.org/jira/browse/OPENENGSB-2758] - Include maven prerequisites section
+ * [OPENENGSB-2765|http://issues.openengsb.org/jira/browse/OPENENGSB-2765] - Include maven depends plugin into the root plugin
+
+h3. Task
+ * [OPENENGSB-2594|http://issues.openengsb.org/jira/browse/OPENENGSB-2594] - Release openengsb-root 31
+
+h2. Known Issues
+
+Non by now.
+

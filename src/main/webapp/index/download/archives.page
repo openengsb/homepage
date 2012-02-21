@@ -1,6 +1,6 @@
 ---
 title: Archives
-page_version: 3
+page_version: 4
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -24,6 +24,7 @@ h2. OpenEngSB Maven Plugin
 h2. OpenEngSB Root
 
 ||Version||Date||Download||
+|30|2012-01-04|[download|openengsb-root/v30]|
 |29|2011-12-31|[download|openengsb-root/v29]|
 |28|2011-12-23|[download|openengsb-root/v28]|
 |27|2011-12-23|[download|openengsb-root/v27]|
