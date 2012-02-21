@@ -3,7 +3,7 @@ page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
-h1. Andreas Pieber posted on Dec 31, 2011\\OpenEngSB Root 29 released
+h3. OpenEngSB Root 29 released (Andreas Pieber - Dec 31, 2011)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Root 29|/index/download/openengsb-root/v29].
 This release contains further improvements to import OpenEngSB projects using the m2e plugin. In addition the openengsb-maven-plugin (2.3.1) had been updated.

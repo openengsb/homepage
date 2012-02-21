@@ -3,7 +3,7 @@ page_version: 1
 page_creator: gritschenberger
 page_modifier: gritschenberger
 --- pipeline:conf
-h1. Christoph Gritschenberger posted on Jan 09, 2012\\OpenEngSB Test Domain 2.0.1 released
+h3. OpenEngSB Test Domain 2.0.1 released (Christoph Gritschenberger - Jan 09, 2012)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Test Domain 2.0.1|/index/download/openengsb-domain-notification/v2.0.1].
 This release upgrades the Test domain to a) work with OpenEngSB 2.4.0 and b) incorporated the latest features of the new version (EDB integration, WSDLs for easy bridge integration, dedicated documentation).
