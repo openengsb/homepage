@@ -22,6 +22,7 @@ h1. Checklist
 * Close and release staging repository on sonatype
 
 * Update Homepage
+** copy entry from download page to archive page if it's missing
 ** upgrade version in download.page
 ** create download/vx.y.z.page and insert release-notes
 *** replace ** with h3.
