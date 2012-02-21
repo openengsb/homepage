@@ -3,7 +3,7 @@ page_version: 1
 page_creator: gritschenberger
 page_modifier: gritschenberger
 --- pipeline:conf
-h1. Christoph Gritschenberger posted on Jan 12, 2012\\OpenEngSB Trac Connector 2.0.0 released
+h3. OpenEngSB Trac Connector 2.0.0 released (Christoph Gritschenberger - Jan 12, 2012)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Trac Connector 2.0.0|/index/download/openengsb-connector-trac/v2.0.0].
 In this release all all interfaces and implementations have been adapted to the latest domain/openengsb versions. In addition EDB/EKB access has been implemented.

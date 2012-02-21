@@ -3,7 +3,7 @@ page_version: 1
 page_creator: gritschenberger
 page_modifier: gritschenberger
 --- pipeline:conf
-h1. Christoph Gritschenberger posted on Jan 09, 2012\\OpenEngSB Notification Domain 2.0.0 released
+h3. OpenEngSB Notification Domain 2.0.0 released (Christoph Gritschenberger - Jan 09, 2012)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Notification Domain 2.0.0|/index/download/openengsb-domain-notification/v2.0.0].
 This release upgrades the Notification domain to a) work with OpenEngSB 2.4.0 and b) incorporated the latest features of the new version (EDB integration, WSDLs for easy bridge integration, dedicated documentation).

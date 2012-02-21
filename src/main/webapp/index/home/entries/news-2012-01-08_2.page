@@ -3,7 +3,7 @@ page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
-h1. Andreas Pieber posted on Jan 08, 2012\\OpenEngSB Report Domain 2.0.0 released
+h3. OpenEngSB Report Domain 2.0.0 released (Andreas Pieber - Jan 08, 2012)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Report Domain 2.0.0|/index/download/openengsb-domain-report/v2.0.0].
 This release contains only upgrades to the latest OpenEngSB Framework 2.4.0 version.
