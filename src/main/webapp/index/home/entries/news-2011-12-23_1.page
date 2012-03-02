@@ -3,7 +3,7 @@ page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
-h1. Andreas Pieber posted on Dec 23, 2011\\OpenEngSB Root 27 released
+h3. OpenEngSB Root 27 released (Andreas Pieber - Dec 23, 2011)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Root 27|/index/download/openengsb-root/v27].
 The 27th version of the openengsb-root pom file increases the support for the use of m2e. In addition the docbook configurations finally found their way into the root pom besides configuration for using the maven wagon plugin with the ssh protocol. Finally the surefire plugins (2.11), assembly (2.2.2), dependency (2.4) and release (2.2.2) plugins got upgraded.

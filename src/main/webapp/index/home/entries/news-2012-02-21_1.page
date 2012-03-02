@@ -3,7 +3,7 @@ page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
-h1. Andreas Pieber posted on Feb 21, 2012\\OpenEngSB Root 31 released
+h3. OpenEngSB Root 31 released (Andreas Pieber - Feb 21, 2012)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Root 31|/index/download/openengsb-root/v31].
 This release contains various library maven plugin upgrades. In addition the no longer required maven.openengsb.org repository had been removed. Another noteable change was the addition of a prerequisites section for maven 3 which forces now to use maven 3 to build the OpenEngSB or related projects.

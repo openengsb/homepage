@@ -3,7 +3,7 @@ page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
-h1. Andreas Pieber posted on Jan 01, 2012\\OpenEngSB Framework 2.3.0 released
+h3. OpenEngSB Framework 2.3.0 released (Andreas Pieber - Jan 01, 2012)
 
 The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Framework 2.3.0|/index/download/openengsb-framework/v2.3.0].
 The third feature release of the OpenEngSB framework contains various bugfixes already included in the minor releases of the the 2.2.x series. In addition the ModelFactory and ConnectorRegistrationManager had been deprecated. Thos should no longer be used. In addition this release finally contains the updated documentation and also deploy them again. For new features the command line interface had been extended; The EKB model had been extended and minor enhancements for domain and connectors had been added. The most important upgrades where done to CXF (2.5.1), Active MQ (5.5.1), and Karaf (2.2.5).
