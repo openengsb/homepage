@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h3. OpenEngSB Root 32 released (Andreas Pieber - Mar 02, 2012)
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Root 32|/index/download/openengsb-root/v32].
+The 32th release of the OpenEngSB root pom includes the version handling of the axis2-java2wsdl-maven-plugin required starting from openengsb-framework-2.4.2. In addition a bug-fix upgrade to the checkstyle (2.9.1) had been included.
+For more information, please see the [release notes|/index/download/openengsb-root/v32].
+
