@@ -17,9 +17,9 @@ h1. Checklist
 * Run Maven-release
 ** mvn release:prepare release:perform -DconnectionUrl=scm:git:file://$PWD
 
-* Push git-repository with tags
-
 * Close and release staging repository on sonatype
+
+* After push to m2 had been successfully push git-repository with tags
 
 * Update Homepage
 ** copy entry from download page to archive page if it's missing
