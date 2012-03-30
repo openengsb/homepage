@@ -8,6 +8,11 @@ h1. Releases history
 
 {toc:minLevel=2|maxLevel=2}
 
+h2. OpenEngSB Distribution
+
+||Version||Date||Download||
+|2.0.0|2012-01-12|[download|download/openengsb/v2.0.0]|
+
 h2. OpenEngSB Framework
 
 ||Version||Date||Download||
@@ -17,6 +22,11 @@ h2. OpenEngSB Framework
 |2.3.1|2012-01-02|[download|openengsb-framework/v2.3.1]|
 |2.3.0|2012-01-01|[download|openengsb-framework/v2.3.0]|
 |2.2.2|2011-12-29|[download|openengsb-framework/v2.2.2]|
+
+h2. OpenEngSB Test Domain
+
+||Version||Date||Download||Compatible to OpenEngSB Version||
+|2.0.0|2012-01-09|[download|download/openengsb-domain-test/v2.0.0]|2.x|
 
 h2. OpenEngSB Maven Plugin
 
