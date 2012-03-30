@@ -1,12 +1,12 @@
 ---
 title: OpenEngSB 2.0.1 Released
-page_version: 1
+page_version: 2
 page_creator: gritschenberger
-page_modifier: gritschenberger
+page_modifier: pieber
 --- pipeline:conf
-h1. OpenEngSB - Version 2.0.1 2012-01-12
+h1. OpenEngSB - Version 2.0.1 2012-01-17
 
-Bugfix release upgrading openengsb-framework to 2.4.1.
+Bugfix release upgrading openengsb-framework to 2.4.1. By this upgrade we've fixed the main problem that not all artifacts are downloaded in offline mode. OpenEngSB 2.0.1 could be run in offline mode again.
 
 h2. Download
 
