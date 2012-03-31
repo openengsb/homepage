@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h3. OpenEngSB Framework 2.4.3 released (Andreas Pieber - Mar 29, 2012)
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Framework 2.4.2|/index/download/openengsb-framework/v2.4.3].
+he third bug-fix release of the OpenEngSB framework corrects minor bugs in the remote communication. In addition some tests had been made more stable and some system.out errors in the workflow had been fixed. In addition we've upgraded Pax Wicket from 0.7.6 to 0.7.8 which increases the Wicket version to 1.4.20 and fixes a problem with the integration tests.
+For more information, please see the [release notes|/index/download/openengsb-framework/v2.4.3].
+
