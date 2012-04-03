@@ -15,22 +15,22 @@ h3. Members
 
 The following is a list of developers with commit privileges that have directly contributed to the project in one way or another.
 
-||Id||Name||Email||PMC||Devision||
-|stefan|Stefan Doesinger|stefandoesinger at gmail.com| |Framework, OpenCIT|
-|ChristophGr|Christoph Gritschenberger|christoph.gritschenberger at qse.ifs.tuwien.ac.at|X|Framework, Maven Plugin, OpenCIT, OpenTicket, Loom Java|
-|mhandler|Michael Handler|michael.handler at fullstop.at|X|Framework, OpenCIT|
-|Turantul|Michael Heil|michael.heil at chello.at| |Framework, OpenTicket|
-|tobster|Tobias Hochwallner|tobster at gmx.at| |Framework|
-|bonomat|Philipp Hoenisch|philipp.hoenisch at gmail.com|X|Framework|
-|chKarner|Christoph Karner|ch.karner at gmail.com| |Framework|
-|Arcticwolf|Felix Mayerhuber|felix.mayerhuber at gmx.at|X|Framework, Maven Plugin|
-|flomotlik|Florian Motlik|flomotlik at gmail.com| |Framework|
-|frenzqse|François Thillen|e1029188 at student.tuwien.ac.at| |Loom CSharp|
-|pieber|Andreas Pieber|anpieber at gmail.com|X|Framework, Maven Plugin, OpenCIT, OpenTicket, Loom CSharp, Loom Java|
-|SoFabian|Fabian Souczek|e0728541 at student.tuwien.ac.at| |Framework|
-|lstampf|Lukas Stampf|lukas.stampf at gmx.at|X|Framework, OpenTicket|
-|esz|Eduard Szente|eduard.szente at gmail.com| |Framework, Maven Plugin|
-|crazymaik|Michael Zoech|zoech at qse.ifs.tuwien.ac.at| |Framework|
+||Name||Details||PMC||Devision||
+|Stefan Dösinger|[Details|team/stefan_doesinger]| |Framework, OpenCIT|
+|Christoph Gritschenberger|[Details|team/christoph_gritschenberger]|X|Framework, Maven Plugin, OpenCIT, OpenTicket, Loom Java|
+|Michael Handler|[Details|team/michael_handler]|X|Framework, OpenCIT|
+|Michael Heil|[Details|team/michael_heil]| |Framework, OpenTicket|
+|Tobias Hochwallner|[Details|team/tobias_hochwallner]| |Framework|
+|Philipp Hoenisch|[Details|team/philipp_hoenisch]|X|Framework|
+|Christoph Karner|[Details|team/christoph_karner]| |Framework|
+|Felix Mayerhuber|[Details|felix_mayerhuber]|X|Framework, Maven Plugin|
+|Florian Motlik|[Details|team/florian_motlik]| |Framework|
+|François Thillen|[Details|team/francois_thillen]| |Loom CSharp|
+|Andreas Pieber|[Details|team/andreas_pieber]]}|X|Framework, Maven Plugin, OpenCIT, OpenTicket, Loom CSharp, Loom Java|
+|Fabian Souczek|[Details|team/fabian_souczek]| |Framework|
+|Lukas Stampf|[Details|team/lukas_stampf]|X|Framework, OpenTicket|
+|Eduard Szente|[Details|team/eduard_szente]| |Framework, Maven Plugin|
+|Michael Zöch|[Details|team/michael_zoech]| |Framework|
 
 h3. Contributors
 

@@ -1,11 +1,11 @@
 ---
-title: FIRST_NAME SECOND_NAME
+title: Details Philipp Hoenisch
 page_version: 1
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
 
-h1. FIRST_NAME SECOND_NAME
+h1. Philipp Hoenisch
 
 THREE SENTENCES ABOUT ME
 
@@ -14,7 +14,7 @@ h2. Contacts
 ||Service||Identity||
 |IRC Nick|NICK|
 |Github Account|ACC|
-|Email Address|ACC at COMP|
+|Email Address|philipp.hoenisch at gmail.com|
 |Twitter| my_twitter_accuont|
 |Skype| my_skypeAccount|
 |LinkedIn| my_linkedinAccount|
