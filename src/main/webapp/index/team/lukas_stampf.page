@@ -1,22 +1,31 @@
 ---
 title: Details Lukas Stampf
-page_version: 1
+page_version: 2
 page_creator: pieber
-page_modifier: pieber
+page_modifier: lstampf
 --- pipeline:conf
 
 h1. Lukas Stampf
 
-THREE SENTENCES ABOUT ME
+I am...
+* Lukas Stampf
+* born on June, 25, 1988
+* living at the Vienna suburbs :-)
+* currently working on my master theses in software engineering at the Vienna University of Technology
+* employed as a teaching assistent, teaching in the areas of Software Engineering, Project Management and Distributed Systems 
+* appearing as lstampf on commits and jira items
+* working actively as PMC on openengsb.org 
+* interested in various aspects of Software Engineering, mainly focused on OS technology
+* the one and only windows user of openengsb
+* doing sports, so I can afford to eat more sweets. 
+
 
 h2. Contacts
 
 ||Service||Identity||
-|IRC Nick|NICK|
-|Github Account|ACC|
+|IRC Nick|lstampf|
+|Github Account|[lstampf|https://github.com/lstampf]|
 |Email Address|lukas.stampf at gmx.at|
-|Twitter| my_twitter_accuont|
-|Skype| my_skypeAccount|
-|LinkedIn| my_linkedinAccount|
-|Blog| my_blog|
+|Skype| lukas.stampf|
+
 
