@@ -37,6 +37,10 @@
     %link(rel="stylesheet" href={uri("/css/bootstrap.css")})
     %link(href={uri("/images/favicon.ico")} rel="shortcut icon")
 
+    %script{:type => "text/javascript", :src => {uri("/css/jquery.js")}}
+    %script{:type => "text/javascript", :src => {uri("/css/custom.js")}}
+
+
     - if (include_console)
       %link(href={uri("/css/scalate/console.css")} rel="stylesheet" type="text/css")
 
@@ -97,7 +101,7 @@
               %li
                 %a{:href => "/index/articles.html"} Articles
               %li
-                %a{:href => "/index/spronsors.html"} Sponsors
+                %a{:href => "/index/sponsors.html"} Sponsors
               %li
                 %a{:href => "http://www.apache.org/licenses/", :target => "_blank"} License
               %li
