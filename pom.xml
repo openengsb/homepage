@@ -143,6 +143,8 @@
             <configuration>
               <nonFilteredFileExtensions>
                 <nonFilteredFileExtension>pdf</nonFilteredFileExtension>
+                <nonFilteredFileExtension>png</nonFilteredFileExtension>
+                <nonFilteredFileExtension>ico</nonFilteredFileExtension>
               </nonFilteredFileExtensions>
               <outputDirectory>${project.build.directory}/webapp</outputDirectory>
               <resources>
