@@ -1,26 +1,28 @@
 ---
 title: IRC Room
-page_version: 2
+page_version: 3
 page_creator: gnodet
-page_modifier: gnodet
---- pipeline:conf
-h1. IRC
+page_modifier: chhochreiner
+--- pipeline:markdown
+# IRC
 
 We use the following IRC channels for discussion and answering questions. At least one member of the core development team should be available on this channel most of the time. Nevertheless we encourage you to use the [mailing lists] instead, since they are easier archive- and searchable. Github will also publish commit notifications on this channel.
 
-If you are using Mozilla you can just click on the IRC link
+If you are using Mozilla, Chrome or Safari you can just click on the IRC link
 
-* [#openengsb at irc.machts.net|irc://irc.machts.net/openengsb] 
+<i class="icon-comment"></i> [#openengsb at irc.machts.net](irc://irc.machts.net/openengsb)
 
 
-h2. Using an IRC client
+## Using an IRC client
 
 Here are the connection details. 
-| server | irc.machts.net |
-| port | 6668 |
-| room | #openengsb |
+<pre>
+server: irc.machts.net
+port:   6668 
+room:   #openengsb
+</pre>
 
-h2. Logs
+## Logs
 
-The IRC channels are logged and all conversations could be followed [here|http://openengsb.org/logs/irclog/].
+The IRC channels are logged and all conversations could be followed [here](http://openengsb.org/logs/irclog/).
 
