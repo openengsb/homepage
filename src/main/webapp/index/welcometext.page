@@ -30,7 +30,7 @@ new TWTR.Widget({
   title: '',
   subject: '',
   width: 250,
-  height: 300,
+  height: 340,
   theme: {
     shell: {
       background: '#8ec1da',
