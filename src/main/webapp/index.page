@@ -8,18 +8,6 @@ page_modifier: lstampf
 {include: Welcometext}
 
 
-h2. Features
-
-The OpenEngSB comes with the following features out of the box:
-
-* Abstract tool integration for mail, scm, issue tracking, build, test, deploy, auditing, reporting and microblogging. In detail we support the following tools: Mail, Twitter, Facebook, JIRA, Git and Maven with more to come.
-* Modular UI presenting the state of the OpenEngSB and its installed modules.
-* Completely integrated workflow and rule management.
-* Very modular, powerful and reusable system based on OSGi.
-* Full control over the system using console and ssh to connect to it; thanks to Apache Karaf
-
-See the [documentation], participate in the [mailing lists] or directly dive into the [source].
-
 {include: News}
 
 h2. Older News
