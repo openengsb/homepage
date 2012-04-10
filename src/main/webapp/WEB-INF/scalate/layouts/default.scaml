@@ -38,7 +38,9 @@
     %link(href={uri("/images/favicon.ico")} rel="shortcut icon")
 
     %script{:type => "text/javascript", :src => {uri("/css/jquery.js")}}
+    %script{:type => "text/javascript", :src => {uri("/css/bootstrap.js")}}
     %script{:type => "text/javascript", :src => {uri("/css/custom.js")}}
+    %script{:type => "text/javascript", :src => {uri("/css/bootstrap-dropdown.js")}}
 
 
     - if (include_console)
@@ -51,73 +53,16 @@
       var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-17453231-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
 
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container-fluid
-          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand{:href => "#"} OpenEngSB
-          .nav-collapse
-            %ul.nav
-              %li.active
-                %a{:href => "/index.html"} Home
+    = include("/site/navigation.page")
     %br/
     %br/
     %br/
     %br/
-    .container-fluid
-      .row-fluid
-        .span2
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Introduction
-              %li
-                %a{:href => "/index/home/archive.html"} News
-              %li
-                %a{:href => "/index/faq.html"} FAQ
-              %li.nav-header Getting Started
-              %li
-                %a{:href => "/index/quickstart.html"} Quickstart
-              %li
-                %a{:href => "/index/download.html"} Download
-              %li
-                %a{:href => "/index/documentation.html"} Documentation
-              %li
-                %a{:href => "/index/help.html"} Help
-              %li.nav-header Contribute
-              %li
-                %a{:href => "/index/roadmap.html"} Roadmap
-              %li
-                %a{:href => "/index/infrastructure.html"} Infrastructure
-              %li
-                %a{:href => "/index/contribute.html"} Contribute
-              %li
-                %a{:href => "/index/team.html"} Team
-              %li.nav-header Others
-              %li
-                %a{:href => "/index/contacts.html"} Contacts
-              %li
-                %a{:href => "/index/articles.html"} Articles
-              %li
-                %a{:href => "/index/sponsors.html"} Sponsors
-              %li
-                %a{:href => "http://www.apache.org/licenses/", :target => "_blank"} License
-              %li
-                %a{:href => "/index/subprojects.html"} Subprojects
-          %script{:type => "text/javascript",  :src  => "http://widgets.twimg.com/j/2/widget.js"}
-          :javascript
-            new TWTR.Widget({version: 2, type: 'search', search: 'openengsb', interval: 30000, title: '', subject: '', width: 190, height: 300,
-            theme: {shell: {background: '#8ec1da', color: '#ffffff'},
-            tweets: {background: '#ffffff', color: '#444444', links: '#1985b5'}
-            },
-            features: { scrollbar: false, loop: true, live: true, behavior: 'default'}
-            }).render().start();
-          %br/  
-          %script{:type => "text/javascript",  :src  => "http://www.ohloh.net/p/494725/widgets/project_partner_badge.js"}
-        .span10
-          !~~ body
+    .container
+      !~~ body
 
-      %footer
-        &copy; 2009-2012 Austrian Association for Software Tool Integration
+    %footer
+      &copy; 2009-2012 Austrian Association for Software Tool Integration
+
+
+
