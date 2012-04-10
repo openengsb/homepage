@@ -36,6 +36,7 @@ page_modifier: lstampf
 				  <li><a href="/index/download.html">Download</a></li>
 				  <li><a href="/index/documentation.html">Documentation</a></li>
 				  <li><a href="/index/help.html">Help</a></li>
+				  <li><a href="/index/quickstart.html">Quickstart</a></li>
 				</ul>
 			  </li>
 			  <li class="dropdown" id="menu3">
