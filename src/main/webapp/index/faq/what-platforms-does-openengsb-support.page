@@ -1,9 +1,0 @@
----
-title: What platforms does OpenEngSB support?
-page_version: 1
-page_creator: lstampf
-page_modifier: lstampf
---- pipeline:conf
-h4. What platforms does OpenEngSB support?
-
-OpenEngSB is written in Java entirely which makes it platform independent and made a broad variety of plattforms prominent among developers and users. Typically used are Debian-Linux distributions, Microsoft Windows and Mac OS. This way OpenEngSB's plattform independence is actively tested on a regular basis. 
