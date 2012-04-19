@@ -3,33 +3,44 @@ title: Subprojects
 page_version: 1
 page_creator: pieber
 page_modifier: pieber
---- pipeline:conf
+--- pipeline:markdown
 
-h1. Subprojects
+# Subprojects
 
-The OpenEngSB project also maintenance several sub-projects. Those are mostly for showing some use cases of the OpenEngSB and implementing some of the extended concepts. In addition we try to "eat our own dog food" as much as possible; e.g. using OpenCIT for our internal project builds ([http://build.openengsb.org|http://build.openengsb.org])
+The OpenEngSB project also maintenance several sub-projects. Those are mostly for showing some use cases of the OpenEngSB and implementing some of the extended concepts. In addition we try to "eat our own dog food" as much as possible; e.g. using OpenCIT for our internal project builds [http://build.openengsb.org](http://build.openengsb.org) 
 
-h2. Applications
+## Applications
 
 Those links show a complete set of applications based on the OpenEngSB and using it's advantages.
 
-h3. OpenCIT
+<div class="row">
+<div class="span2 offset1 well">
+<h3>OpenCIT</h3>
+      <a href="http://opencit.openengsb.org/">OpenCIT</a> 
+</div>
 
-* [OpenCIT|http://opencit.openengsb.org/]
+<div class="span2 offset4 well">
+<h3>OpenTicket</h3>
+      <a href="http://openticket.openengsb.org/">OpenTicket</a> 
+</div>
+</div>
 
-h3. OpenTicket
 
-* [OpenTicket|http://openticket.openengsb.org/]
-
-h2. Libraries
+## Libraries
 
 This is a collection of libraries developed by the OpenEngSB team for the OpenEngSB, but independent of the core project. Those are required to activate various features, but not are not located at the core.
 
-h3. Paxexam Karaf
+<div class="row">
+<div class="span2 offset1 well">
+<h3>Paxexam Karaf</h3>
+      <a href="http://github.com/openengsb/labs-paxexam-karaf">Paxexam Karaf</a> 
+</div>
 
-* [Paxexam Karaf|http://github.com/openengsb/labs-paxexam-karaf]
+<div class="span2 offset4 well">
+<h3>Liquibase OSGi</h3>
+      Not created by now.
+</div>
+</div>
 
-h3. Liquibase OSGi
 
-Not created by now.
 

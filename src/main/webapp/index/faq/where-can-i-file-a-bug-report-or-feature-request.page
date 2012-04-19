@@ -1,9 +1,0 @@
----
-title: Where can I file a bug report or feature request?
-page_version: 1
-page_creator: lstampf
-page_modifier: lstampf
---- pipeline:conf
-h4. Where can I file a bug report or feature request?
-
-[Here|issue tracker] is information about our issue tracking process. Please feel free to let us know about any bugs, issues or other problems you encounter. We are especially happy about feedback regarding the documentation of the OpenEngSB project. If you have ideas on improving OpenEngSB please contact us via the [mailing lists]. 

@@ -1,12 +1,13 @@
 ---
 title: CI
-page_version: 1
+page_version: 2
 page_creator: lstampf
-page_modifier: lstampf
---- pipeline:conf
-h1. Continous Integration
+page_modifier: chhochreiner
+--- pipeline:markdown
+# Continous Integration
 
 The following is a link to the continuous integration system used by the project.
-{panel}
-[http://build.openengsb.org/opencit/]
-{panel}
+
+<pre>
+<a href="http://build.openengsb.org/opencit/">http://build.openengsb.org/opencit/</a>
+</pre>

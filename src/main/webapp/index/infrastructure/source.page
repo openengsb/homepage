@@ -1,61 +1,62 @@
 ---
 title: Source
-page_version: 2
+page_version: 3
 page_creator: pieber
-page_modifier: pieber
---- pipeline:conf
-h1. Source
+page_modifier: chhochreiner
+--- pipeline:markdown
+# Source
 
 This project uses Git as Source Content Management System to manage its source code. 
 
-h2. Web Access
+## Web Access
 
 All source repositories could be found on github using the following link:
 
-{panel}
+<pre>
 http://github.com/openengsb/
-{panel}
+</pre>
 
 There you'll find various projects containing the domains, connectors, frameworks, maven-plugin and various other tools like IDE integrations.
 
-h2. Anonymous access
+## Anonymous access
 
 All projects could be checked out anonymously:
 
-{panel}
+<pre>
 git clone git://github.com/openengsb/PROJECT_NAME.git
-{panel}
+</pre>
 
-h2. Developer access
+## Developer access
 
 If you've commit rights to the repositories you can easily checkout them with the following command:
 
-{panel}
+<pre>
 git clone git@github.com:openengsb/PROJECT_NAME.git
-{panel}
+</pre>
 
-h2. Using repo
+## Using repo
 
-[Repo|http://source.android.com/source/version-control.html] is a collection of [Python|http://python.org/] scripts allowing easier management of multible git repositories. After you've installed repo do the following steps to get the entire project sources follow the next steps.
+[Repo](http://source.android.com/source/version-control.html) is a collection of [Python](http://python.org/) scripts allowing easier management of multible git repositories. After you've installed repo do the following steps to get the entire project sources follow the next steps.
 
-h3. Getting OpenEngSB sources
+### Getting OpenEngSB sources
 
 The entire code of the maven-plugin, domains, connectors and framework could be retrieved by:
 
-{panel}
+<pre>
 mkdir openengsb; cd openengsb
 repo init -u git://github.com/openengsb/openengsb-manifest.git
 repo sync
 ln -s .repo/manifest/pom.xml
-{panel}
+</pre>
 
-h4. Getting Loom Visual Studio CSharp
+
+#### Getting Loom Visual Studio CSharp
 
 For the Visual Studio IDE support use
-{panel}
+<pre>
 mkdir loom-vs-csharp; cd loom-vs-csharp
 repo init -u git://github.com/openengsb/loom-csharp-manifest.git
 repo sync
 ln -s .repo/manifest/pom.xml
-{panel}
+</pre>
 

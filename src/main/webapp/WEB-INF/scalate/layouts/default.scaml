@@ -34,10 +34,14 @@
     - if (include_console)
       = include("/org/fusesource/scalate/console/console_head.scaml")
 
-    %link(href={uri("/css/style.css")} rel="stylesheet" type="text/css")
-    %link(href={uri("/css/pygmentize.css")} rel="stylesheet" type="text/css")
+    %link(rel="stylesheet" href={uri("/css/bootstrap.css")})
     %link(href={uri("/images/favicon.ico")} rel="shortcut icon")
-    
+
+    %script{:type => "text/javascript", :src => {uri("/css/jquery.js")}}
+    %script{:type => "text/javascript", :src => {uri("/css/bootstrap.js")}}
+    %script{:type => "text/javascript", :src => {uri("/css/custom.js")}}
+    %script{:type => "text/javascript", :src => {uri("/css/bootstrap-dropdown.js")}}
+
 
     - if (include_console)
       %link(href={uri("/css/scalate/console.css")} rel="stylesheet" type="text/css")
@@ -49,73 +53,17 @@
       var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-17453231-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
 
   %body
-    %table{:width => "100%", :cellpadding => "0", :cellspacing => "0"}
-      %tr{:width => "100%"}
-        %td#cell-0-0{:colspan => "2"}
-          &nbsp;
-        %td#cell-0-1
-          &nbsp;
-        %td#cell-0-2{:colspan => "2"}
-          &nbsp;
-      %tr{:width => "100%"}
-        %td#cell-1-0
-          &nbsp;
-        %td#cell-1-1
-          &nbsp;
-        %td#cell-1-2
-          %div{:style => "padding: 5px;"}
-            #banner
-              = include("/site/banner.page")
-            #top-menu
-              %table{:border => "0", :cellpadding => "1", :cellspacing => "0", :width => "100%"}
-                %tr
-                  %td
-                    %div{:align => "left"}
-                  %td
-                    %div{:align => "right"}
-                      = include("/site/quicklinks.page")
-        %td#cell-1-3
-          &nbsp;
-        %td#cell-1-4
-          &nbsp;
-      %tr{:width => "100%"}
-        %td#cell-2-0{:colspan => "2"}
-          &nbsp;
-        %td#cell-2-1
-          %table
-            %tr{:height => "100%", :valign => "top"}
-              %td{:height => "100%"}
-                #wrapper-menu-page-right
-                  #wrapper-menu-page-top
-                    #wrapper-menu-page-bottom
-                      #menu-page
-                        = include("/site/navigation.page")
-                      %script{:type => "text/javascript",
-                        :src  => "http://www.ohloh.net/p/494725/widgets/project_partner_badge.js"}
-              %td{:height =>"100%", :width => "100%"}
-                .wiki-content
-                  !~~ body
-        %td#cell-2-2{:colspan => "2"}
-          &nbsp;
-      %tr{:width => "100%"}
-        %td#cell-3-0
-          &nbsp;
-        %td#cell-3-1
-          &nbsp;
-        %td#cell-3-2
-          #footer
-            #site-footer
-              &copy; 2009-2012 Austrian Association for Software Tool Integration
-        %td#cell-3-3
-          &nbsp;
-        %td#cell-3-4
-          &nbsp;
-      %tr{:width => "100%"}
-        %td#cell-4-0{:colspan => "2"}
-          &nbsp;
-        %td#cell-4-1
-          &nbsp;
-        %td#cell-4-2{:colspan => "2"}
-          &nbsp;
-    - if (include_console)
-      = include("/org/fusesource/scalate/console/console.scaml")
+    = include("/site/navigation.page")
+    %br/
+    %br/
+    %br/
+    %br/
+    .container
+      !~~ body
+
+      %hr
+      %footer.footer
+        &copy; 2009-2012 Austrian Association for Software Tool Integration
+
+
+
