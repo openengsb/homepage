@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h3. OpenEngSB Root 33 released (Andreas Pieber - Apr 19, 2012)
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Root 33|/index/download/openengsb-root/v33].
+The 33th release of OpenEngSB root pom focuses on fixes the assembly problem we had by downgrading to version 2.2.2 of the maven-assembly-plugin.
+For more information, please see the [release notes|/index/download/openengsb-root/v33].
+
