@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: pieber
+page_modifier: pieber
+--- pipeline:conf
+h3. OpenEngSB Framework 2.4.5 released (Andreas Pieber - Apr 29, 2012)
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Framework 2.4.5|/index/download/openengsb-framework/v2.4.5].
+The fifth bug-fix release of the OpenEngSB Framework tons of issues internal and various issues by upgrading various libraries. The release fixes various errors in the documentation; fixed the permission error of the config directory; fixed various tests; a nullpointer exception in the EDB, and abstracted the primitives handling by using ClassUtils in commons-lang. This release is more stable by upgrading openengsb-root (v33), PaxExam Karaf (v0.5.3), Apache CXF (v2.5.3), Apache Karaf (v2.2.7), Pax Exam (v2.3.1), Apache Felix File Install (v3.2.2), OPS4J Pax Web (v1.0.9) and Apache Felix Gogo (v0.10.0). All in all we've reduced the number of known issues from 17 to 15.
+For more information, please see the [release notes|/index/download/openengsb-framework/v2.4.5].
+
