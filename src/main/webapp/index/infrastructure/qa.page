@@ -24,4 +24,4 @@ h3. Issue-tracker
 A JIRA Issue Tracker is used to keep track of Bugs and Tasks. They are scheduled for specific release versions. A version can only be released when all assigned issues are closed (or rescheduled to another version).
 
 h3. Continous Integration (OpenCIT)
-There are many unit-, integration- and system tests that cover many aspects of the project (including the UI). They are executed by the build-server everytime a change is commited to one of the main branches (master, v2.4.x, ...). Build breaks are announced to the [openengsb-notification@googlegroups.com|notification mailing-list]. As build-server we use OpenCIT, a CI-server implementation based on OpenEngSB.
+There are many unit-, integration- and system tests that cover many aspects of the project (including the UI). They are executed by the build-server everytime a change is commited to one of the main branches (master, v2.4.x, ...). Build breaks are announced to the mailinglist:  [openengsb-notification@googlegroups.com|Mailing Lists]. As build-server we use OpenCIT, a CI-server implementation based on OpenEngSB.
