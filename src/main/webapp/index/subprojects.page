@@ -36,11 +36,15 @@ This is a collection of libraries developed by the OpenEngSB team for the OpenEn
       <a href="http://github.com/openengsb/labs-paxexam-karaf">Paxexam Karaf</a> 
 </div>
 
-<div class="span2 offset4 well">
+<div class="span2 offset1 well">
 <h3>Liquibase OSGi</h3>
       Not created by now.
 </div>
-</div>
 
+<div class="span2 offset1 well">
+<h3>labs-delegation</h3>
+      <a href="http://github.com/openengsb/labs-delegation/">labs-delegation</a> 
+</div>
+</div>
 
 
