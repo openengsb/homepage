@@ -17,6 +17,9 @@ h2. OpenEngSB Distribution
 h2. OpenEngSB Framework
 
 ||Version||Date||Download||
+|2.4.5|2012-04-29|[download|openengsb-framework/v2.4.5]|
+|2.4.4|2012-04-11|[download|openengsb-framework/v2.4.4]|
+|2.4.3|2012-03-29|[download|openengsb-framework/v2.4.3]|
 |2.4.2|2012-03-08|[download|openengsb-framework/v2.4.2]|
 |2.4.1|2012-01-17|[download|openengsb-framework/v2.4.1]|
 |2.4.0|2012-01-08|[download|openengsb-framework/v2.4.0]|
@@ -38,6 +41,7 @@ h2. OpenEngSB Maven Plugin
 h2. OpenEngSB Root
 
 ||Version||Date||Download||
+|32|2012-03-02|[download|openengsb-root/v32]|
 |31|2012-02-21|[download|openengsb-root/v31]|
 |30|2012-01-04|[download|openengsb-root/v30]|
 |29|2011-12-31|[download|openengsb-root/v29]|
