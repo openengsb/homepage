@@ -1,0 +1,27 @@
+---
+title: Quality Assurance
+page_version: 1
+page_creator: gritschenberger
+page_modifier: gritschenberger
+--- pipeline:conf
+h1. Quality Assurance
+
+h3. Project Management Commitee (PMC)
+The PMC is a group of developers supervising development in the project. Fundamental architectural decisions are made by the PMC in consensus.
+All other decisions are publicy discussed on the mailing list, so that all decisions tracked.
+PMC members are dedicated contributers to the project who convinced the other PMC members with good quality in their contributions.
+
+h3. Release vote
+Releases must be approved by a majority vote of the PMC. When a release is cut, a vote is announced to the mailing list. It's open for 72 hours. During this time period PMCs check the released artifact again for bugs and license compliance.
+
+h3. Checkstyle
+Checks complience of the code to the coding-standards defined for the project. It's integrated in the build-process via the checkstyle-maven-plugin and configured so that violations count as a failed build.
+
+h3. Code-reviews
+For master and every version-branch (e.g. "2.4.x"), every commit must be reviewed by at leaset one member of the PMC. This review focuses on quality and readability of the code as well as documentation and test-quality. This is done using the "Pull Request"-feature in github.
+
+h3. Issue-tracker
+A JIRA Issue Tracker is used to keep track of Bugs and Tasks. They are scheduled for specific release versions. A version can only be released when all assigned issues are closed (or rescheduled to another version).
+
+h3. Continous Integration (OpenCIT)
+There are many unit-, integration- and system tests that cover many aspects of the project (including the UI). They are executed by the build-server everytime a change is commited to one of the main branches (master, v2.4.x, ...). Build breaks are announced to the mailinglist:  [openengsb-notification@googlegroups.com|Mailing Lists]. As build-server we use OpenCIT, a CI-server implementation based on OpenEngSB.

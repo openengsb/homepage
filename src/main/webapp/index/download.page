@@ -1,6 +1,6 @@
 ---
 title: Download
-page_version: 18
+page_version: 19
 page_creator: pieber
 page_modifier: pieber
 --- pipeline:conf
@@ -101,7 +101,7 @@ This chapter collects the releases relevant indirectly for users; mostly only if
 h3. OpenEngSB Framework
 
 ||Version||Date||Download||
-|2.4.3|2012-03-29|[download|download/openengsb-framework/v2.4.3]|
+|2.5.0|2012-05-03|[download|download/openengsb-framework/v2.5.0]|
 
 h3. OpenEngSB Maven Plugin
 
@@ -115,7 +115,7 @@ The following chapters show the downloads of OpenEngSB utilities required in one
 h3. OpenEngSB Root
 
 ||Version||Date||Download||
-|32|2012-03-02|[download|download/openengsb-root/v32]|
+|33|2012-04-19|[download|download/openengsb-root/v33]|
 
 h3. OpenEngSB Assembly Builder Resources
 
