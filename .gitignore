@@ -5,3 +5,6 @@ bin
 .settings
 logFile.log
 .DS_Store
+*site.iml
+*.idea
+
