@@ -16,7 +16,7 @@ A line length of 80 was standard 10 years ago, but with increasing screen size a
 
 h4. Wrapping
 
-Use the auto-formatter of your IDE. Import the [Eclipse Formatter file|http://dev.openengsb.org/resources/eclipse/formatter.xml].
+Use the auto-formatter of your IDE. Import the [Eclipse Formatter file|https://github.com/openengsb/openengsb-framework/blob/master/etc/eclipse/formatter.xml].
 
 h4. Number of declarations per line
 
