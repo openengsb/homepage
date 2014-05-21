@@ -1,0 +1,85 @@
+---
+title: OpenEngSB Root 34 Released
+page_version: 1
+page_creator: stfnsche
+page_modifier: stfnsche
+--- pipeline:conf
+h1. OpenEngSB Root - Version 34 2014-04-11
+
+The 34th release of OpenEngSB root pom sets the java compiler level to 1.7 and brings various stability improvements.
+
+h2. Download
+
+You can download the release manually...
+
+||Description||Download Link||PGP||SHA1||MD5||
+|Binary Distribution|[download|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/34/openengsb-root-34.pom]|[PGP|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/34/openengsb-root-34.pom.asc]|[SHA1|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/34/openengsb-root-34.pom.sha1]|[MD5|http://uk1.maven.org/maven2/org/openengsb/openengsb-root/34/openengsb-root-34.pom.md5]|
+|Source Distribution|[download|https://github.com/openengsb/openengsb-root/zipball/v34]| | | |
+
+...or use it directly in Apache Maven...
+
+{code}
+<parent>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-root</artifactId>
+  <version>34</version>
+</parent>
+{code}
+
+The {{KEYS}} used to sign the release can be found [here|http://www.openengsb.org/index/dist/KEYS.txt].
+
+h2. Release Notes
+
+h3. Administration
+  * [OPENENGSB-3465] - Migrate from hudson to travis
+
+h3. Bug
+  * [OPENENGSB-3103|http://issues.openengsb.org/jira/browse/OPENENGSB-3103] - upgrade axis java2wsdl plugin to 1.6.2
+  * [OPENENGSB-3296|http://issues.openengsb.org/jira/browse/OPENENGSB-3296] - some bundles are created with the wrong symblic name
+  * [OPENENGSB-3303|http://issues.openengsb.org/jira/browse/OPENENGSB-3303] - make it possible to use gpgagent during release and make it default
+  * [OPENENGSB-3327|http://issues.openengsb.org/jira/browse/OPENENGSB-3327] - Add aduna-maven-repo so that npanday can correctly resolve openrdf
+  * [OPENENGSB-3332|http://issues.openengsb.org/jira/browse/OPENENGSB-3332] - projects should specify UTF-8 as source-encoding
+  * [OPENENGSB-3461|http://issues.openengsb.org/jira/browse/OPENENGSB-3461] - Root pom contains invalid configuration for deploy plugin
+  * [OPENENGSB-3475|http://issues.openengsb.org/jira/browse/OPENENGSB-3475] - Removal of orienttechnologies repository
+  * [OPENENGSB-3498|http://issues.openengsb.org/jira/browse/OPENENGSB-3498] - license-check does not report missing licenses anymore
+  * [OPENENGSB-3531|http://issues.openengsb.org/jira/browse/OPENENGSB-3531] - remove unneeded redundant dependency to root from root
+  * [OPENENGSB-3533|http://issues.openengsb.org/jira/browse/OPENENGSB-3533] - Remove old api version properties and all of its references
+  * [OPENENGSB-3548|http://issues.openengsb.org/jira/browse/OPENENGSB-3548] - Add new spring osgi repository
+  * [OPENENGSB-3549|http://issues.openengsb.org/jira/browse/OPENENGSB-3549] - OpenEngSB is not working with recent Karaf
+  * [OPENENGSB-3632|http://issues.openengsb.org/jira/browse/OPENENGSB-3632] - first karaf start sometimes causes ConcurrentModificationException
+
+h3. Improvement
+  * [OPENENGSB-1314|http://issues.openengsb.org/jira/browse/OPENENGSB-1314] - Extract dependencies from openengsb-framework to openengsb-root
+  * [OPENENGSB-2793|http://issues.openengsb.org/jira/browse/OPENENGSB-2793] - use the new openjpa maven plugin instead of the old one
+  * [OPENENGSB-2973|http://issues.openengsb.org/jira/browse/OPENENGSB-2973] - Speed up multi module build
+  * [OPENENGSB-3037|http://issues.openengsb.org/jira/browse/OPENENGSB-3037] - move orienttechnologies-repo to root
+  * [OPENENGSB-3131|http://issues.openengsb.org/jira/browse/OPENENGSB-3131] - Warning weaver.test jar is empty
+  * [OPENENGSB-3370|http://issues.openengsb.org/jira/browse/OPENENGSB-3370] - upgrade osgi.compendium to 4.3
+  * [OPENENGSB-3419|http://issues.openengsb.org/jira/browse/OPENENGSB-3419] - Packaging should add default specification and implementation entries
+  * [OPENENGSB-3433|http://issues.openengsb.org/jira/browse/OPENENGSB-3433] - Move contributor list from framework root pom to confluence
+  * [OPENENGSB-3509|http://issues.openengsb.org/jira/browse/OPENENGSB-3509] - Don't validate import order in checkstyle
+  * [OPENENGSB-3513|http://issues.openengsb.org/jira/browse/OPENENGSB-3513] - make openengsb-root the only available parent pom
+  * [OPENENGSB-3583|http://issues.openengsb.org/jira/browse/OPENENGSB-3583] - Remove no longer used maven-site-plugin
+  * [OPENENGSB-3588|http://issues.openengsb.org/jira/browse/OPENENGSB-3588] - Remove maven-shade plugin
+
+h3. Library Upgrade
+  * [OPENENGSB-2807|http://issues.openengsb.org/jira/browse/OPENENGSB-2807] - Upgrade to openengsb-maven-plugin 2.4.0
+  * [OPENENGSB-2977|http://issues.openengsb.org/jira/browse/OPENENGSB-2977] - Upgrade to compiler plugin 2.4
+  * [OPENENGSB-3491|http://issues.openengsb.org/jira/browse/OPENENGSB-3491] - Upgrade labs-delegation to 0.1.1
+  * [OPENENGSB-3492|http://issues.openengsb.org/jira/browse/OPENENGSB-3492] - Include liquibase integration framework 1.0.0
+  * [OPENENGSB-3506|http://issues.openengsb.org/jira/browse/OPENENGSB-3506] - Upgrade labs dependencies to  0.1.0
+  * [OPENENGSB-3540|http://issues.openengsb.org/jira/browse/OPENENGSB-3540] - Upgrade pax-web to 3.0.0.M3
+  * [OPENENGSB-3582|http://issues.openengsb.org/jira/browse/OPENENGSB-3582] - Upgrade to maven-compiler-plugin 3.0
+  * [OPENENGSB-3584|http://issues.openengsb.org/jira/browse/OPENENGSB-3584] - Upgrade maven-release-pluin to 2.4
+  * [OPENENGSB-3585|http://issues.openengsb.org/jira/browse/OPENENGSB-3585] - Upgrade maven-notice-plugin to 1.0.5
+  * [OPENENGSB-3586|http://issues.openengsb.org/jira/browse/OPENENGSB-3586] - Upgrade maven-wagon-plugin to 1.0-beta-4
+  * [OPENENGSB-3587|http://issues.openengsb.org/jira/browse/OPENENGSB-3587] - Upgrade to maven-resources-plugin 2.6
+  * [OPENENGSB-3589|http://issues.openengsb.org/jira/browse/OPENENGSB-3589] - Upgrade surefire plugins to 2.14
+  * [OPENENGSB-3590|http://issues.openengsb.org/jira/browse/OPENENGSB-3590] - Upgrade maven-clean-plugin to 2.5
+  * [OPENENGSB-3591|http://issues.openengsb.org/jira/browse/OPENENGSB-3591] - maven-dependency-plugin to 2.7
+  * [OPENENGSB-3592|http://issues.openengsb.org/jira/browse/OPENENGSB-3592] - Upgrade maven-plugin-plugin to 3.2
+  * [OPENENGSB-3593|http://issues.openengsb.org/jira/browse/OPENENGSB-3593] - Upgrade maven-enforcer plugin to 1.2
+  * [OPENENGSB-3655|http://issues.openengsb.org/jira/browse/OPENENGSB-3655] - Upgrade orientDB
+  * [OPENENGSB-3673|http://issues.openengsb.org/jira/browse/OPENENGSB-3673] - maven-dependency-plugin to 2.8
+  * [OPENENGSB-3674|http://issues.openengsb.org/jira/browse/OPENENGSB-3674] - upgrade guava to 14.0.1
+  * [OPENENGSB-3675|http://issues.openengsb.org/jira/browse/OPENENGSB-3675] - upgrade fasterxml.jackson to 2.2.2

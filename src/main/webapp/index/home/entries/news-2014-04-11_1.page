@@ -1,0 +1,11 @@
+---
+page_version: 1
+page_creator: stfnsche
+page_modifier: stfnsche
+--- pipeline:conf
+h3. OpenEngSB Root 34 released (Stefan Scheiber - Apr 11, 2014)
+
+The OpenEngSB team is pleased to announce the availability of the [OpenEngSB Root 34|/index/download/openengsb-root/v34].
+The 34th release of OpenEngSB root pom sets the java compiler level to 1.7 and brings various stability improvements.
+For more information, please see the [release notes|/index/download/openengsb-root/v34].
+
